@@ -1,0 +1,480 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.cart-card {
+            .mat-mdc-card-content {
+                .recent-orders-table {
+                    margin: {
+                        left: -20px;
+                        right: -20px;
+                        bottom: 20px;
+                    };
+                    table {
+                        width: 100%;
+                        border-spacing: 0;
+
+                        thead {
+                            tr {
+                                th {
+                                    text-align: left;
+                                    padding: 18px 20px;
+                                    white-space: nowrap;
+                                    background-color: #e7effd;
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    border-bottom: 1px dashed #e0e0e0;
+                                    white-space: nowrap;
+                                    padding: 18px 20px;
+
+                                    .info {
+                                        .image {
+                                            width: 50px;
+                                            line-height: .01;
+                                            margin-right: 12px;
+            
+                                            img {
+                                                border-radius: 50%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .coupon-code {
+                    max-width: 430px;
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .recent-orders-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        background-color: #131920;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        border-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .recent-orders-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        .info {
+                                            .image {
+                                                margin: {
+                                                    right: 0;
+                                                    left: 12px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.order-summary-card {
+            .mat-mdc-card-content {
+                .order-summary-table {
+                    margin: {
+                        left: -20px;
+                        right: -20px;
+                        bottom: 25px;
+                    };
+                    table {
+                        width: 100%;
+                        border-spacing: 0;
+
+                        thead {
+                            tr {
+                                th {
+                                    text-align: left;
+                                    padding: 15px 20px;
+                                    white-space: nowrap;
+                                    background-color: #e7effd;
+
+                                    &:last-child {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    border-bottom: 1px dashed #e0e0e0;
+                                    white-space: nowrap;
+                                    padding: 15px 20px;
+
+                                    &:last-child {
+                                        text-align: right;
+                                    }
+                                }
+                                &:last-child {
+                                    td {
+                                        padding-bottom: 0;
+                                        border-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                h5 {
+                    margin-bottom: 12px;
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        background-color: #131920;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        border-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        text-align: right;
+    
+                                        &:last-child {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        &:last-child {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.cart-card {
+                .mat-mdc-card-content {
+                    .coupon-code {
+                        padding-right: 125px;
+
+                        .mat-mdc-form-field {
+                            height: 50px;
+                            background-color: #f4f6fc;
+
+                            .mat-mdc-text-field-wrapper {
+                                border: 0;
+                            }
+                            .mat-mdc-text-field-wrapper {
+                                .mat-mdc-form-field-flex {
+                                    .mat-mdc-floating-label {
+                                        top: 24px;
+                                    }
+                                }
+                                &:not(.mdc-text-field--outlined) {
+                                    .mat-mdc-form-field-infix {
+                                        padding-top: 22px;
+                                    }
+                                }
+                            }
+                        }
+                        .mat-mdc-button {
+                            right: 0;
+                            top: 50%;
+                            border: 0;
+                            height: auto;
+                            min-width: auto;
+                            min-height: auto;
+                            padding: 14px 35px;
+                            position: absolute;
+                            font-weight: normal;
+                            color: var(--whiteColor);
+                            transform: translateY(-50%);
+                            background-color: var(--daxaColor);
+                        }
+                    }
+                }
+                &.component-dark-theme {
+                    .mat-mdc-card-content {
+                        .coupon-code {
+                            .mat-mdc-form-field {
+                                background-color: #131920;
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .coupon-code {
+                            padding: {
+                                right: 0;
+                                left: 125px;
+                            };
+                            .mat-mdc-button {
+                                right: auto;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &.order-summary-card {
+                .mat-mdc-card-content {
+                    .mat-mdc-button {
+                        border: 0;
+                        height: auto;
+                        min-width: auto;
+                        min-height: auto;
+                        margin-top: 20px;
+                        padding: 13px 40px;
+                        font-weight: normal;
+                        color: var(--whiteColor);
+                        background-color: var(--daxaColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.cart-card {
+                .mat-mdc-card-content {
+                    .recent-orders-table {
+                        margin: {
+                            left: -15px;
+                            right: -15px;
+                            bottom: 15px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .coupon-code {
+                        max-width: 100%;
+                    }
+                }
+            }
+            &.order-summary-card {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        margin: {
+                            left: -15px;
+                            right: -15px;
+                            bottom: 15px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.cart-card {
+                    .mat-mdc-card-content {
+                        .coupon-code {
+                            padding-right: 0;
+    
+                            .mat-mdc-button {
+                                top: 0;
+                                margin-top: 15px;
+                                position: relative;
+                                transform: translateY(0);
+                            }
+                        }
+                    }
+                    &.rtl-enabled {
+                        .mat-mdc-card-content {
+                            .coupon-code {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+                &.order-summary-card {
+                    .mat-mdc-card-content {
+                        .mat-mdc-button {
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.cart-card {
+                .mat-mdc-card-content {
+                    .recent-orders-table {
+                        margin: {
+                            left: -20px;
+                            right: -20px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.order-summary-card {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        margin: {
+                            left: -20px;
+                            right: -20px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

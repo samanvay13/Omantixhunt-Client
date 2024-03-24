@@ -1,0 +1,199 @@
+<header
+    class="header-area bg-white border-radius transition"
+    [ngClass]="{'active': isSidebarToggled, 'sticky': isSticky}"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.right-sidebar]="themeService.isRightSidebar()"
+    [class.hide-sidebar]="themeService.isHideSidebar()"
+    [class.dark-header]="themeService.isHeaderDark()"
+    [class.card-borderd-theme]="themeService.isCardBorder()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="d-md-flex align-items-center justify-content-between">
+        <div class="header-left-side d-flex align-items-center">
+            <h3 style="margin-left: 240%; margin-top: 10px;">OmantixHunt</h3>
+        </div>
+        <ul class="header-right-side d-flex align-items-center mt-0 mb-0 pl-0 list-unstyled">
+            <li>
+                <button
+                    mat-button
+                    class="dark-swtich-btn"
+                    (click)="toggleTheme()"
+                >
+                    <i class="material-symbols-outlined">
+                        dark_mode
+                    </i>
+                </button>
+            </li>
+            <li>
+                <a routerLink="/" mat-icon-button class="calendar-menu-btn p-0">
+                    <i class="material-symbols-outlined">
+                        format_list_bulleted
+                    </i>
+                </a>
+            </li>
+            <li>
+                <button mat-icon-button [matMenuTriggerFor]="messagesMenu" class="messages-menu-btn p-0">
+                    <i class="material-symbols-outlined">
+                        leaderboard
+                    </i>
+                </button>
+                <mat-menu class="messages-menu-dropdown" #messagesMenu="matMenu" xPosition="before">
+                    <div
+                        [class.dark-menu]="themeService.isDark() || themeService.isHeaderDark()"
+                    >
+                        <div class="title d-flex align-items-center justify-content-between">
+                            <span class="fw-medium">
+                                Leaderboard 
+                            </span>
+                        </div>
+                        <ul class="menu-body pl-0 mt-0 list-unstyled">
+                            <li class="position-relative">
+                                <img src="assets/images/users/user1.jpg" width="44" height="44" class="rounded-circle position-absolute" alt="user">
+                                <span class="sub-title d-block fw-medium">
+                                    Walter White
+                                </span>
+                            </li>
+                            <li class="position-relative">
+                                <img src="assets/images/users/user2.jpg" width="44" height="44" class="rounded-circle position-absolute" alt="user">
+                                <span class="sub-title d-block fw-medium">
+                                    Angela Carter
+                                </span>
+                            </li>
+                            <li class="position-relative">
+                                <img src="assets/images/users/user3.jpg" width="44" height="44" class="rounded-circle position-absolute" alt="user">
+                                <span class="sub-title d-block fw-medium">
+                                    Brad Traversy
+                                </span>
+                                <a routerLink="/chat" class="d-block link-btn position-absolute"></a>
+                            </li>
+                        </ul>
+                        <div class="menu-footer text-center">
+                            <a routerLink="/chat" class="link-btn text-daxa d-inline-block fw-medium">
+                                View All Rankings
+                            </a>
+                        </div>
+                    </div>
+                </mat-menu>
+            </li>
+            <li>
+                <button mat-icon-button [matMenuTriggerFor]="notificationsMenu" class="notifications-menu-btn p-0">
+                    <i class="material-symbols-outlined">
+                        notifications
+                    </i>
+                    <span class="daxa-badge">
+                        3
+                    </span>
+                </button>
+                <mat-menu class="notifications-menu-dropdown" #notificationsMenu="matMenu" xPosition="before">
+                    <div
+                        [class.dark-menu]="themeService.isDark() || themeService.isHeaderDark()"
+                    >
+                        <div class="title d-flex align-items-center justify-content-between">
+                            <span class="fw-medium">
+                                Notifications
+                                <span class="text-body fw-normal">(03)</span>
+                            </span>
+                        </div>
+                        <ul class="menu-body pl-0 mt-0 list-unstyled">
+                            <li class="position-relative">
+                                <div class="icon rounded-circle position-absolute text-center transition">
+                                    <i class="material-symbols-outlined">
+                                        sms
+                                    </i>
+                                </div>
+                                <span class="sub-title d-block">
+                                    You have requested to <strong class="fw-medium">withdrawal</strong>
+                                </span>
+                                <span class="time d-block text-body">
+                                    2 hrs ago
+                                </span>
+                                <a routerLink="/notifications" class="d-block link-btn position-absolute"></a>
+                                <span class="unread d-inline-block rounded-circle bg-daxa position-absolute"></span>
+                            </li>
+                            <li class="position-relative">
+                                <div class="icon rounded-circle position-absolute text-center transition">
+                                    <i class="material-symbols-outlined">
+                                        person
+                                    </i>
+                                </div>
+                                <span class="sub-title d-block">
+                                    <strong class="fw-medium">A new user</strong> added in Daxa
+                                </span>
+                                <span class="time d-block text-body">
+                                    3 hrs ago
+                                </span>
+                                <a routerLink="/notifications" class="d-block link-btn position-absolute"></a>
+                                <span class="unread d-inline-block rounded-circle bg-daxa position-absolute"></span>
+                            </li>
+                            <li class="position-relative">
+                                <div class="icon rounded-circle position-absolute text-center transition">
+                                    <i class="material-symbols-outlined">
+                                        mark_email_unread
+                                    </i>
+                                </div>
+                                <span class="sub-title d-block">
+                                    You have requested to <strong class="fw-medium">withdrawal</strong>
+                                </span>
+                                <span class="time d-block text-body">
+                                    1 day ago
+                                </span>
+                                <a routerLink="/notifications" class="d-block link-btn position-absolute"></a>
+                            </li>
+                        </ul>
+                        <div class="menu-footer text-center">
+                            <a routerLink="/notifications" class="link-btn text-daxa d-inline-block fw-medium">
+                                See All Notifications
+                            </a>
+                        </div>
+                    </div>
+                </mat-menu>
+            </li>
+            <li>
+                <button mat-button [matMenuTriggerFor]="profileMenu" class="profile-menu-btn">
+                    <img src="assets/images/admin.png" alt="profile-image">
+                    <span class="status d-inline-block rounded-circle position-absolute"></span>
+                </button>
+                <mat-menu class="profile-menu-dropdown" #profileMenu="matMenu" xPosition="before">
+                    <div
+                        [class.dark-menu]="themeService.isDark() || themeService.isHeaderDark()"
+                    >
+                        <div class="menu-header d-flex align-items-center">
+                            <img src="assets/images/admin.png" alt="profile-image">
+                            <div class="title">
+                                <a routerLink="/my-profile" class="d-inline-block fw-medium">
+                                    Mateo Luca
+                                </a>
+                                <span class="designation d-block text-body">
+                                    User
+                                </span>
+                            </div>
+                        </div>
+                        <ul class="menu-body pl-0 mb-0 mt-0 list-unstyled">
+                            <li class="position-relative transition fw-medium">
+                                <i class="material-symbols-outlined">
+                                    person
+                                </i>
+                                My Profile
+                                <a routerLink="/my-profile" class="link-btn d-block position-absolute"></a>
+                            </li>
+                            <li class="position-relative transition fw-medium">
+                                <i class="material-symbols-outlined">
+                                    settings
+                                </i>
+                                Settings
+                                <a routerLink="/settings" class="link-btn d-block position-absolute"></a>
+                            </li>
+                            <li class="position-relative transition fw-medium">
+                                <i class="material-symbols-outlined">
+                                    logout
+                                </i>
+                                Logout
+                                <a routerLink="/authentication" class="link-btn d-block position-absolute"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </mat-menu>
+            </li>
+        </ul>
+    </div>
+</header>

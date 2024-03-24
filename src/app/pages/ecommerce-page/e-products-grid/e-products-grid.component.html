@@ -1,0 +1,806 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Products Grid
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Products Grid
+        </li>
+    </ol>
+</div>
+
+<!-- Products Grid -->
+<div
+    class="row"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="col-md-4 col-lg-3">
+
+        <!-- Filter Sidebar Card -->
+        <mat-card class="daxa-card filter-sidebar-card mb-25 border-radius bg-white border-none d-block">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mt-0 mb-0">
+                        Filter
+                    </h5>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="filter-item">
+                    <span class="d-block fw-medium">
+                        Search
+                    </span>
+                    <form class="search-box position-relative">
+                        <i class="material-symbols-outlined">
+                            search
+                        </i>
+                        <input type="text" class="input-search d-block w-100 border-none outline-0" placeholder="Search product...">
+                    </form>
+                </div>
+                <div class="filter-item">
+                    <span class="d-block fw-medium">
+                        Items for
+                    </span>
+                    <ul class="filters-list pl-0 mb-0 list-unstyled">
+                        <li>
+                            <mat-checkbox>
+                                Women
+                            </mat-checkbox>
+                        </li>
+                        <li>
+                            <mat-checkbox>
+                                Men
+                            </mat-checkbox>
+                        </li>
+                        <li>
+                            <mat-checkbox>
+                                Kids
+                            </mat-checkbox>
+                        </li>
+                        <li>
+                            <mat-checkbox>
+                                Accessories
+                            </mat-checkbox>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-item">
+                    <span class="d-block fw-medium">
+                        Categories
+                    </span>
+                    <ul class="filters-list pl-0 mb-0 list-unstyled">
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                All
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                246
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Electronics
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                85
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Accessories
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                99
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Sports
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                27
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Games
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                16
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Computers
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                38
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Mobiles
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                24
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-item">
+                    <span class="d-block fw-medium">
+                        Brands
+                    </span>
+                    <ul class="filters-list pl-0 mb-0 list-unstyled">
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                All
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                156
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Adidas
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                34
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Banboo
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                26
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Canin
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                19
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Debilop
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                29
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Emburo
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                10
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                Fediz
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                13
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-item">
+                    <span class="d-block fw-medium">
+                        Colors
+                    </span>
+                    <ul class="filters-list colors pl-0 list-unstyled">
+                        <li class="d-inline-block black">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block white">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block red">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block green">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block blue">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block gold">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block yellow">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block pink">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block light-blue">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                        <li class="d-inline-block turquoise">
+                            <mat-checkbox></mat-checkbox>
+                        </li>
+                    </ul>
+                </div>
+                <div class="filter-item">
+                    <span class="d-block fw-medium">
+                        Price
+                    </span>
+                    <div class="price-filter">
+                        <mat-slider min="0" step="10" max="5000">
+                            <input matSliderStartThumb [(ngModel)]="startValue">
+                            <input matSliderEndThumb [(ngModel)]="endValue">
+                        </mat-slider>
+                        <div class="value d-flex align-items-center justify-content-between">
+                            <span class="d-block text-body">
+                                ${{startValue}}
+                            </span>
+                            <span class="d-block text-body">
+                                ${{endValue}}
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-item">
+                    <span class="d-block fw-medium">
+                        Ratings
+                    </span>
+                    <ul class="filters-list pl-0 mb-0 list-unstyled">
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                <div class="ratings lh-1 d-flex align-items-center text-body">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <span class="d-inline-block position-relative">
+                                        (5)
+                                    </span>
+                                </div>
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                145
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                <div class="ratings lh-1 d-flex align-items-center text-body">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="d-inline-block position-relative">
+                                        (4)
+                                    </span>
+                                </div>
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                75
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                <div class="ratings lh-1 d-flex align-items-center text-body">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="d-inline-block position-relative">
+                                        (3)
+                                    </span>
+                                </div>
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                12
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                <div class="ratings lh-1 d-flex align-items-center text-body">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="d-inline-block position-relative">
+                                        (2)
+                                    </span>
+                                </div>
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                5
+                            </span>
+                        </li>
+                        <li class="d-flex align-items-center justify-content-between">
+                            <mat-checkbox>
+                                <div class="ratings lh-1 d-flex align-items-center text-body">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="d-inline-block position-relative">
+                                        (1)
+                                    </span>
+                                </div>
+                            </mat-checkbox>
+                            <span class="number d-block text-body">
+                                3
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+    </div>
+    <div class="col-md-8 col-lg-9">
+
+        <!-- Products -->
+        <div class="row">
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product1.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Luxury Rendering
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $150.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $180.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <span class="d-inline-block position-relative">
+                                    (5)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product2.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Mobile Device
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $750.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $780.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <span class="d-inline-block position-relative">
+                                    (4.5)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product3.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Gaming Laptop
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $25.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $300.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <span class="d-inline-block position-relative">
+                                    (4)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product4.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Wireless Headphone
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $80.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $100.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                                <span class="d-inline-block position-relative">
+                                    (3.5)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product5.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Hand Watch
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $120.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $130.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <i class="ri-star-line"></i>
+                                <span class="d-inline-block position-relative">
+                                    (3)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product6.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Futuristic Bracelet
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $15.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $19.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <span class="d-inline-block position-relative">
+                                    (4)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product7.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Triblend T-shirt
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $45.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $75.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-line"></i>
+                                <span class="d-inline-block position-relative">
+                                    (4)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product8.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Sports Shoes
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $55.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $70.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <i class="ri-star-line"></i>
+                                <span class="d-inline-block position-relative">
+                                    (4.5)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+            <div class="col-sm-6 col-lg-4">
+                <mat-card class="daxa-card product-card text-center mb-25 border-radius p-0 bg-white border-none d-block">
+                    <mat-card-content>
+                        <div class="image position-relative border-radius">
+                            <a routerLink="/ecommerce-page/product-details" class="d-block border-radius">
+                                <img src="assets/images/products/product9.jpg" class="border-radius transition" alt="product-image">
+                            </a>
+                            <button mat-fab>
+                                <i class="ri-heart-line"></i>
+                            </button>
+                        </div>
+                        <div class="content">
+                            <h5>
+                                <a routerLink="/ecommerce-page/product-details">
+                                    Woman Handbag
+                                </a>
+                            </h5>
+                            <div class="price d-flex align-items-center justify-content-center lh-1">
+                                <span class="text-black fw-medium d-block">
+                                    $75.00
+                                </span>
+                                <span class="text-body d-block">
+                                    $90.00
+                                </span>
+                            </div>
+                            <div class="ratings lh-1 d-flex align-items-center justify-content-center text-body">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <span class="d-inline-block position-relative">
+                                    (5)
+                                </span>
+                            </div>
+                            <button mat-button>
+                                <i class="material-symbols-outlined">
+                                    shopping_basket
+                                </i>
+                                Add To Cart
+                            </button>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="pagination-card mb-25 d-lg-flex align-items-center justify-content-between">
+            <p class="mb-0">
+                Showing 1 to 9 of 50 entries
+            </p>
+            <ol class="pagination list-unstyled mt-0 mb-0 pl-0">
+                <li class="pagination-item d-inline-block">
+                    <a mat-button routerLink="/ecommerce-page">
+                        <i class="material-symbols-outlined">
+                            west
+                        </i>
+                    </a>
+                </li>
+                <li class="pagination-item d-inline-block">
+                    <a mat-button routerLink="/ecommerce-page" class="active">
+                        1
+                    </a>
+                </li>
+                <li class="pagination-item d-inline-block">
+                    <a mat-button routerLink="/ecommerce-page">
+                        2
+                    </a>
+                </li>
+                <li class="pagination-item d-inline-block">
+                    <a mat-button routerLink="/ecommerce-page">
+                        3
+                    </a>
+                </li>
+                <li class="pagination-item d-inline-block">
+                    <a mat-button routerLink="/ecommerce-page">
+                        <i class="material-symbols-outlined">
+                            east
+                        </i>
+                    </a>
+                </li>
+            </ol>
+        </div>
+
+    </div>
+</div>

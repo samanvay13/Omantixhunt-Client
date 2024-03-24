@@ -1,0 +1,64 @@
+<div class="sign-in-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div
+                class="daxa-form ml-auto mr-auto border-radius bg-white"
+                [class.card-borderd-theme]="themeService.isCardBorder()"
+                [class.component-dark-theme]="themeService.isDark()"
+                [class.rtl-enabled]="themeService.isRTLEnabled()"
+            >
+                <div class="title text-center">
+                    <h3>
+                        Login
+                    </h3>
+                    <p class="text-black">
+                        Don’t have an account yet? <a routerLink="/authentication/sign-up" class="text-daxa">Sign Up</a>
+                    </p>
+                </div>
+                <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label class="main-label d-block lh-1 text-black">
+                            Username
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter Username
+                            </mat-label>
+                            <input matInput type="text" id="username" formControlName="username">
+                        </mat-form-field>
+                        <div class="error text-danger" *ngIf="authForm.get('username')!.hasError('required') && authForm.get('username')!.touched">
+                            Username is required.
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="main-label d-block lh-1 text-black">
+                            Your Password
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter your password
+                            </mat-label>
+                            <input matInput [type]="hide ? 'password' : 'text'" id="password" formControlName="password">
+                            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                                <span class="material-symbols-outlined">
+                                    {{hide ? 'visibility_off' : 'visibility'}}
+                                </span>
+                            </button>
+                        </mat-form-field>
+                    </div>
+                    <div class="info d-flex justify-content-between align-items-center">
+                        <mat-checkbox>
+                            Remember me
+                        </mat-checkbox>
+                        <a routerLink="/authentication/forgot-password" class="d-inline-block text-daxa">
+                            Forgot Password?
+                        </a>
+                    </div>
+                    <button mat-button class="btn" type="submit" [disabled]="authForm.invalid">
+                        Sign In
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

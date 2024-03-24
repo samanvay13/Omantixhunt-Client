@@ -1,0 +1,35 @@
+<div
+    class="stat-item position-relative"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <h5>
+        Active Users
+    </h5>
+    <div class="number lh-1 fw-medium">
+        94,817
+    </div>
+    <span class="daxa-up-down-badge position-relative">
+        <i class="material-symbols-outlined">
+            trending_up
+        </i>
+        8.75%
+    </span>
+    <div class="chart">
+        <apx-chart
+            [series]="chartOptions.series!"
+            [chart]="chartOptions.chart!"
+            [xaxis]="chartOptions.xaxis!"
+            [stroke]="chartOptions.stroke!"
+            [dataLabels]="chartOptions.dataLabels!"
+            [colors]="chartOptions.colors!"
+            [yaxis]="chartOptions.yaxis!"
+            [grid]="chartOptions.grid!"
+            [labels]="chartOptions.labels!"
+            [legend]="chartOptions.legend!"
+        ></apx-chart>
+        <div class="title d-block text-body">
+            This Month
+        </div>
+    </div>
+</div>

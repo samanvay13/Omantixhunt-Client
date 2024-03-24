@@ -1,0 +1,140 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Inbox
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Apps
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Email
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Inbox
+        </li>
+    </ol>
+</div>
+
+<!-- Inbox -->
+<div class="row">
+    <div class="col-lg-3 col-md-12">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="col-lg-9 col-md-12">
+        <mat-card
+            class="daxa-card emails-card mb-25 border-radius bg-white border-none d-block"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mt-0 mb-0">
+                        Emails List
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <div class="info-buttons-list d-flex align-items-center">
+                        <button mat-button>
+                            <i class="material-symbols-outlined">
+                                refresh
+                            </i>
+                        </button>
+                        <button mat-button>
+                            <i class="material-symbols-outlined">
+                                print
+                            </i>
+                        </button>
+                        <button mat-button>
+                            <i class="material-symbols-outlined">
+                                report_gmailerrorred
+                            </i>
+                        </button>
+                        <button mat-button>
+                            <i class="material-symbols-outlined">
+                                delete
+                            </i>
+                        </button>
+                        <button type="button" mat-button [matMenuTriggerFor]="emailHeaderMenu">
+                            <i class="material-symbols-outlined">
+                                more_horiz
+                            </i>
+                        </button>
+                        <mat-menu #emailHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                            <button mat-menu-item>
+                                Recent
+                            </button>
+                            <button mat-menu-item>
+                                Unread
+                            </button>
+                            <button mat-menu-item>
+                                Mark All Read
+                            </button>
+                            <button mat-menu-item>
+                                Spam
+                            </button>
+                            <button mat-menu-item>
+                                Delete All
+                            </button>
+                        </mat-menu>
+                    </div>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="emails-table">
+                    <div class="table-responsive">
+                        <table mat-table [dataSource]="dataSource">
+        
+                            <!-- Checkbox Column -->
+                            <ng-container matColumnDef="select">
+                                <td mat-cell *matCellDef="let row">
+                                    <mat-checkbox (click)="$event.stopPropagation()"
+                                        (change)="$event ? selection.toggle(row) : null"
+                                        [checked]="selection.isSelected(row)"
+                                        [aria-label]="checkboxLabel(row)">
+                                    </mat-checkbox>
+                                    <div class="icon text-body">
+                                        <i class="ri-star-line"></i>
+                                    </div>
+                                </td>
+                            </ng-container>
+        
+                            <!-- Title Column -->
+                            <ng-container matColumnDef="title">
+                                <td mat-cell *matCellDef="let element">
+                                    <a routerLink="/email/read" class="fw-medium">
+                                        {{element.title}}
+                                    </a>
+                                </td>
+                            </ng-container>
+        
+                            <!-- Description Column -->
+                            <ng-container matColumnDef="description">
+                                <td mat-cell *matCellDef="let element" class="text-body">
+                                    {{element.description}}
+                                </td>
+                            </ng-container>
+        
+                            <!-- Date Column -->
+                            <ng-container matColumnDef="date">
+                                <td mat-cell *matCellDef="let element" class="text-body">
+                                    {{element.date}}
+                                </td>
+                            </ng-container>
+        
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="'/email/read/'"></tr>
+        
+                        </table>
+                    </div>
+                    <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

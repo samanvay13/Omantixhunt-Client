@@ -1,0 +1,39 @@
+<mat-card
+    class="daxa-card welcome-card mb-25 border-radius position-relative bg-gradient border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="content">
+                    <span class="d-block text-white">
+                        {{ currentDate }}
+                    </span>
+                    <h3 class="text-white">
+                        Welcome Back! Daxa
+                    </h3>
+                    <p class="text-white">
+                        Learning Management System Dashboard.
+                    </p>
+                    <span class="d-block text-white fw-medium">
+                        Daily Performance
+                    </span>
+                    <div class="chart">
+                        <apx-chart
+                            [series]="chartOptions.series!"
+                            [colors]="chartOptions.colors!"
+                            [chart]="chartOptions.chart!"
+                            [plotOptions]="chartOptions.plotOptions!"
+                            [fill]="chartOptions.fill!"
+                        ></apx-chart>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="image">
+                    <img src="assets/images/welcome.png" alt="welcome-image">
+                </div>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

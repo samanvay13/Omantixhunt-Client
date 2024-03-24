@@ -1,0 +1,195 @@
+::ng-deep {
+    .basic-expansion {
+        &.mat-accordion {
+            .mat-expansion-panel {
+                border-radius: 0;
+                margin: 0 0 22px;
+                box-shadow: unset;
+                background-color: transparent;
+
+                .mat-expansion-panel-header {
+                    padding: 0 0 0 25px;
+                    display: block;
+                    height: auto;
+
+                    .mat-content {
+                        margin-right: 0;
+                        flex-direction: unset;
+                        justify-content: space-between;
+                    }
+                    .mat-expansion-panel-header-title {
+                        color: var(--blackColor);
+                        font-weight: normal;
+                        margin-right: 0;
+                        display: block;
+                        flex: {
+                            basis: unset;
+                            grow: unset;
+                        };
+                    }
+                    .mat-expansion-panel-header-description {
+                        display: block;
+                        margin-right: 0;
+                        flex-grow: unset;
+                        flex-basis: unset;
+                        color: var(--bodyColor);
+
+                        span {
+                            margin-right: 15px;
+
+                            &:last-child {
+                                margin-right: 0;
+                            }
+                        }
+                    }
+                    .mat-expansion-indicator {
+                        transform: translateY(-50%) !important;
+                        position: absolute;
+                        margin-top: -4px;
+                        left: 2px;
+                        top: 50%;
+
+                        &::after {
+                            color: var(--blackColor);
+                        }
+                    }
+                    &.mat-expanded {
+                        .mat-expansion-indicator {
+                            margin-top: 4px;
+                            transform: translateY(-50%) rotate(180deg) !important;
+                        }
+                    }
+                }
+                &:not(.mat-expanded) {
+                    .mat-expansion-panel-header {
+                        &:not([aria-disabled=true]) {
+                            &:hover {
+                                background: transparent;
+                            }
+                        }
+                    }
+                }
+                .mat-expansion-panel-body {
+                    padding: 15px 0 0;
+                    background-color: transparent;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    .component-dark-theme {
+        .basic-expansion {
+            &.mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-header {
+                        .mat-expansion-panel-header-title {
+                            color: var(--whiteColor);
+                        }
+                        .mat-expansion-panel-header-description {
+                            color: rgba(255, 255, 255, .50);
+                        }
+                        .mat-expansion-indicator {
+                            &::after {
+                                color: var(--whiteColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .rtl-enabled {
+        .basic-expansion {
+            &.mat-accordion {
+                .mat-expansion-panel {
+                    .mat-expansion-panel-header {
+                        padding: 0 25px 0 0;
+    
+                        .mat-expansion-panel-header-description {
+                            span {
+                                margin: {
+                                    right: 0;
+                                    left: 15px;
+                                };
+                                &:last-child {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                        .mat-expansion-indicator {
+                            left: auto;
+                            right: 2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    ::ng-deep {
+        .basic-expansion {
+            &.mat-accordion {
+                .mat-expansion-panel {
+                    margin-bottom: 18px;
+
+                    .mat-expansion-panel-header {
+                        padding-left: 22px;
+
+                        .mat-expansion-panel-header-description {
+                            span {
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                    .mat-expansion-panel-body {
+                        padding-top: 15px;
+                    }
+                }
+            }
+        }
+        .rtl-enabled {
+            .basic-expansion {
+                &.mat-accordion {
+                    .mat-expansion-panel {
+                        .mat-expansion-panel-header {
+                            padding: {
+                                left: 0;
+                                right: 22px;
+                            };
+                            .mat-expansion-panel-header-description {
+                                span {
+                                    margin: {
+                                        right: 0;
+                                        left: 10px;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

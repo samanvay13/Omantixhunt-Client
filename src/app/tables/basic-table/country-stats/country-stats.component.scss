@@ -1,0 +1,291 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.country-stats-card {
+            .mat-mdc-card-content {
+                .country-stats-table {
+                    table {
+                        width: 100%;
+                        border-spacing: 0;
+
+                        thead {
+                            tr {
+                                th {
+                                    padding: 17px 20px;
+                                    white-space: nowrap;
+                                    border: {
+                                        top: 1px dashed #e0e0e0;
+                                        bottom: 1px dashed #e0e0e0;
+                                    };
+                                    &:first-child {
+                                        padding-left: 0;
+                                    }
+                                    &:last-child {
+                                        padding-right: 0;
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    border-bottom: 1px dashed #e0e0e0;
+                                    white-space: nowrap;
+                                    padding: 20px;
+
+                                    img {
+                                        width: 20px;
+                                        margin-right: 8px;
+                                    }
+                                    &:first-child {
+                                        padding-left: 0;
+                                    }
+                                    &:last-child {
+                                        padding-right: 0;
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .country-stats-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        border-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        border-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .country-stats-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        &:first-child {
+                                            padding: {
+                                                left: 20px;
+                                                right: 0;
+                                            };
+                                        }
+                                        &:last-child {
+                                            text-align: left;
+                                            padding: {
+                                                right: 20px;
+                                                left: 0;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        img {
+                                            margin: {
+                                                right: 0;
+                                                left: 8px;
+                                            };
+                                        }
+                                        &:first-child {
+                                            padding: {
+                                                left: 20px;
+                                                right: 0;
+                                            };
+                                        }
+                                        &:last-child {
+                                            text-align: left;
+                                            padding: {
+                                                right: 20px;
+                                                left: 0;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.country-stats-card {
+                .mat-mdc-card-content {
+                    .country-stats-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .country-stats-table {
+                            table {
+                                thead {
+                                    tr {
+                                        th {
+                                            &:first-child {
+                                                padding: {
+                                                    left: 15px;
+                                                };
+                                            }
+                                            &:last-child {
+                                                padding: {
+                                                    right: 15px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            &:first-child {
+                                                padding: {
+                                                    left: 15px;
+                                                };
+                                            }
+                                            &:last-child {
+                                                padding: {
+                                                    right: 15px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.country-stats-card {
+                .mat-mdc-card-content {
+                    .country-stats-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .country-stats-table {
+                            table {
+                                thead {
+                                    tr {
+                                        th {
+                                            &:first-child {
+                                                padding: {
+                                                    left: 20px;
+                                                };
+                                            }
+                                            &:last-child {
+                                                padding: {
+                                                    right: 20px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            &:first-child {
+                                                padding: {
+                                                    left: 20px;
+                                                };
+                                            }
+                                            &:last-child {
+                                                padding: {
+                                                    right: 20px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

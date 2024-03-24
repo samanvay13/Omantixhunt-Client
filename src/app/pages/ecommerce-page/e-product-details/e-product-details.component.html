@@ -1,0 +1,324 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Products Details
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Products
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Product Details
+        </li>
+    </ol>
+</div>
+
+<!-- Product Details -->
+<mat-card
+    class="daxa-card product-details-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <div class="row align-items-center">
+            <div class="col-lg-6 col-md-12">
+                <div class="product-details-image">
+                    <div class="product-gallery__featured">
+                        <owl-carousel-o [options]="{items: 1, dots: false, animateIn: 'fadeIn', animateOut: 'fadeOut'}" #owlCar>
+                            <ng-container *ngFor="let image of productImages">
+                                <ng-template carouselSlide [id]="image.url">
+                                    <img [src]="image.url" [alt]="image.url" class="border-radius">
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
+                    </div>
+                    <div class="product-gallery__carousel">
+                        <owl-carousel-o [options]="{items: 3, dots: false, margin: 10, autoWidth: true}">
+                            <ng-container *ngFor="let image of productImages; let i = index">
+                                <ng-template carouselSlide [id]="image.url+i"  [width]="100">
+                                    <a (click)="owlCar.to(image.url); changeimage(image.url+i)" class="border-radius">
+                                        <img [src]="image.url" [alt]="image.url" class="border-radius">
+                                    </a>
+                                </ng-template>
+                            </ng-container>
+                        </owl-carousel-o>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12">
+                <div class="product-details-content">
+                    <h3>
+                        Luxury Rendering
+                    </h3>
+                    <div class="price d-flex align-items-center lh-1">
+                        <span class="text-black fw-medium d-block">
+                            $75.00
+                        </span>
+                        <span class="text-body d-block">
+                            $90.00
+                        </span>
+                    </div>
+                    <div class="ratings lh-1 d-flex align-items-center text-body">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                        <span class="d-inline-block position-relative">
+                            (4.5)
+                        </span>
+                    </div>
+                    <p>
+                        Auctor in nam malesuada auctor ultrices proin condimentum leo cras. Ultrices a quam massa tincidunt dictum luctus cursus. Est eleifend nam hendrerit ultricies elit montes. Molestie blandit orci viverra arcu vitae integer pharetra.
+                    </p>
+                    <span class="sub-title d-block text-body">
+                        100% Original Products
+                    </span>
+                    <span class="sub-title d-block text-body">
+                        Easy 15 days returns and exchanges
+                    </span>
+                    <div class="add-to-cart d-flex align-items-center">
+                        <div class="quantity-counter">
+                            <button (click)="decrement()">
+                                -
+                            </button>
+                            <input type="number" [(ngModel)]="value" />
+                            <button (click)="increment()">
+                                +
+                            </button>
+                        </div>
+                        <button mat-button>
+                            Add To Cart
+                        </button>
+                    </div>
+                    <ul class="info mb-0 mt-0 pl-0 list-unstyled">
+                        <li class="text-body">
+                            <span class="text-black">Category:</span>
+                            Jewellery
+                        </li>
+                        <li class="text-body">
+                            <span class="text-black">
+                                SKU:
+                            </span>
+                            APR 517
+                        </li>
+                        <li class="text-body">
+                            <span class="text-black">
+                                Vendor:
+                            </span>
+                            Michael Shelton
+                        </li>
+                        <li class="text-success">
+                            <span class="text-black">
+                                Availability:
+                            </span>
+                            In stock 20 items
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab label="Description">
+                <p>
+                    Nam dui tempor mi id. Risus nulla amet facilisis eu metus nulla. Nisi interdum nec in lectus amet dis. Pulvinar ut vulputate odio venenatis id urna. Nullam elementum id egestas aliquet leo potenti pellentesque vel tortor. Varius integer facilisi vestibulum ante scelerisque adipiscing at turpis ultricies. Ullamcorper dui in in ultricies sodales in sapien. Elit lectus tincidunt tempus platea praesent. Mi dignissim faucibus fringilla egestas.
+                </p>
+                <p>
+                    Nulla in consequat nisl quam. Arcu vulputate integer mauris adipiscing felis etiam. Leo morbi euismod egestas turpis velit. Mauris fames convallis aliquet augue semper tortor sem. Amet aliquam urna mus aenean. Eu quam tristique at scelerisque id posuere.
+                </p>
+                <ul class="features-list pl-0 list-unstyled mb-0 mt-0">
+                    <li class="position-relative text-body">
+                        Consequat imperdiet dolor a pretium.
+                    </li>
+                    <li class="position-relative text-body">
+                        In pulvinar amet sagittis etiam imperdiet non pretium integer.
+                    </li>
+                    <li class="position-relative text-body">
+                        Aenean ut facilisis tristique ut nam nam turpis facilisi vel.
+                    </li>
+                    <li class="position-relative text-body">
+                        Vulputate dui phasellus vitae velit odio habitant
+                    </li>
+                    <li class="position-relative text-body">
+                        Amet porta egestas augue purus tellus orci diam.
+                    </li>
+                </ul>
+            </mat-tab>
+            <mat-tab label="Ratings & Reviews">
+                <div class="overall-ratings">
+                    <h5>
+                        Ratings
+                    </h5>
+                    <div class="row align-items-center">
+                        <div class="col-md-4 col-lg-3 col-xxxl-2">
+                            <h3>
+                                4.9
+                            </h3>
+                            <span class="d-block text-body">
+                                Overall Rating 
+                            </span>
+                            <div class="all-ratings d-flex align-items-center">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <span class="text-body position-relative">(158 Reviews)</span>
+                            </div>
+                        </div>
+                        <div class="col-md-8 col-lg-9 col-xxxl-10">
+                            <div class="rating-item position-relative">
+                                <div class="ratings d-flex align-items-center">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <span class="text-body position-relative">(5.00)</span>
+                                </div>
+                                <mat-progress-bar mode="determinate" value="80"></mat-progress-bar>
+                                <span class="number text-body d-block">
+                                    (120)
+                                </span>
+                            </div>
+                            <div class="rating-item position-relative">
+                                <div class="ratings d-flex align-items-center">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="text-body position-relative">(4.00)</span>
+                                </div>
+                                <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+                                <span class="number text-body d-block">
+                                    (25)
+                                </span>
+                            </div>
+                            <div class="rating-item position-relative">
+                                <div class="ratings d-flex align-items-center">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="text-body position-relative">(3.00)</span>
+                                </div>
+                                <mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+                                <span class="number text-body d-block">
+                                    (9)
+                                </span>
+                            </div>
+                            <div class="rating-item position-relative">
+                                <div class="ratings d-flex align-items-center">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="text-body position-relative">(2.00)</span>
+                                </div>
+                                <mat-progress-bar mode="determinate" value="8"></mat-progress-bar>
+                                <span class="number text-body d-block">
+                                    (3)
+                                </span>
+                            </div>
+                            <div class="rating-item position-relative">
+                                <div class="ratings d-flex align-items-center">
+                                    <i class="ri-star-fill"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <i class="ri-star-line"></i>
+                                    <span class="text-body position-relative">(1.00)</span>
+                                </div>
+                                <mat-progress-bar mode="determinate" value="2"></mat-progress-bar>
+                                <span class="number text-body d-block">
+                                    (1)
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="review-item mb-25 border-radius">
+                            <div class="ratings d-flex align-items-center">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <span class="text-body position-relative">(5)</span>
+                            </div>
+                            <p>
+                                Risus nulla amet facilisis eu metus nulla. Nisi interdum nec in lectus amet dis. Pulvinar ut vulputate odio venenatis id urna. Nullam elementum id egestas aliquet leo potenti pellentesque vel tortor. Varius integer facilisi vestibulum ante scelerisque adipiscing at turpis ultricies. Ullamcorper dui in in ultricies sodales in sapien. Elit lectus tincidunt tempus platea praesent. Mi dignissim faucibus fringilla egestas.
+                            </p>
+                            <div class="user-info d-flex align-items-center">
+                                <div>
+                                    <img src="assets/images/users/user1.jpg" alt="user-image">
+                                </div>
+                                <div>
+                                    <span class="d-block">
+                                        Mark Stjohn
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="review-item mb-25 border-radius">
+                            <div class="ratings d-flex align-items-center">
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-fill"></i>
+                                <i class="ri-star-half-line"></i>
+                                <span class="text-body position-relative">(4.5)</span>
+                            </div>
+                            <p>
+                                Risus nulla amet facilisis eu metus nulla. Nisi interdum nec in lectus amet dis. Pulvinar ut vulputate odio venenatis id urna. Nullam elementum id egestas aliquet leo potenti pellentesque vel tortor. Varius integer facilisi vestibulum ante scelerisque adipiscing at turpis ultricies. Ullamcorper dui in in ultricies sodales in sapien. Elit lectus tincidunt tempus platea praesent. Mi dignissim faucibus fringilla egestas.
+                            </p>
+                            <div class="user-info d-flex align-items-center">
+                                <div>
+                                    <img src="assets/images/users/user2.jpg" alt="user-image">
+                                </div>
+                                <div>
+                                    <span class="d-block">
+                                        Joan Stanley
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="your-ratings">
+                    <h5>
+                        Your Ratings
+                    </h5>
+                    <app-star-rating [(rating)]="selectedRating"></app-star-rating>
+                    <form>
+                        <mat-form-field class="textarea">
+                            <mat-label>
+                                Write comment here...
+                            </mat-label>
+                            <textarea matInput placeholder="E.g. It makes me feel..."></textarea>
+                        </mat-form-field>
+                        <button mat-button>
+                            Submit
+                        </button>
+                    </form>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,88 @@
+<div
+    class="coming-soon-area bg-white"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="row mr-0 mr-0">
+        <div class="col-lg-5 col-md-12 pl-0 pr-0">
+            <div class="coming-soon-left bg-gradient text-center">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <h3 class="text-white">
+                            TIME LEFT UNTIL LAUNCHING
+                        </h3>
+                        <div class="countdown-container">
+                            <div class="countdown-value">
+                                {{ countdown.days }}
+                            </div>
+                            <div class="countdown-label">
+                                Days
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value">
+                                    {{ countdown.hours }}
+                                </div>
+                                <div class="countdown-label">
+                                    Hours
+                                </div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value">
+                                    {{ countdown.minutes }}
+                                </div>
+                                <div class="countdown-label">
+                                    Minutes
+                                </div>
+                            </div>
+                            <div class="countdown-item">
+                                <div class="countdown-value">
+                                    {{ countdown.seconds }}
+                                </div>
+                                <div class="countdown-label">
+                                    Seconds
+                                </div>
+                            </div>
+                        </div>
+                        <img src="assets/images/coming-soon/coming-soon.png" alt="coming-soon-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7 col-md-12 pl-0 pr-0">
+            <div class="coming-soon-right text-center position-relative">
+                <div class="d-table">
+                    <div class="d-table-cell">
+                        <a routerLink="/" class="logo d-inline-block">
+                            <img src="assets/images/logo-big.svg" alt="logo">
+                        </a>
+                        <span class="sub-title d-block">
+                            Website is under maintenance
+                        </span>
+                        <h1 class="text-primary fw-bold lh-1">
+                            WE ARE LAUNCHING SOON
+                        </h1>
+                        <p class="text-black">
+                            Be the first to know when our site is live
+                        </p>
+                        <form>
+                            <mat-form-field>
+                                <mat-label>
+                                    Email address
+                                </mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                            <button mat-button>
+                                Submit
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <img src="assets/images/coming-soon/shape1.png" class="shape1" alt="shape1">
+                <img src="assets/images/coming-soon/shape2.png" class="shape2" alt="shape2">
+                <img src="assets/images/coming-soon/shape3.png" class="shape3" alt="shape3">
+                <img src="assets/images/coming-soon/shape4.png" class="shape4" alt="shape4">
+                <img src="assets/images/coming-soon/shape5.png" class="shape5" alt="shape5">
+                <img src="assets/images/coming-soon/shape6.png" class="shape6" alt="shape6">
+            </div>
+        </div>
+    </div>
+</div>

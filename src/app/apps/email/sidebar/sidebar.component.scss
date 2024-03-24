@@ -1,0 +1,237 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.sidebar-card {
+            .mat-mdc-card-content {
+                .search-box {
+                    margin-bottom: 20px;
+
+                    i {
+                        transform: translateY(-50%);
+                        color: var(--blackColor);
+                        position: absolute;
+                        font-size: 18px;
+                        left: 13px;
+                        top: 50%;
+                    }
+                    .input-search {
+                        height: 45px;
+                        font-size: 14px;
+                        border-radius: 3px;
+                        background: #f4f6fc;
+                        color: var(--blackColor);
+                        padding: {
+                            left: 40px;
+                            right: 15px;
+                        };
+                        &::placeholder {
+                            font-weight: 300;
+                            color: var(--bodyColor);
+                            transition: var(--transition);
+                        }
+                        &:focus {
+                            &::placeholder {
+                                color: transparent;
+                            }
+                        }
+                    }
+                }
+                .btn {
+                    &.mat-mdc-button {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        min-width: auto;
+                        border-radius: 3px;
+                        padding: 12px 20px;
+                        text-align: center;
+                        color: var(--whiteColor);
+                        background-color: var(--daxaColor);
+                    }
+                }
+                .sidebar-list {
+                    margin: {
+                        top: 25px;
+                        bottom: 22px;
+                    };
+                    li {
+                        margin-bottom: 22px;
+
+                        a {
+                            padding-left: 28px;
+                            
+                            i {
+                                transform: translateY(-50%);
+                                position: absolute;
+                                font-size: 16px;
+                                top: 50%;
+                                left: 0;
+                            }
+                            span {
+                                font-size: 14px;
+                            }
+                            &.active {
+                                color: var(--daxaColor);
+                            }
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .search-box {
+                        i {
+                            color: var(--whiteColor);
+                        }
+                        .input-search {
+                            background: rgba(255, 255, 255, .07);
+                            color: var(--whiteColor);
+                            
+                            &::placeholder {
+                                color: rgba(255, 255, 255, .50);
+                            }
+                            &:focus {
+                                &::placeholder {
+                                    color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .search-box {
+                        i {
+                            left: auto;
+                            right: 13px;
+                        }
+                        .input-search {
+                            padding: {
+                                left: 15px;
+                                right: 40px;
+                            };
+                        }
+                    }
+                    .sidebar-list {
+                        padding-right: 0;
+
+                        li {
+                            a {
+                                padding: {
+                                    left: 0;
+                                    right: 20px;
+                                };
+                                i {
+                                    left: auto;
+                                    right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.sidebar-card {
+                .mat-mdc-card-content {
+                    .search-box {
+                        margin-bottom: 15px;
+                    }
+                    .sidebar-list {
+                        margin: {
+                            top: 15px;
+                            bottom: 15px;
+                        };
+                        li {
+                            margin-bottom: 15px;
+    
+                            a {
+                                padding-left: 25px;
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .sidebar-list {
+                            li {
+                                a {
+                                    padding: {
+                                        left: 0;
+                                        right: 25px;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.sidebar-card {
+                .mat-mdc-card-content {
+                    .search-box {
+                        margin-bottom: 20px;
+                    }
+                    .sidebar-list {
+                        margin: {
+                            top: 20px;
+                            bottom: 20px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.sidebar-card {
+                .mat-mdc-card-content {
+                    .sidebar-list {
+                        margin: {
+                            top: 25px;
+                            bottom: 20px;
+                        };
+                        li {
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

@@ -1,0 +1,340 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.sidebar-card {
+            .mat-mdc-card-content {
+                .search-box {
+                    margin-bottom: 20px;
+
+                    i {
+                        transform: translateY(-50%);
+                        color: var(--blackColor);
+                        position: absolute;
+                        font-size: 18px;
+                        left: 13px;
+                        top: 50%;
+                    }
+                    .input-search {
+                        height: 45px;
+                        font-size: 14px;
+                        border-radius: 3px;
+                        background: #f4f6fc;
+                        color: var(--blackColor);
+                        padding: {
+                            left: 40px;
+                            right: 15px;
+                        };
+                        &::placeholder {
+                            font-weight: 300;
+                            color: var(--bodyColor);
+                            transition: var(--transition);
+                        }
+                        &:focus {
+                            &::placeholder {
+                                color: transparent;
+                            }
+                        }
+                    }
+                }
+                .sidebar-list {
+                    margin: {
+                        top: 25px;
+                        bottom: 35px;
+                    };
+                    li {
+                        margin-bottom: 22px;
+
+                        a {
+                            padding-left: 28px;
+                            
+                            i {
+                                transform: translateY(-50%);
+                                position: absolute;
+                                margin-top: -.5px;
+                                font-size: 16px;
+                                top: 50%;
+                                left: 0;
+                            }
+                            span {
+                                font-size: 14px;
+                            }
+                            &.active {
+                                color: var(--daxaColor);
+                            }
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        ul {
+                            padding-left: 28px;
+                            margin: {
+                                top: 20px;
+                                bottom: 25px;
+                            };
+                            li {
+                                margin-bottom: 18px;
+
+                                a {
+                                    padding-left: 17px;
+                                    font-size: 15.5px;
+
+                                    &::before {
+                                        left: 0;
+                                        top: 50%;
+                                        width: 5px;
+                                        content: '';
+                                        height: 5px;
+                                        border-radius: 50%;
+                                        position: absolute;
+                                        background: #475569;
+                                        transform: translateY(-50%);
+                                        transition: var(--transition);
+                                    }
+                                    &.active, &:hover {
+                                        &::before {
+                                            background: var(--daxaColor);
+                                        }
+                                    }
+                                }
+                                &:last-child {
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+                .storage-status {
+                    h5 {
+                        margin-bottom: 15px;
+                    }
+                    .mat-mdc-progress-bar {
+                        margin-bottom: 12px;
+                        --mdc-linear-progress-track-height: 10px;
+                        --mdc-linear-progress-active-indicator-height: 10px;
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .search-box {
+                        i {
+                            color: var(--whiteColor);
+                        }
+                        .input-search {
+                            background: rgba(255, 255, 255, .07);
+                            color: var(--whiteColor);
+                            
+                            &::placeholder {
+                                color: rgba(255, 255, 255, .50);
+                            }
+                            &:focus {
+                                &::placeholder {
+                                    color: transparent;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .search-box {
+                        i {
+                            left: auto;
+                            right: 13px;
+                        }
+                        .input-search {
+                            padding: {
+                                right: 40px;
+                                left: 15px;
+                            };
+                        }
+                    }
+                    .sidebar-list {
+                        padding-right: 0;
+
+                        li {
+                            a {
+                                padding: {
+                                    right: 28px;
+                                    left: 0;
+                                };
+                                i {
+                                    left: auto;
+                                    right: 0;
+                                }
+                            }
+                            ul {
+                                padding: {
+                                    left: 0;
+                                    right: 28px;
+                                };
+                                li {
+                                    a {
+                                        padding: {
+                                            left: 0;
+                                            right: 17px;
+                                        };
+                                        &::before {
+                                            left: auto;
+                                            right: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.sidebar-card {
+                .mat-mdc-card-content {
+                    .search-box {
+                        margin-bottom: 15px;
+                    }
+                    .sidebar-list {
+                        margin: {
+                            top: 15px;
+                            bottom: 20px;
+                        };
+                        li {
+                            margin-bottom: 15px;
+    
+                            a {
+                                padding-left: 25px;
+                            }
+                            ul {
+                                padding-left: 25px;
+                                margin: {
+                                    top: 15px;
+                                    bottom: 18px;
+                                };
+                                li {
+                                    margin-bottom: 15px;
+    
+                                    a {
+                                        padding-left: 15px;
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .storage-status {
+                        h5 {
+                            margin-bottom: 12px;
+                        }
+                        .mat-mdc-progress-bar {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .sidebar-list {
+                            li {
+                                a {
+                                    padding: {
+                                        left: 0;
+                                        right: 25px;
+                                    };
+                                }
+                                ul {
+                                    padding: {
+                                        left: 0;
+                                        right: 25px;
+                                    };
+                                    li {
+                                        a {
+                                            padding: {
+                                                left: 0;
+                                                right: 15px;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.sidebar-card {
+                .mat-mdc-card-content {
+                    .search-box {
+                        margin-bottom: 20px;
+                    }
+                    .sidebar-list {
+                        margin: {
+                            top: 20px;
+                            bottom: 20px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.sidebar-card {
+                .mat-mdc-card-content {
+                    .sidebar-list {
+                        margin: {
+                            top: 25px;
+                            bottom: 20px;
+                        };
+                        li {
+                            margin-bottom: 20px;
+
+                            ul {
+                                margin: {
+                                    top: 18px;
+                                    bottom: 22px;
+                                };
+                                li {
+                                    margin-bottom: 17px;
+    
+                                    a {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

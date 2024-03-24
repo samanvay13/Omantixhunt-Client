@@ -1,0 +1,33 @@
+.example-container {
+    height: 350px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: var(--whiteColor);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #ebebeb;
+    }
+}
+.mat-mdc-table-sticky {
+    border-top: 1px dashed #e0e0e0;
+    background-color: var(--whiteColor);
+}
+.component-dark-theme {
+    .example-container {
+        &::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, .10);
+        }
+        &::-webkit-scrollbar-thumb {
+            background: var(--blackColor);
+        }
+    }
+    .mat-mdc-table-sticky {
+        border-color: rgba(255, 255, 255, 0.09);
+        background-color: #1b232d;
+    }
+}

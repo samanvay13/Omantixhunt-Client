@@ -1,0 +1,25 @@
+.example-container {
+    height: 400px;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background-color: var(--whiteColor);
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #ebebeb;
+    }
+}
+.component-dark-theme {
+    .example-container {
+        &::-webkit-scrollbar-track {
+            background-color: rgba(255, 255, 255, .10);
+        }
+        &::-webkit-scrollbar-thumb {
+            background: var(--blackColor);
+        }
+    }
+}

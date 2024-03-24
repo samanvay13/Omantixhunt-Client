@@ -1,0 +1,30 @@
+<div [class.component-dark-theme]="themeService.isDark()">
+    <div cdkDropListGroup>
+        <div class="example-container">
+            <h5>Available items</h5>
+            <div
+                cdkDropList
+                class="example-list"
+                cdkDropListSortingDisabled
+                (cdkDropListDropped)="drop($event)"
+            >
+                @for (item of items; track item) {
+                    <div class="example-box" cdkDrag [cdkDragDisabled]="item.disabled">{{item.value}}</div>
+                }
+            </div>
+        </div>
+        <div class="example-container">
+            <h5>Shopping basket</h5>
+            <div
+                cdkDropList
+                class="example-list"
+                cdkDropListSortingDisabled
+                (cdkDropListDropped)="drop($event)"
+            >
+                @for (item of basket; track item) {
+                    <div class="example-box" cdkDrag [cdkDragDisabled]="item.disabled">{{item.value}}</div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

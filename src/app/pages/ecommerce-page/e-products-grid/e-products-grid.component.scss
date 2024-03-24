@@ -1,0 +1,979 @@
+// Filter Sidebar Card
+.mat-mdc-card {
+    &.daxa-card {
+        &.filter-sidebar-card {
+            .mat-mdc-card-content {
+                .filter-item {
+                    margin-bottom: 20px;
+            
+                    .search-box {
+                        margin-top: 10px;
+            
+                        i {
+                            transform: translateY(-50%);
+                            color: var(--blackColor);
+                            position: absolute;
+                            font-size: 18px;
+                            left: 13px;
+                            top: 50%;
+                        }
+                        .input-search {
+                            height: 40px;
+                            font-size: 14px;
+                            border-radius: 3px;
+                            background: #f4f6fc;
+                            color: var(--blackColor);
+                            padding: {
+                                left: 40px;
+                                right: 15px;
+                            };
+                            &::placeholder {
+                                font-weight: 300;
+                                color: var(--bodyColor);
+                                transition: var(--transition);
+                            }
+                            &:focus {
+                                &::placeholder {
+                                    color: transparent;
+                                }
+                            }
+                        }
+                    }
+                    .filters-list {
+                        margin-top: 11px;
+
+                        li {
+                            margin-bottom: 11px;
+
+                            .number {
+                                font-size: 14px;
+                            }
+                            .ratings {
+                                i {
+                                    color: var(--warningColor);
+                                    font-size: var(--fontSize);
+                                    margin-right: 2px;
+                                }
+                                span {
+                                    top: 1px;
+                                    font-size: 14px;
+                                    margin-left: 1px;
+                                }
+                            }
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                        &.colors {
+                            margin-bottom: -10px;
+
+                            li {
+                                margin: {
+                                    right: 10px;
+                                    bottom: 10px;
+                                };
+                            }
+                        }
+                    }
+                    .price-filter {
+                        .value {
+                            font-size: 14px;
+                            margin-top: -5px;
+                        }
+                        .mat-mdc-slider {
+                            width: 100%;
+                        }
+                    }
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.filter-sidebar-card {
+                .mat-mdc-card-content {
+                    .filter-item {
+                        .filters-list {
+                            li {
+                                .mat-mdc-checkbox {
+                                    .mdc-label {
+                                        margin-left: 5px;
+                                        font-size: 14px;
+                                    }
+                                    .mdc-checkbox {
+                                        margin: 0;
+                                        padding: 0;
+        
+                                        .mdc-checkbox__native-control {
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                        .mdc-checkbox__background {
+                                            top: 0;
+                                            left: 0;
+                                            border-radius: 50%;
+                                            border-color: #e0e0e0;
+                                        }
+                                        .mat-mdc-checkbox-ripple, .mdc-checkbox__ripple {
+                                            border-radius: 2px;
+                                        }
+                                        .mat-mdc-checkbox-touch-target {
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled:focus:checked~.mdc-checkbox__background, &:enabled:focus:indeterminate~.mdc-checkbox__background {
+                                                border-color: var(--daxaColor);
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: var(--daxaColor);
+                                            }
+                                            &:focus~.mdc-checkbox__ripple {
+                                                background-color: transparent;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.black {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #000000;
+                                            background-color: #000000;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #000000;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #000000;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.white {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #919aa3;
+                                            background-color: var(--whiteColor);
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #919aa3;
+                                                        background-color: var(--whiteColor);
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #919aa3;
+                                            }
+                                            &:enabled~.mdc-checkbox__background {
+                                                .mdc-checkbox__checkmark {
+                                                    color: var(--blackColor);
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                &.red {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #d32030;
+                                            background-color: #d32030;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #d32030;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #d32030;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.green {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #2ed47e;
+                                            background-color: #2ed47e;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #2ed47e;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #2ed47e;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.blue {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #0f79f3;
+                                            background-color: #0f79f3;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #0f79f3;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #0f79f3;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.gold {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #f67c00;
+                                            background-color: #f67c00;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #f67c00;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #f67c00;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.yellow {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #ffe500;
+                                            background-color: #ffe500;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #ffe500;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #ffe500;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.pink {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #ff00b8;
+                                            background-color: #ff00b8;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #ff00b8;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #ff00b8;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.light-blue {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #796df6;
+                                            background-color: #796df6;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #796df6;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #796df6;
+                                            }
+                                        }
+                                    }
+                                }
+                                &.turquoise {
+                                    .mdc-checkbox {
+                                        .mdc-checkbox__background {
+                                            border-color: #00cae3;
+                                            background-color: #00cae3;
+                                        }
+                                        .mdc-checkbox__native-control {
+                                            &:enabled {
+                                                &:focus {
+                                                    &:checked~.mdc-checkbox__background, &:indeterminate~.mdc-checkbox__background {
+                                                        border-color: #00cae3;
+                                                    }
+                                                }
+                                            }
+                                            &:enabled:checked~.mdc-checkbox__background, &:enabled:indeterminate~.mdc-checkbox__background, &[data-indeterminate=true]:enabled~.mdc-checkbox__background {
+                                                border-color: #00cae3;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .price-filter {
+                        .mat-mdc-slider {
+                            --mdc-slider-handle-height: 10px;
+                            --mdc-slider-handle-width: 10px;
+                            --mdc-slider-handle-shape: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Products
+.mat-mdc-card {
+    &.daxa-card {
+        &.product-card {
+            .mat-mdc-card-content {
+                .image {
+                    overflow: hidden;
+
+                    img {
+                        margin-bottom: -4px;
+                    }
+                    .mdc-fab {
+                        top: 20px;
+                        z-index: 1;
+                        right: 20px;
+                        width: 40px;
+                        height: 40px;
+                        box-shadow: unset;
+                        position: absolute;
+                        color: var(--blackColor);
+                        background-color: var(--whiteColor);
+                        --mat-fab-state-layer-color: #000000;
+
+                        &:focus {
+                            color: var(--warningColor);
+
+                            i {
+                                &::before {
+                                    content: "\ee0e";
+                                }
+                            }
+                        }
+                    }
+                }
+                .content {
+                    padding: 20px;
+
+                    h5 {
+                        margin-bottom: 11px;
+                    }
+                    .price {
+                        margin-bottom: 12px;
+
+                        span {
+                            &:nth-child(1) {
+                                font-size: 18px;
+                                margin-right: 4px;
+                            }
+                            &:nth-child(2) {
+                                font-size: 14px;
+                                margin-left: 4px;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                    .ratings {
+                        i {
+                            color: var(--warningColor);
+                            font-size: var(--fontSize);
+                            margin-right: 2px;
+                        }
+                        span {
+                            top: 1px;
+                            font-size: 14px;
+                            margin-left: 1px;
+                        }
+                    }
+                    .mat-mdc-button {
+                        margin-top: 18px;
+                    }
+                }
+                &:hover {
+                    .image {
+                        img {
+                            transform: scale(1.08);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-card {
+                .mat-mdc-card-content {
+                    .content {
+                        .mat-mdc-button {
+                            border: 1px solid #c2cada;
+                            font-size: 15px !important;
+                            color: var(--blackColor);
+                            padding: 11px 20px;
+                            border-radius: 3px;
+                            min-width: auto;
+                            display: block;
+                            height: auto;
+                            width: 100%;
+
+                            .mdc-button__label {
+                                padding-left: 28px;
+
+                                i {
+                                    left: 0;
+                                    top: 50%;
+                                    font-size: 20px;
+                                    position: absolute;
+                                    transform: translateY(-50%);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Dark Mode CSS
+.component-dark-theme {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.filter-sidebar-card {
+                .mat-mdc-card-content {
+                    .filter-item {
+                        .search-box {
+                            i {
+                                color: var(--whiteColor);
+                            }
+                            .input-search {
+                                background: rgba(255, 255, 255, .07);
+                                color: var(--whiteColor);
+                                
+                                &::placeholder {
+                                    color: rgba(255, 255, 255, .50);
+                                }
+                                &:focus {
+                                    &::placeholder {
+                                        color: transparent;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.filter-sidebar-card {
+                    .mat-mdc-card-content {
+                        .filter-item {
+                            .filters-list {
+                                li {
+                                    .mat-mdc-checkbox {
+                                        .mdc-checkbox {
+                                            .mdc-checkbox__background {
+                                                border-color: rgba(255, 255, 255, 0.2);
+                                            }
+                                        }
+                                    }
+                                    &.black {
+                                        .mdc-checkbox {
+                                            .mdc-checkbox__background {
+                                                border-color: #000000;
+                                            }
+                                        }
+                                    }
+                                    &.white {
+                                        .mdc-checkbox {
+                                            .mdc-checkbox__background {
+                                                border-color: var(--whiteColor);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.product-card {
+                    .mat-mdc-card-content {
+                        .content {
+                            .mat-mdc-button {
+                                border-color: rgba(255, 255, 255, 0.09);
+                                color: var(--whiteColor);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// RTL Enabled
+.rtl-enabled {
+
+    // Filter Sidebar Card
+    .mat-mdc-card {
+        &.daxa-card {
+            &.filter-sidebar-card {
+                .mat-mdc-card-content {
+                    .filter-item {
+                        .search-box {
+                            i {
+                                left: auto;
+                                right: 13px;
+                            }
+                            .input-search {
+                                padding: {
+                                    left: 15px;
+                                    right: 40px;
+                                };
+                            }
+                        }
+                        .filters-list {
+                            padding-right: 0;
+
+                            li {
+                                .ratings {
+                                    i {
+                                        margin: {
+                                            right: 0;
+                                            left: 2px;
+                                        };
+                                    }
+                                    span {
+                                        margin: {
+                                            left: 0;
+                                            right: 1px;
+                                        };
+                                    }
+                                }
+                            }
+                            &.colors {
+                                li {
+                                    margin: {
+                                        left: 10px;
+                                        right: 0;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.filter-sidebar-card {
+                    .mat-mdc-card-content {
+                        .filter-item {
+                            .filters-list {
+                                li {
+                                    .mat-mdc-checkbox {
+                                        .mdc-label {
+                                            margin: {
+                                                left: 0;
+                                                right: 5px;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Products
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-card {
+                .mat-mdc-card-content {
+                    .image {
+                        .mdc-fab {
+                            right: auto;
+                            left: 20px;
+                        }
+                    }
+                    .content {
+                        .price {
+                            span {
+                                &:nth-child(1) {
+                                    margin: {
+                                        right: 0;
+                                        left: 4px;
+                                    };
+                                }
+                                &:nth-child(2) {
+                                    margin: {
+                                        left: 0;
+                                        right: 4px;
+                                    };
+                                }
+                            }
+                        }
+                        .ratings {
+                            i {
+                                margin: {
+                                    right: 0;
+                                    left: 2px;
+                                };
+                            }
+                            span {
+                                margin: {
+                                    left: 0;
+                                    right: 1px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-card {
+                    .mat-mdc-card-content {
+                        .content {
+                            .mat-mdc-button {
+                                .mdc-button__label {
+                                    padding: {
+                                        left: 0;
+                                        right: 28px;
+                                    };
+                                    i {
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    // Filter Sidebar Card
+    .mat-mdc-card {
+        &.daxa-card {
+            &.filter-sidebar-card {
+                .mat-mdc-card-content {
+                    .filter-item {
+                        margin-bottom: 15px;
+                
+                        .search-box {
+                            margin-top: 8px;
+                        }
+                        .filters-list {
+                            margin-top: 10px;
+
+                            li {
+                                margin-bottom: 10px;
+
+                                .number {
+                                    font-size: 14px;
+                                }
+                                .ratings {
+                                    i {
+                                        font-size: 14px;
+                                    }
+                                    span {
+                                        font-size: 13px;
+                                    }
+                                }
+                            }
+                            &.colors {
+                                margin-bottom: -6px;
+    
+                                li {
+                                    margin: {
+                                        right: 6px;
+                                        bottom: 6px;
+                                    };
+                                }
+                            }
+                        }
+                        .price-filter {
+                            .value {
+                                margin-top: -7px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.filter-sidebar-card {
+                    .mat-mdc-card-content {
+                        .filter-item {
+                            .filters-list {
+                                li {
+                                    .mat-mdc-checkbox {
+                                        .mdc-label {
+                                            margin-left: 4px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // Products
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-card {
+                .mat-mdc-card-content {
+                    .image {
+                        .mdc-fab {
+                            top: 15px;
+                            right: 15px;
+                            width: 35px;
+                            height: 35px;
+                        }
+                    }
+                    .content {
+                        padding: 15px;
+    
+                        h5 {
+                            margin-bottom: 11px;
+                        }
+                        .price {
+                            margin-bottom: 12px;
+    
+                            span {
+                                &:nth-child(1) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        .ratings {
+                            i {
+                                font-size: 15px;
+                            }
+                        }
+                        .mat-mdc-button {
+                            margin-top: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-card {
+                    .mat-mdc-card-content {
+                        .content {
+                            .mat-mdc-button {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // RTL Enabled
+    .rtl-enabled {
+
+        // Filter Sidebar Card
+        .mat-mdc-card {
+            &.daxa-card {
+                &.filter-sidebar-card {
+                    .mat-mdc-card-content {
+                        .filter-item {
+                            .filters-list {
+                                &.colors {
+                                    li {
+                                        margin: {
+                                            right: 0;
+                                            left: 6px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        ::ng-deep {
+            .mat-mdc-card {
+                &.daxa-card {
+                    &.filter-sidebar-card {
+                        .mat-mdc-card-content {
+                            .filter-item {
+                                .filters-list {
+                                    li {
+                                        .mat-mdc-checkbox {
+                                            .mdc-label {
+                                                margin: {
+                                                    left: 0;
+                                                    right: 4px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Products
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-card {
+                    .mat-mdc-card-content {
+                        .image {
+                            .mdc-fab {
+                                right: auto;
+                                left: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    // Products
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-card {
+                .mat-mdc-card-content {
+                    .image {
+                        .mdc-fab {
+                            top: 15px;
+                            right: 15px;
+                        }
+                    }
+                    .content {
+                        .price {
+                            span {
+                                &:nth-child(1) {
+                                    font-size: 17px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // RTL Enabled
+    .rtl-enabled {
+
+        // Products
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-card {
+                    .mat-mdc-card-content {
+                        .image {
+                            .mdc-fab {
+                                left: 15px;
+                                right: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

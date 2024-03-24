@@ -1,0 +1,419 @@
+.coming-soon-area {
+    .coming-soon-left {
+        height: 100vh;
+        padding: 30px;
+        
+        h3 {
+            letter-spacing: 4.5px;
+            margin-bottom: 20px;
+            font: {
+                size: 18px;
+                weight: 300;
+            };
+        }
+        .countdown-container {
+            margin-bottom: 40px;
+
+            .countdown-value {
+                line-height: 1;
+                color: var(--warningColor);
+                font: {
+                    size: 96px;
+                    weight: 600;
+                };
+            }
+            .countdown-label {
+                line-height: 1;
+                color: #f5f2f5;
+                letter-spacing: 1.8px;
+                font: {
+                    size: 18px;
+                    weight: 300;
+                };
+            }
+            .countdown-item {
+                position: relative;
+                display: inline-block;
+                margin: {
+                    top: 25px;
+                    left: 30px;
+                    right: 30px;
+                };
+                .countdown-value {
+                    margin-bottom: 5px;
+                    font: {
+                        size: 36px;
+                        weight: normal;
+                    };
+                }
+                .countdown-label {
+                    font-size: 16px;
+                }
+                &::before {
+                    top: 50%;
+                    right: -32px;
+                    content: ":";
+                    line-height: 1;
+                    font-size: 30px;
+                    margin-top: -15px;
+                    position: absolute;
+                    color: var(--infoColor);
+                    transform: translateY(-50%);
+                }
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+        }
+        img {
+            margin-bottom: -4px;
+        }
+    }
+    .coming-soon-right {
+        z-index: 1;
+        padding: 30px;
+        height: 100vh;
+
+        .logo {
+            margin-bottom: 25px;
+        }
+        .sub-title {
+            font-size: 18px;
+            letter-spacing: 1.8px;
+        }
+        h1 {
+            font-size: 48px;
+            letter-spacing: 4.8px;
+            margin: {
+                bottom: 25px;
+                top: 20px;
+            };
+        }
+        p {
+            letter-spacing: 1.8px;
+            font: {
+                size: 18px;
+                weight: 300;
+            };
+        }
+        form {
+            position: relative;
+            max-width: 700px;
+            margin: {
+                left: auto;
+                right: auto;
+            };
+            .mat-mdc-button {
+                top: 0;
+                right: 0;
+                border: 0;
+                bottom: 0;
+                height: auto;
+                min-width: auto;
+                min-height: auto;
+                padding: 13px 50px;
+                position: absolute;
+                font-weight: normal;
+                color: var(--whiteColor);
+                background-color: var(--daxaColor);
+            }
+        }
+        .shape1 {
+            top: 0;
+            left: -1px;
+            z-index: -1;
+            max-width: 20%;
+            position: absolute;
+        }
+        .shape2 {
+            top: 0;
+            left: 50%;
+            z-index: -1;
+            position: absolute;
+        }
+        .shape3 {
+            top: 0;
+            right: 0;
+            z-index: -1;
+            max-width: 20%;
+            position: absolute;
+        }
+        .shape4 {
+            bottom: 0;
+            left: -1px;
+            z-index: -1;
+            max-width: 20%;
+            position: absolute;
+        }
+        .shape5 {
+            left: 38%;
+            bottom: 1%;
+            z-index: -1;
+            position: absolute;
+        }
+        .shape6 {
+            right: 0;
+            bottom: 0;
+            z-index: -1;
+            max-width: 15%;
+            position: absolute;
+        }
+    }
+    &.rtl-enabled {
+        .coming-soon-left {
+            .countdown-container {
+                .countdown-item {
+                    &::before {
+                        left: -32px;
+                        right: auto;
+                    }
+                    &:first-child {
+                        margin: {
+                            left: 30px;
+                            right: 0;
+                        };
+                    }
+                    &:last-child {
+                        margin: {
+                            right: 30px;
+                            left: 0;
+                        };
+                    }
+                }
+            }
+        }
+        .coming-soon-right {
+            form {
+                .mat-mdc-button {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .coming-soon-area {
+        .coming-soon-left {
+            height: auto;
+            padding: 40px 15px;
+            
+            h3 {
+                letter-spacing: 2.5px;
+                margin-bottom: 15px;
+                font-size: 16px;
+            }
+            .countdown-container {
+                margin-bottom: 25px;
+    
+                .countdown-value {
+                    font-size: 45px;
+                    margin-bottom: 5px;
+                }
+                .countdown-label {
+                    letter-spacing: .8px;
+                    font-size: 16px;
+                }
+                .countdown-item {
+                    margin: {
+                        top: 20px;
+                        left: 15px;
+                        right: 15px;
+                    };
+                    .countdown-value {
+                        font-size: 28px;
+                    }
+                    .countdown-label {
+                        font-size: 15px;
+                    }
+                    &::before {
+                        right: -18px;
+                        font-size: 25px;
+                        margin-top: -14px;
+                    }
+                }
+            }
+        }
+        .coming-soon-right {
+            height: auto;
+            padding: 40px 15px;
+    
+            .logo {
+                margin-bottom: 15px;
+            }
+            .sub-title {
+                font-size: 15px;
+                letter-spacing: .8px;
+            }
+            h1 {
+                font-size: 24px;
+                letter-spacing: 2px;
+                line-height: 1.3 !important;
+                margin: {
+                    bottom: 5px;
+                    top: 13px;
+                };
+            }
+            p {
+                letter-spacing: .8px;
+                font-size: 15px;
+            }
+            form {
+                max-width: 100%;
+                
+                .mat-mdc-button {
+                    padding: 12px 30px;
+                }
+            }
+            .shape1, .shape2, .shape3, .shape4, .shape5, .shape6 {
+                display: none;
+            }
+        }
+        &.rtl-enabled {
+            .coming-soon-left {
+                .countdown-container {
+                    .countdown-item {
+                        &::before {
+                            right: auto;
+                            left: -18px;
+                        }
+                        &:first-child {
+                            margin: {
+                                left: 15px;
+                            };
+                        }
+                        &:last-child {
+                            margin: {
+                                right: 15px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .coming-soon-area {
+        .coming-soon-right {
+            form {
+                max-width: 540px;
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .coming-soon-area {
+        .coming-soon-left {
+            .countdown-container {
+                .countdown-value {
+                    font-size: 80px;
+                }
+            }
+        }
+        .coming-soon-right {
+            h1 {
+                font-size: 40px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .coming-soon-area {
+        .coming-soon-left {
+            h3 {
+                letter-spacing: 3.5px;
+            }
+            .countdown-container {
+                .countdown-value {
+                    font-size: 80px;
+                }
+            }
+        }
+        .coming-soon-right {
+            h1 {
+                font-size: 38px;
+                margin-bottom: 20px;
+                letter-spacing: 1.8px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .coming-soon-area {
+        .coming-soon-right {
+            h1 {
+                font-size: 43px;
+                letter-spacing: 3.8px;
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .coming-soon-area {
+        .coming-soon-left {
+            h3 {
+                margin-bottom: 25px;
+            }
+            .countdown-container {
+                margin-bottom: 60px;
+    
+                .countdown-item {
+                    margin-top: 30px;
+                }
+            }
+        }
+        .coming-soon-right {
+            h1 {
+                margin-bottom: 35px;
+            }
+            form {
+                max-width: 792px;
+            }
+            .shape1 {
+                max-width: 100%;
+            }
+            .shape3 {
+                max-width: 100%;
+            }
+            .shape4 {
+                max-width: 100%;
+            }
+            .shape6 {
+                max-width: 100%;
+            }
+        }
+    }
+
+}

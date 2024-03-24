@@ -1,0 +1,11 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.gallery-card {
+            .mat-mdc-card-content {
+                .gallery-list {
+                    margin-bottom: -25px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.github-user {
+    .title {
+        margin-left: 13px;
+
+        span {
+            &:not(:first-child) {
+                font-size: 14px;
+                margin-top: 4px;
+            }
+        }
+    }
+}

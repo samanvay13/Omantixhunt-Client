@@ -1,0 +1,149 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.email-compose-card {
+            .mat-mdc-card-content {
+                .main-label {
+                    margin-bottom: 12px;
+                }
+                .btn-box {
+                    padding-bottom: 91px;
+
+                    .mat-mdc-button {
+                        &.btn {
+                            border: 0;
+                            height: auto;
+                            min-width: auto;
+                            min-height: auto;
+                            padding: 12px 40px;
+                            font-weight: normal;
+                            color: var(--whiteColor);
+                            background-color: var(--daxaColor);
+                            border: 1px solid var(--daxaColor);
+                        }
+                    }
+                    .buttons-list {
+                        top: 2px;
+                        margin-left: 25px;
+                        position: relative;
+
+                        .mat-mdc-button {
+                            padding: 0;
+                            height: auto;
+                            min-width: auto;
+                            margin-left: 15px;
+                            display: inline-block;
+                            transition: var(--transition);
+
+                            i {
+                                font-size: 20px;
+                            }
+                            &:hover {
+                                color: var(--daxaColor);
+                            }
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .btn-box {
+                        .buttons-list {
+                            margin: {
+                                left: 0;
+                                right: 25px;
+                            };
+                            .mat-mdc-button {
+                                margin: {
+                                    left: 0;
+                                    right: 15px;
+                                };
+                                &:first-child {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.email-compose-card {
+                .mat-mdc-card-content {
+                    .NgxEditor__Wrapper {
+                        .NgxEditor {
+                            min-height: 220px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.email-compose-card {
+                .mat-mdc-card-content {
+                    .btn-box {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.email-compose-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            .info-buttons-list {
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.email-compose-card {
+                .mat-mdc-card-content {
+                    .btn-box {
+                        padding-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

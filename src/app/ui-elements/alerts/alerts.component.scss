@@ -1,0 +1,16 @@
+.example-alerts {
+    margin-bottom: -15px;
+    
+    .alert {
+        margin-bottom: 15px;
+    }
+}
+.component-dark-theme {
+    .alert {
+        &:not(.alert-secondary, .alert-light) {
+            .close {
+                color: var(--whiteColor);
+            }
+        }
+    }
+}

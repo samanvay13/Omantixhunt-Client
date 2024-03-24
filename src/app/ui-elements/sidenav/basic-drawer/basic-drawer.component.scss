@@ -1,0 +1,10 @@
+.example-container {
+    margin: 10px;
+    height: 200px;
+    border: 1px solid #dae0ec;
+}
+.component-dark-theme {
+    .example-container {
+        border-color: rgba(255, 255, 255, 0.09);
+    }
+}

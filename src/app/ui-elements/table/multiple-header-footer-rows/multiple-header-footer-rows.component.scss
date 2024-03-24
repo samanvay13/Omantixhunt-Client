@@ -1,0 +1,12 @@
+.example-first-header-row {
+    th {
+        border-bottom: 1px dashed #e0e0e0 !important;
+    }
+}
+.component-dark-theme {
+    .example-first-header-row {
+        th {
+            border-color: rgba(255, 255, 255, 0.09) !important;
+        }
+    }
+}

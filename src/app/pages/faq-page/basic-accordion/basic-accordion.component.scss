@@ -1,0 +1,108 @@
+.basic-accordion {
+    .accordion-item {
+        margin-bottom: 22px;
+        display: block;
+
+        .accordion-item-header {
+            padding-left: 26px;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                left: 0;
+                top: 50%;
+                content: "\ea4e";
+                position: absolute;
+                transform: translateY(-50%);
+                font: {
+                    size: 18px;
+                    family: remixicon;
+                };
+            }
+            &.close {
+                &::after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+        }
+        .accordion-item-body {
+            margin-top: 12px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.rtl-enabled {
+    .basic-accordion {
+        .accordion-item {
+            .accordion-item-header {
+                padding: {
+                    left: 0;
+                    right: 26px;
+                };
+                &::after {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .basic-accordion {
+        .accordion-item {
+            margin-bottom: 15px;
+    
+            .accordion-item-header {
+                padding-left: 20px;
+    
+                &::after {
+                    font-size: 16px;
+                }
+            }
+            .accordion-item-body {
+                margin-top: 11px;
+            }
+        }
+    }
+    .rtl-enabled {
+        .basic-accordion {
+            .accordion-item {
+                .accordion-item-header {
+                    padding: {
+                        left: 0;
+                        right: 20px;
+                    };
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .basic-accordion {
+        .accordion-item {
+            margin-bottom: 18px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

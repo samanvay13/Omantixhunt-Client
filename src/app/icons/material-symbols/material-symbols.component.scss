@@ -1,0 +1,50 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.icon-card {
+            .mat-mdc-card-content {
+                padding-top: 40px;
+
+                .title {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+}
+code {
+    padding: 20px;
+    display: block;
+    background: #f5f2f0;
+
+    .red {
+        color: #905;
+        margin-right: 5px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    .green {
+        color: #690;
+    }
+    .blue {
+        color: #07a;
+    }
+}
+.btn {
+    &.mat-mdc-button {
+        border: 0;
+        height: auto;
+        min-width: auto;
+        min-height: auto;
+        padding: 13px 40px;
+        font-weight: normal;
+        color: var(--whiteColor);
+        background-color: var(--daxaColor);
+    }
+}
+.component-dark-theme {
+    code {
+        background: #131920;
+    }
+}

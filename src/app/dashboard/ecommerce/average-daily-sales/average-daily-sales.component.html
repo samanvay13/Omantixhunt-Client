@@ -1,0 +1,34 @@
+<mat-card class="daxa-card average-daily-sales-card mb-25 border-radius bg-white border-none d-block">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Average Daily Sales
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <span class="daxa-badge position-relative">
+                <i class="material-symbols-outlined">
+                    trending_up
+                </i>
+                5.25%
+            </span>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="price lh-1 fw-medium">
+            $5K+
+        </div>
+        <apx-chart
+            [series]="chartOptions.series!"
+            [chart]="chartOptions.chart!"
+            [dataLabels]="chartOptions.dataLabels!"
+            [plotOptions]="chartOptions.plotOptions!"
+            [yaxis]="chartOptions.yaxis!"
+            [xaxis]="chartOptions.xaxis!"
+            [tooltip]="chartOptions.tooltip!"
+            [legend]="chartOptions.legend!"
+            [colors]="chartOptions.colors!"
+            [grid]="chartOptions.grid!"
+        ></apx-chart>
+    </mat-card-content>
+</mat-card>

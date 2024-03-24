@@ -1,0 +1,142 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Advanced Forms
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Forms
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Advanced Forms
+        </li>
+    </ol>
+</div>
+
+<!-- Select -->
+<mat-card class="daxa-card mb-25 border-radius bg-white border-none d-block">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Select
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-md-6 col-xxl-4">
+                <h5>Default Select</h5>
+                <mat-form-field>
+                    <mat-label>Favorite food</mat-label>
+                    <mat-select>
+                        <mat-option value="Steak">Steak</mat-option>
+                        <mat-option value="Pizza">Pizza</mat-option>
+                        <mat-option value="Tacos">Tacos</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+                <h5>Multiple Select</h5>
+                <mat-form-field>
+                    <mat-label>Favorite food</mat-label>
+                    <mat-select multiple>
+                        <mat-option value="Steak">Steak</mat-option>
+                        <mat-option value="Pizza">Pizza</mat-option>
+                        <mat-option value="Tacos">Tacos</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+                <h5>Custom Trigger Select</h5>
+                <mat-form-field>
+                    <mat-label>Toppings</mat-label>
+                    <mat-select [formControl]="toppings" multiple>
+                        <mat-select-trigger>
+                            {{toppings.value?.[0] || ''}}
+                            @if ((toppings.value?.length || 0) > 1) {
+                                <span class="example-additional-selection">
+                                    (+{{(toppings.value?.length || 0) - 1}} {{toppings.value?.length === 2 ? 'other' : 'others'}})
+                                </span>
+                            }
+                        </mat-select-trigger>
+                        @for (topping of toppingList; track topping) {
+                            <mat-option [value]="topping">{{topping}}</mat-option>
+                        }
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<!-- Picker -->
+<mat-card class="daxa-card mb-25 border-radius bg-white border-none d-block">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Picker
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-md-6 col-xxl-4">
+                <h5>Date Picker</h5>
+                <mat-form-field appearance="fill">
+                    <mat-label>MM/DD/YYYY</mat-label>
+                    <input matInput [matDatepicker]="picker2">
+                    <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+                    <mat-datepicker #picker2></mat-datepicker>
+                </mat-form-field>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+                <h5>Time Picker 12h</h5>
+                <mat-form-field appearance="fill">
+                    <input matInput name="selected_time_A" [ngxMatTimepicker]="pickerA" placeholder="4:00 PM" readonly />
+                    <button mat-icon-button matSuffix (click)="pickerA.open()">
+                        <mat-icon>
+                            watch_later
+                        </mat-icon>
+                    </button>
+                </mat-form-field>
+                <ngx-mat-timepicker #pickerA></ngx-mat-timepicker>
+            </div>
+            <div class="col-md-6 col-xxl-4">
+                <h5>Time Picker 24h</h5>
+                <mat-form-field appearance="fill">
+                    <input matInput name="selected_time_B" [format]="24" [ngxMatTimepicker]="pickerB" placeholder="16:00" readonly />
+                    <button mat-icon-button matSuffix (click)="pickerB.open()">
+                        <mat-icon>
+                            watch_later
+                        </mat-icon>
+                    </button>
+                </mat-form-field>
+                <ngx-mat-timepicker color="accent" #pickerB></ngx-mat-timepicker>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<!-- Advanced Form -->
+<div class="row">
+    <div class="col-md-6">
+        <mat-card class="daxa-card mb-25 border-radius bg-white border-none d-block">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mt-0 mb-0">
+                        Advanced Form
+                    </h5>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <app-advanced-form></app-advanced-form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

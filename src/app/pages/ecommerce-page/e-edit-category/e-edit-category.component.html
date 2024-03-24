@@ -1,0 +1,145 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Edit Category
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Categories
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Edit Category
+        </li>
+    </ol>
+</div>
+
+<!-- Edit Category -->
+<mat-card
+    class="daxa-card edit-category-card mb-25 border-radius bg-white border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Edit Category
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Category Name
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Category name
+                            </mat-label>
+                            <input matInput value="Electronics">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Slug
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Slug
+                            </mat-label>
+                            <input matInput value="electronics">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Parent Category
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Select
+                            </mat-label>
+                            <mat-select [(value)]="parentCategorySelected">
+                                <mat-option value="option1">
+                                    Emburo
+                                </mat-option>
+                                <mat-option value="option2">
+                                    Fediz
+                                </mat-option>
+                                <mat-option value="option3">
+                                    Debilop
+                                </mat-option>
+                                <mat-option value="option4">
+                                    Canin
+                                </mat-option>
+                                <mat-option value="option5">
+                                    Daxa
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Display Type
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Select
+                            </mat-label>
+                            <mat-select [(value)]="displayTypeSelected">
+                                <mat-option value="option1">
+                                    Digital Category
+                                </mat-option>
+                                <mat-option value="option2">
+                                    Physical Category
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Description
+                        </label>
+                        <div class="NgxEditor__Wrapper">
+                            <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+                            <ngx-editor [editor]="editor" [placeholder]="'Type here...'"></ngx-editor>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Upload New Category Image
+                        </label>
+                        <file-upload class="file-uploader" [multiple]="multiple"></file-upload>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button mat-button>
+                    Update Changes
+                </button>
+                <button mat-button>
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

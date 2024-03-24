@@ -1,0 +1,195 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.top-selling-products-card {
+            .mat-mdc-card-content {
+                .top-selling-products-table {
+                    .mat-mdc-table {
+                        .mat-mdc-cell {
+                            padding: 15px;
+
+                            &:first-child, &:nth-child(2) {
+                                padding-left: 0;
+                            }
+                            &:last-child {
+                                text-align: right;
+                                padding-right: 0;
+                            }
+                        }
+                        .mat-mdc-row {
+                            &:first-child {
+                                .mat-mdc-cell {
+                                    padding-top: 5px;
+                                }
+                            }
+                        }
+                        .product-info {
+                            .image {
+                                width: 50px;
+                                line-height: .01;
+
+                                img {
+                                    border-radius: 50%;
+                                }
+                            }
+                            .info {
+                                margin-left: 12px;
+
+                                a {
+                                    font-size: 18px;
+                                }
+                                span {
+                                    font-size: 14px;
+                                    margin-top: 4px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .top-selling-products-table {
+                        .mat-mdc-table {
+                            .mat-mdc-cell {
+                                &:first-child, &:nth-child(2) {
+                                    padding: {
+                                        left: 15px;
+                                        right: 0;
+                                    };
+                                }
+                                &:last-child {
+                                    text-align: left;
+                                    padding: {
+                                        right: 15px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                            .product-info {
+                                .info {
+                                    margin: {
+                                        left: 0;
+                                        right: 12px;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.top-selling-products-card {
+                .mat-mdc-card-content {
+                    .top-selling-products-table {
+                        .mat-mdc-paginator {
+                            padding-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.top-selling-products-card {
+                .mat-mdc-card-content {
+                    .top-selling-products-table {
+                        .mat-mdc-table {
+                            .mat-mdc-cell {
+                                padding: 10px;
+                            }
+                            .mat-mdc-row {
+                                &:first-child {
+                                    .mat-mdc-cell {
+                                        padding-top: 0;
+                                    }
+                                }
+                            }
+                            .product-info {
+                                .image {
+                                    width: 35px;
+                                }
+                                .info {
+                                    margin-left: 8px;
+                                    
+                                    a {
+                                        font-size: 16px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .top-selling-products-table {
+                            .mat-mdc-table {
+                                .mat-mdc-cell {
+                                    &:first-child, &:nth-child(2) {
+                                        padding: {
+                                            left: 10px;
+                                        };
+                                    }
+                                    &:last-child {
+                                        padding: {
+                                            right: 10px;
+                                        };
+                                    }
+                                }
+                                .product-info {
+                                    .info {
+                                        margin: {
+                                            left: 0;
+                                            right: 8px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.top-selling-products-card {
+                    .mat-mdc-card-content {
+                        .top-selling-products-table {
+                            .mat-mdc-paginator {
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

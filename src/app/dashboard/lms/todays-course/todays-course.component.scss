@@ -1,0 +1,344 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.todays-course-card {
+            background-color: #d2d2e4 !important;
+
+            .mat-mdc-card-content {
+                .course-item {
+                    .image {
+                        border-radius: 10px;
+                        margin-right: 119px;
+
+                        img {
+                            border-radius: 10px;
+                            width: auto !important;
+                        }
+                    }
+                    .content {
+                        margin-left: -125px;
+
+                        .price {
+                            font-size: 26px;
+                            margin-top: 10px;
+                        }
+                    }
+                    .info {
+                        border-bottom: 1px dashed #919aa3;
+                        padding-bottom: 20px;
+                        margin: {
+                            bottom: 20px;
+                            top: 20px;
+                        };
+                        span {
+                            &:not(:first-child) {
+                                font-size: 15px;
+                                margin-top: 5px;
+                            }
+                        }
+                    }
+                    .view-details-btn {
+                        .mat-mdc-button {
+                            padding: 0;
+                            height: auto;
+                            min-width: auto;
+                            font: {
+                                size: var(--fontSize) !important;
+                                weight: normal;
+                            };
+                            &:not(:disabled) {
+                                color: var(--daxaColor);
+                            }
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                background-color: #363f49 !important;
+
+                .mat-mdc-card-content {
+                    .course-item {
+                        .info {
+                            border-color: rgba(255, 255, 255, 0.09);
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .course-item {
+                        .image {
+                            margin: {
+                                right: 0;
+                                left: 119px;
+                            };
+                        }
+                        .content {
+                            margin: {
+                                left: 0;
+                                right: -125px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.todays-course-card {
+                .mat-mdc-card-content {
+                    .owl-theme {
+                        .owl-nav {
+                            &.disabled + .owl-dots {
+                                margin-top: 0;
+                            }
+                        }
+                        .owl-dots {
+                            left: 0;
+                            bottom: 4px;
+                            position: absolute;
+
+                            .owl-dot {
+                                span {
+                                    width: 5px;
+                                    height: 5px;
+                                    margin: 0 5px 0 0;
+                                    border-radius: 50%;
+                                    transition: var(--transition);
+                                    background: var(--whiteColor);
+                                }
+                                &:hover, &.active {
+                                    span {
+                                        background: var(--daxaColor);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .owl-theme {
+                            .owl-dots {
+                                left: auto;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.todays-course-card {
+                .mat-mdc-card-content {
+                    .course-item {
+                        .image {
+                            margin-right: 0;
+                        }
+                        .content {
+                            margin: {
+                                left: 0;
+                                top: 15px;
+                            };
+                            .price {
+                                font-size: 22px;
+                                margin-top: 8px;
+                            }
+                        }
+                        .info {
+                            padding-bottom: 15px;
+                            margin: {
+                                bottom: 15px;
+                                top: 15px;
+                            };
+                            span {
+                                &:not(:first-child) {
+                                    font-size: 14px;
+                                    margin-top: 6px;
+                                }
+                            }
+                        }
+                        .view-details-btn {
+                            .mat-mdc-button {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .course-item {
+                            .image {
+                                margin-left: 0;
+                            }
+                            .content {
+                                margin: {
+                                    right: 0;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.todays-course-card {
+                .mat-mdc-card-content {
+                    .course-item {
+                        .image {
+                            margin-right: 0;
+                        }
+                        .content {
+                            margin: {
+                                left: 0;
+                                top: 20px;
+                            };
+                        }
+                        .view-details-btn {
+                            .mat-mdc-button {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .course-item {
+                            .image {
+                                margin-left: 0;
+                            }
+                            .content {
+                                margin: {
+                                    right: 0;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.todays-course-card {
+                .mat-mdc-card-content {
+                    .course-item {
+                        .image {
+                            margin-right: 68px;
+                        }
+                        .content {
+                            margin-left: -73px;
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .course-item {
+                            .image {
+                                margin-left: 68px;
+                            }
+                            .content {
+                                margin-right: -73px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    
+    .mat-mdc-card {
+        &.daxa-card {
+            &.todays-course-card {
+                .mat-mdc-card-content {
+                    .course-item {
+                        .image {
+                            margin-right: 60px;
+                        }
+                        .content {
+                            margin-left: -65px;
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .course-item {
+                            .image {
+                                margin-left: 60px;
+                            }
+                            .content {
+                                margin-right: -65px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.todays-course-card {
+                .mat-mdc-card-content {
+                    .course-item {
+                        .image {
+                            margin-right: 29px;
+                        }
+                        .content {
+                            margin-left: -35px;
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .course-item {
+                            .image {
+                                margin-left: 29px;
+                            }
+                            .content {
+                                margin-right: -35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

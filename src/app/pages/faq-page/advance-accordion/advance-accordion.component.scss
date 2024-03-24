@@ -1,0 +1,131 @@
+.advance-accordion {
+    .accordion-item {
+        margin-bottom: 18px;
+        display: block;
+
+        .accordion-item-header {
+            transition: var(--transition);
+            padding: 15px 18px 15px 40px;
+            background-color: #f4f6fc;
+            position: relative;
+            cursor: pointer;
+
+            &::after {
+                top: 50%;
+                left: 15px;
+                content: "\ea4e";
+                position: absolute;
+                transform: translateY(-50%);
+                font: {
+                    size: 18px;
+                    family: remixicon;
+                };
+            }
+            &.close {
+                &::after {
+                    transform: translateY(-50%) rotate(180deg);
+                }
+            }
+            &:hover {
+                background: rgba(0, 0, 0, 0.04);
+            }
+        }
+        .accordion-item-body {
+            margin-top: 13px;
+        }
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+.component-dark-theme {
+    .advance-accordion {
+        .accordion-item {
+            .accordion-item-header {
+                background-color: #131920;
+    
+                &:hover {
+                    background: rgba(255, 255, 255, 0.04);
+                }
+            }
+        }
+    }
+}
+.rtl-enabled {
+    .advance-accordion {
+        .accordion-item {
+            .accordion-item-header {
+                padding: {
+                    left: 18px;
+                    right: 40px;
+                };
+                &::after {
+                    left: auto;
+                    right: 15px;
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .advance-accordion {
+        .accordion-item {
+            margin-bottom: 15px;
+    
+            .accordion-item-header {
+                padding: 13px 12px 13px 34px;
+    
+                &::after {
+                    left: 10px;
+                    font-size: 16px;
+                }
+            }
+            .accordion-item-body {
+                margin-top: 11px;
+            }
+        }
+    }
+    .rtl-enabled {
+        .advance-accordion {
+            .accordion-item {
+                .accordion-item-header {
+                    padding: {
+                        left: 12px;
+                        right: 34px;
+                    };
+                    &::after {
+                        left: auto;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .advance-accordion {
+        .accordion-item {
+            margin-bottom: 18px;
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

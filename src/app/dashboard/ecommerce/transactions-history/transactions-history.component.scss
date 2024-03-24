@@ -1,0 +1,260 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.transactions-history-card {
+            .mat-mdc-card-content {
+                .transactions-history-table {
+                    .mat-mdc-table {
+                        .mat-mdc-cell {
+                            padding: {
+                                top: 15px;
+                                bottom: 15px;
+                            };
+                            &:last-child {
+                                text-align: right;
+                                padding-right: 0;
+                            }
+                            &:first-child {
+                                padding-left: 0;
+                            }
+                        }
+                        .mat-mdc-row {
+                            &:first-child {
+                                .mat-mdc-cell {
+                                    padding-top: 5px;
+                                }
+                            }
+                            &:nth-child(2) {
+                                .icon {
+                                    color: var(--dangerColor);
+                                    background-color: #fce4e2;
+                                }
+                            }
+                            &:nth-child(3) {
+                                .icon {
+                                    color: var(--primaryColor);
+                                    background-color: #ebe9fe;
+                                }
+                            }
+                            &:nth-child(4) {
+                                .icon {
+                                    color: var(--infoColor);
+                                    background-color: #daf7fb;
+                                }
+                            }
+                            &:nth-child(5) {
+                                .icon {
+                                    color: var(--warningColor);
+                                    background-color: #fff4e8;
+                                }
+                            }
+                            &:nth-child(6) {
+                                .icon {
+                                    color: #2ecc71;
+                                    background-color: #e0f8ea;
+                                }
+                            }
+                        }
+                        .icon {
+                            width: 50px;
+                            height: 50px;
+                            text-align: center;
+                            border-radius: 50%;
+                            position: relative;
+                            color: var(--daxaColor);
+                            background-color: #dbeafd;
+
+                            i {
+                                left: 0;
+                                right: 0;
+                                top: 50%;
+                                position: absolute;
+                                transform: translateY(-50%);
+                            }
+                        }
+                        .info {
+                            margin-left: 15px;
+
+                            .title {
+                                font-size: 18px;
+                                margin-top: 0;
+                            }
+                            span {
+                                font-size: 14px;
+                                margin-top: 5px;
+                            }
+                        }
+                        .plus-price {
+                            color: #2ecc71;
+                        }
+                        .minus-price {
+                            color: var(--dangerColor);
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .transactions-history-table {
+                        .mat-mdc-table {
+                            .mat-mdc-cell {
+                                &:last-child {
+                                    text-align: left;
+                                    padding: {
+                                        left: 0;
+                                        right: 20px;
+                                    };
+                                }
+                                &:first-child {
+                                    padding: {
+                                        right: 0;
+                                        left: 20px;
+                                    };
+                                }
+                            }
+                            .info {
+                                margin: {
+                                    left: 0;
+                                    right: 15px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.transactions-history-card {
+                .mat-mdc-card-content {
+                    .transactions-history-table {
+                        .mat-mdc-paginator {
+                            padding-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.transactions-history-card {
+                .mat-mdc-card-content {
+                    .transactions-history-table {
+                        .mat-mdc-table {
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 10px;
+                                    bottom: 10px;
+                                };
+                            }
+                            .mat-mdc-row {
+                                &:first-child {
+                                    .mat-mdc-cell {
+                                        padding-top: 0;
+                                    }
+                                }
+                            }
+                            .icon {
+                                width: 48px;
+                                height: 48px;
+                            }
+                            .info {
+                                margin-left: 10px;
+    
+                                .title {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .transactions-history-table {
+                            .mat-mdc-table {
+                                .mat-mdc-cell {
+                                    &:last-child {
+                                        padding-right: 15px;
+                                    }
+                                    &:first-child {
+                                        padding-left: 15px;
+                                    }
+                                }
+                                .info {
+                                    margin: {
+                                        left: 0;
+                                        right: 10px;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.transactions-history-card {
+                    .mat-mdc-card-content {
+                        .transactions-history-table {
+                            .mat-mdc-paginator {
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.transactions-history-card {
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .transactions-history-table {
+                            .mat-mdc-table {
+                                .mat-mdc-cell {
+                                    &:last-child {
+                                        padding-right: 20px;
+                                    }
+                                    &:first-child {
+                                        padding-left: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

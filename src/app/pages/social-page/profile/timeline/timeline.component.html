@@ -1,0 +1,308 @@
+<!-- Create Post -->
+<mat-card
+    class="daxa-card publish-post-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab label="Create Post">
+                <mat-form-field class="textarea">
+                    <mat-label>
+                        What's on your mind, Micheal?
+                    </mat-label>
+                    <textarea matInput placeholder="E.g. It makes me feel..."></textarea>
+                </mat-form-field>
+                <div class="btn-box d-md-flex align-items-center">
+                    <button mat-button class="btn">
+                        Publish Post
+                    </button>
+                    <div class="buttons-list d-flex align-items-center">
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                sentiment_satisfied
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                attach_file
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                mic_none
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                image
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Photos/Videos">
+                <mat-form-field class="textarea">
+                    <mat-label>
+                        What's on your mind, Micheal?
+                    </mat-label>
+                    <textarea matInput placeholder="E.g. It makes me feel..."></textarea>
+                </mat-form-field>
+                <div class="btn-box d-md-flex align-items-center">
+                    <button mat-button class="btn">
+                        Publish Post
+                    </button>
+                    <div class="buttons-list d-flex align-items-center">
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                sentiment_satisfied
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                attach_file
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                mic_none
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                image
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Story">
+                <mat-form-field class="textarea">
+                    <mat-label>
+                        What's on your mind, Micheal?
+                    </mat-label>
+                    <textarea matInput placeholder="E.g. It makes me feel..."></textarea>
+                </mat-form-field>
+                <div class="btn-box d-md-flex align-items-center">
+                    <button mat-button class="btn">
+                        Publish Post
+                    </button>
+                    <div class="buttons-list d-flex align-items-center">
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                sentiment_satisfied
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                attach_file
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                mic_none
+                            </i>
+                        </button>
+                        <button mat-button class="text-body">
+                            <i class="material-symbols-outlined">
+                                image
+                            </i>
+                        </button>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>
+
+<!-- Timeline -->
+<mat-card
+    class="daxa-card post-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-subtitle>
+            <button type="button" mat-button class="card-header-menu-btn p-0" [matMenuTriggerFor]="cardHeaderMenu">
+                <i class="material-symbols-outlined">
+                    more_horiz
+                </i>
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <button mat-menu-item>
+                    Save Post
+                </button>
+                <button mat-menu-item>
+                    Hide Post
+                </button>
+                <button mat-menu-item>
+                    Report Photo
+                </button>
+                <button mat-menu-item>
+                    Block Cynthia
+                </button>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="user d-flex align-items-center">
+            <div class="img">
+                <img src="assets/images/users/user15.jpg" class="rounded-circle" alt="user-image">
+            </div>
+            <div class="title">
+                <span class="d-block fw-medium">
+                    Cynthia Baggett
+                </span>
+                <span class="d-block text-body">
+                    05 mins ago
+                </span>
+            </div>
+        </div>
+        <p>
+            Pellentesque viverra lorem malesuada nunc tristique sapien. Imperdiet sit hendrerit tincidunt bibendum donec adipiscing. Tellus non morbi nascetur cursus etiam facilisis mi. Dolor aliquam sed amet aliquam venenatis. Ac viverra interdum tortor enim. Molestie tincidunt ut consequat a urna tortor. Vitae velit ac nisl velit mauris placerat nisi placerat.
+        </p>
+        <div class="post-info d-md-flex align-items-center">
+            <button mat-button class="text-body">
+                <i class="material-symbols-outlined">
+                    thumb_up
+                </i>
+                10 Likes
+            </button>
+            <button mat-button class="text-body">
+                <i class="material-symbols-outlined">
+                    chat_bubble_outline
+                </i>
+                0 Comments
+            </button>
+            <button mat-button class="text-body">
+                <i class="material-symbols-outlined">
+                    share
+                </i>
+                0 Share
+            </button>
+        </div>
+        <div class="post-comment d-md-flex align-items-center">
+            <div class="img">
+                <img src="assets/images/profile.jpg" class="rounded-circle" alt="profile-image">
+            </div>
+            <form class="position-relative">
+                <mat-form-field>
+                    <mat-label>Type something....</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <button mat-button>
+                    <i class="material-symbols-outlined">
+                        send
+                    </i>
+                </button>
+            </form>
+            <div class="buttons-list d-flex align-items-center">
+                <button mat-button class="text-body">
+                    <i class="material-symbols-outlined">
+                        sentiment_satisfied
+                    </i>
+                </button>
+                <button mat-button class="text-body">
+                    <i class="material-symbols-outlined">
+                        attach_file
+                    </i>
+                </button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+<mat-card
+    class="daxa-card post-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-subtitle>
+            <button type="button" mat-button class="card-header-menu-btn p-0" [matMenuTriggerFor]="cardHeaderMenu">
+                <i class="material-symbols-outlined">
+                    more_horiz
+                </i>
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <button mat-menu-item>
+                    Save Post
+                </button>
+                <button mat-menu-item>
+                    Hide Post
+                </button>
+                <button mat-menu-item>
+                    Report Photo
+                </button>
+                <button mat-menu-item>
+                    Block Douglas
+                </button>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="user d-flex align-items-center">
+            <div class="img">
+                <img src="assets/images/users/user17.jpg" class="rounded-circle" alt="user-image">
+            </div>
+            <div class="title">
+                <span class="d-block fw-medium">
+                    Douglas Hairston
+                </span>
+                <span class="d-block text-body">
+                    1 hour ago
+                </span>
+            </div>
+        </div>
+        <p>
+            Pellentesque viverra lorem malesuada nunc tristique sapien. Imperdiet sit hendrerit tincidunt bibendum donec adipiscing. Tellus non morbi nascetur cursus etiam facilisis mi. Dolor aliquam sed amet aliquam venenatis. Ac viverra interdum tortor enim. Molestie tincidunt ut consequat a urna tortor. Vitae velit ac nisl velit mauris placerat nisi placerat.
+        </p>
+        <div class="post-info d-md-flex align-items-center">
+            <button mat-button class="text-body">
+                <i class="material-symbols-outlined">
+                    thumb_up
+                </i>
+                42 Likes
+            </button>
+            <button mat-button class="text-body">
+                <i class="material-symbols-outlined">
+                    chat_bubble_outline
+                </i>
+                2 Comments
+            </button>
+            <button mat-button class="text-body">
+                <i class="material-symbols-outlined">
+                    share
+                </i>
+                1 Share
+            </button>
+        </div>
+        <div class="post-comment d-md-flex align-items-center">
+            <div class="img">
+                <img src="assets/images/profile.jpg" class="rounded-circle" alt="profile-image">
+            </div>
+            <form class="position-relative">
+                <mat-form-field>
+                    <mat-label>Type something....</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <button mat-button>
+                    <i class="material-symbols-outlined">
+                        send
+                    </i>
+                </button>
+            </form>
+            <div class="buttons-list d-flex align-items-center">
+                <button mat-button class="text-body">
+                    <i class="material-symbols-outlined">
+                        sentiment_satisfied
+                    </i>
+                </button>
+                <button mat-button class="text-body">
+                    <i class="material-symbols-outlined">
+                        attach_file
+                    </i>
+                </button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,348 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.students-progress-card {
+            .mat-mdc-card-content {
+                margin: {
+                    left: -20px;
+                    right: -20px;
+                };
+                .students-progress-table {
+                    .mat-mdc-table {
+                        .mat-mdc-header-cell {
+                            padding: {
+                                top: 22px;
+                                bottom: 22px;
+                            };
+                            &:last-child {
+                                text-align: right;
+                            }
+                            &:first-child {
+                                padding-right: 0;
+                            }
+                        }
+                        .mat-mdc-cell {
+                            padding: {
+                                top: 25.7px;
+                                bottom: 25.7px;
+                            };
+                            &:last-child {
+                                text-align: right;
+                            }
+                            &:first-child {
+                                padding-right: 0;
+                            }
+                        }
+                        .percentage {
+                            margin-bottom: 4px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .students-progress-table {
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                &:last-child {
+                                    text-align: left;
+                                }
+                                &:first-child {
+                                    padding: {
+                                        right: 20px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                            .mat-mdc-cell {
+                                &:last-child {
+                                    text-align: left;
+                                }
+                                &:first-child {
+                                    padding: {
+                                        right: 20px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.students-progress-card {
+                .mat-mdc-card-content {
+                    .students-progress-table {
+                        .mat-mdc-paginator {
+                            padding: {
+                                top: 15px;
+                                left: 20px;
+                                right: 20px;
+                            };
+                        }
+                        .mat-mdc-progress-bar {
+                            --mdc-linear-progress-active-indicator-height: 5px;
+                            --mdc-linear-progress-track-height: 5px;
+                        }
+                        .mat-mdc-row, .mdc-data-table__content {
+                            &:nth-child(1) {
+                                .mat-mdc-progress-bar {
+                                    --mdc-linear-progress-active-indicator-color: var(--infoColor);
+                                }
+                            }
+                            &:nth-child(3) {
+                                .mat-mdc-progress-bar {
+                                    --mdc-linear-progress-active-indicator-color: var(--warningColor);
+                                }
+                            }
+                            &:nth-child(4) {
+                                .mat-mdc-progress-bar {
+                                    --mdc-linear-progress-active-indicator-color: var(--primaryColor);
+                                }
+                            }
+                            &:nth-child(5) {
+                                .mat-mdc-progress-bar {
+                                    --mdc-linear-progress-active-indicator-color: var(--successColor);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.students-progress-card {
+                .mat-mdc-card-content {
+                    margin: {
+                        left: -15px;
+                        right: -15px;
+                    };
+                    .students-progress-table {
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                padding: {
+                                    top: 15px;
+                                    bottom: 15px;
+                                };
+                            }
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 15px;
+                                    bottom: 15px;
+                                };
+                            }
+                            .percentage {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .students-progress-table {
+                            .mat-mdc-table {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 15px;
+                                        };
+                                    }
+                                }
+                                .mat-mdc-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 15px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.students-progress-card {
+                    .mat-mdc-card-content {
+                        .students-progress-table {
+                            .mat-mdc-paginator {
+                                padding: {
+                                    top: 10px;
+                                    left: 15px;
+                                    right: 15px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.students-progress-card {
+                .mat-mdc-card-content {
+                    margin: {
+                        left: -20px;
+                        right: -20px;
+                    };
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .students-progress-table {
+                            .mat-mdc-table {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                                .mat-mdc-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.students-progress-card {
+                    .mat-mdc-card-content {
+                        .students-progress-table {
+                            .mat-mdc-paginator {
+                                padding: {
+                                    left: 20px;
+                                    right: 20px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.students-progress-card {
+                .mat-mdc-card-content {
+                    .students-progress-table {
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                padding: {
+                                    top: 20px;
+                                    bottom: 20px;
+                                };
+                            }
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 20px;
+                                    bottom: 20px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.students-progress-card {
+                .mat-mdc-card-content {
+                    .students-progress-table {
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                padding: {
+                                    top: 18px;
+                                    bottom: 18px;
+                                };
+                            }
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 18px;
+                                    bottom: 18px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.students-progress-card {
+                .mat-mdc-card-content {
+                    .students-progress-table {
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                padding: {
+                                    top: 18px;
+                                    bottom: 18px;
+                                };
+                            }
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 18px;
+                                    bottom: 18px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

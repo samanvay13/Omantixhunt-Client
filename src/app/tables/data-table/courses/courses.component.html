@@ -1,0 +1,32 @@
+<mat-card
+    class="daxa-card courses-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Courses
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <mat-tab-group animationDuration="0ms">
+            <mat-tab label="All Courses">
+                <app-all-courses></app-all-courses>
+            </mat-tab>
+            <mat-tab label="Paid">
+                <app-paid-courses></app-paid-courses>
+            </mat-tab>
+            <mat-tab label="Free">
+                <app-free-courses></app-free-courses>
+            </mat-tab>
+            <mat-tab label="Top Rated">
+                <app-top-rated-courses></app-top-rated-courses>
+            </mat-tab>
+            <mat-tab label="Best Seller">
+                <app-best-seller-courses></app-best-seller-courses>
+            </mat-tab>
+        </mat-tab-group>
+    </mat-card-content>
+</mat-card>

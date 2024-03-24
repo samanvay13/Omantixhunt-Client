@@ -1,0 +1,175 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Categories
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Categories
+        </li>
+    </ol>
+</div>
+
+<!-- Categories List -->
+<mat-card
+    class="daxa-card categories-card mb-25 border-radius bg-white border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <form class="search-box position-relative">
+                <i class="material-symbols-outlined">
+                    search
+                </i>
+                <input type="text" class="input-search d-block w-100 border-none outline-0" placeholder="Search category..." (keyup)="applyFilter($event)" #input>
+            </form>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <a mat-button class="add-new-btn" routerLink="/ecommerce-page/create-category">
+                + Add New Category
+            </a>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="categories-table">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Checkbox Column -->
+                    <ng-container matColumnDef="select">
+                        <th mat-header-cell *matHeaderCellDef>
+                            <mat-checkbox
+                                (change)="$event ? toggleAllRows() : null"
+                                [checked]="selection.hasValue() && isAllSelected()"
+                                [indeterminate]="selection.hasValue() && !isAllSelected()"
+                                [aria-label]="checkboxLabel()"
+                            >
+                            </mat-checkbox>
+                        </th>
+                        <td mat-cell *matCellDef="let row">
+                            <mat-checkbox
+                                (click)="$event.stopPropagation()"
+                                (change)="$event ? selection.toggle(row) : null"
+                                [checked]="selection.isSelected(row)"
+                                [aria-label]="checkboxLabel(row)"
+                            >
+                            </mat-checkbox>
+                        </td>
+                    </ng-container>
+
+                    <!-- Image Column -->
+                    <ng-container matColumnDef="image">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Image
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="info">
+                                <img [src]="element.image" alt="category-image">
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Name Column -->
+                    <ng-container matColumnDef="name">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Name
+                        </th>
+                        <td mat-cell *matCellDef="let element" class="text-black fw-medium">
+                            {{element.name}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Total Products Column -->
+                    <ng-container matColumnDef="totalProducts">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Total Products
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.totalProducts}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Slug Column -->
+                    <ng-container matColumnDef="slug">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Slug
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.slug}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Description Column -->
+                    <ng-container matColumnDef="description">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Description
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            {{element.description}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Status Column -->
+                    <ng-container matColumnDef="status">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Status
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <span class="daxa-badge active d-inline-block" *ngIf="element.status.active">
+                                {{element.status.active}}
+                            </span>
+                            <span class="daxa-badge deactive d-inline-block" *ngIf="element.status.deactive">
+                                {{element.status.deactive}}
+                            </span>
+                        </td>
+                    </ng-container>
+
+                    <!-- Action Column -->
+                    <ng-container matColumnDef="action">
+                        <th mat-header-cell *matHeaderCellDef>
+                            Action
+                        </th>
+                        <td mat-cell *matCellDef="let element">
+                            <div class="action-info">
+                                <!-- <button type="button" mat-button matTooltip="View Category" matTooltipPosition="above">
+                                    <i class="material-symbols-outlined">
+                                        {{element.action.view}}
+                                    </i>
+                                </button> -->
+                                <a mat-button routerLink="/ecommerce-page/edit-category" matTooltip="Edit Category" matTooltipPosition="above">
+                                    <i class="material-symbols-outlined">
+                                        {{element.action.edit}}
+                                    </i>
+                                </a>
+                                <button type="button" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                    <i class="material-symbols-outlined">
+                                        {{element.action.delete}}
+                                    </i>
+                                </button>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    
+                    <!-- Row shown when there is no matching data. -->
+                    <tr class="mat-row" *matNoDataRow>
+                        <td class="mat-cell" colspan="4">No data matching the filter "{{input.value}}"</td>
+                    </tr>
+
+                </table>
+            </div>
+            <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>

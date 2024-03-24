@@ -1,0 +1,353 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.users-card {
+            .mat-mdc-card-content {
+                .users-table {
+                    margin: {
+                        left: -20px;
+                        right: -20px;
+                    };
+                    table {
+                        width: 100%;
+                        border-spacing: 0;
+
+                        thead {
+                            tr {
+                                th {
+                                    background-color: #e7effd;
+                                    white-space: nowrap;
+                                    padding: 17px 20px;
+                                    text-align: left;
+                                    
+                                    &:first-child {
+                                        padding-right: 0;
+                                    }
+                                    &:last-child {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    border-bottom: 1px dashed #e0e0e0;
+                                    white-space: nowrap;
+                                    padding: 18px 20px;
+
+                                    .info {
+                                        .image {
+                                            width: 35px;
+                                            line-height: .01;
+                                            margin-right: 12px;
+            
+                                            img {
+                                                border-radius: 50%;
+                                            }
+                                        }
+                                    }
+                                    .daxa-badge {
+                                        padding: 3px 11px;
+                                        border-radius: 3px;
+                                        color: var(--successColor);
+                                        background: rgba(46, 212, 126, 0.10);
+            
+                                        &.deactive {
+                                            color: var(--dangerColor);
+                                            background: rgba(231, 76, 60, 0.10);
+                                        }
+                                    }
+                                    &:first-child {
+                                        padding-right: 0;
+                                    }
+                                    &:last-child {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .users-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        background-color: #131920;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        border-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .users-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        text-align: right;
+                                        
+                                        &:first-child {
+                                            padding: {
+                                                right: 20px;
+                                                left: 0;
+                                            };
+                                        }
+                                        &:last-child {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        .info {
+                                            .image {
+                                                margin: {
+                                                    right: 0;
+                                                    left: 12px;
+                                                };
+                                            }
+                                        }
+                                        &:first-child {
+                                            padding: {
+                                                right: 20px;
+                                                left: 0;
+                                            };
+                                        }
+                                        &:last-child {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.users-card {
+                .mat-mdc-card-content {
+                    .users-table {
+                        table {
+                            tbody {
+                                tr {
+                                    td {
+                                        .action-info {
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: end;
+                        
+                                            .mat-mdc-button {
+                                                padding: 0;
+                                                width: auto;
+                                                height: auto;
+                                                line-height: 1;
+                                                min-width: auto;
+                                                border-radius: 0;
+                        
+                                                .mdc-button__label {
+                                                    i {
+                                                        font-size: 16px;
+                                                    }
+                                                }
+                                                &:not(:first-child) {
+                                                    margin-left: 12px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .users-table {
+                            table {
+                                tbody {
+                                    tr {
+                                        td {
+                                            .action-info {
+                                                .mat-mdc-button {
+                                                    &:not(:first-child) {
+                                                        margin: {
+                                                            left: 0;
+                                                            right: 12px;
+                                                        };
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.users-card {
+                .mat-mdc-card-content {
+                    .users-table {
+                        margin: {
+                            left: -15px;
+                            right: -15px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .users-table {
+                            table {
+                                thead {
+                                    tr {
+                                        th {
+                                            &:first-child {
+                                                padding-right: 15px;
+                                            }
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            &:first-child {
+                                                padding-right: 15px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.users-card {
+                .mat-mdc-card-content {
+                    .users-table {
+                        margin: {
+                            left: -20px;
+                            right: -20px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .users-table {
+                            table {
+                                thead {
+                                    tr {
+                                        th {
+                                            &:first-child {
+                                                padding-right: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                                tbody {
+                                    tr {
+                                        td {
+                                            &:first-child {
+                                                padding-right: 20px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

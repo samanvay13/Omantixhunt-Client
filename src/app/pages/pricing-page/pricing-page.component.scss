@@ -1,0 +1,209 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.pricing-card {
+            .mat-mdc-card-header {
+                padding: 20px;
+                margin-bottom: 25px;
+                background: linear-gradient(180deg, #5C4EDB 0%, #796DF6 100%) !important;
+
+                h5 {
+                    color: var(--whiteColor);
+                }
+                span {
+                    color: var(--whiteColor);
+                    margin-top: 7px;
+                }
+            }
+            .mat-mdc-card-content {
+                padding: {
+                    left: 20px;
+                    right: 20px;
+                    bottom: 20px;
+                };
+                .price {
+                    margin-bottom: 25px;
+                    font-size: 26px;
+
+                    span {
+                        font-size: 14px;
+                    }
+                }
+                .features-list {
+                    padding: 0;
+                    
+                    li {
+                        margin-bottom: 17px;
+                        padding-right: 22px;
+
+                        i {
+                            right: 0;
+                            top: 50%;
+                            font-size: 20px;
+                            position: absolute;
+                            transform: translateY(-50%);
+                        }
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .mat-mdc-button {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    min-width: auto;
+                    min-height: auto;
+                    margin-top: 25px;
+                    border-radius: 5px;
+                    text-align: center;
+                    padding: 12px 40px;
+                    font-weight: normal;
+                    color: var(--blackColor);
+                    border: 1px solid #c2cada;
+                    transition: var(--transition);
+
+                    &:hover {
+                        color: var(--whiteColor);
+                        border-color: var(--daxaColor);
+                        background-color: var(--daxaColor);
+                    }
+                }
+            }
+        }
+    }
+}
+.component-dark-theme {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.pricing-card {
+                .mat-mdc-card-content {
+                    .mat-mdc-button {
+                        color: var(--whiteColor);
+                        border-color: rgba(255, 255, 255, 0.09);
+    
+                        &:hover {
+                            border-color: var(--daxaColor);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.pricing-card {
+                .mat-mdc-card-header {
+                    padding: 15px;
+                    margin-bottom: 15px;
+    
+                    span {
+                        margin-top: 6px;
+                    }
+                }
+                .mat-mdc-card-content {
+                    padding: {
+                        left: 15px;
+                        right: 15px;
+                        bottom: 15px;
+                    };
+                    .price {
+                        margin-bottom: 15px;
+                        font-size: 22px;
+                    }
+                    .features-list {
+                        li {
+                            padding-right: 17px;
+                            margin-bottom: 12px;
+    
+                            i {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+                    .mat-mdc-button {
+                        margin-top: 15px;
+                        padding: 12px 30px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.pricing-card {
+                .mat-mdc-card-header {
+                    padding: 20px;
+                    margin-bottom: 20px;
+                }
+                .mat-mdc-card-content {
+                    padding: {
+                        left: 20px;
+                        right: 20px;
+                        bottom: 20px;
+                    };
+                    .price {
+                        margin-bottom: 20px;
+                    }
+                    .mat-mdc-button {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.pricing-card {
+                .mat-mdc-card-header {
+                    margin-bottom: 20px;
+                }
+                .mat-mdc-card-content {
+                    .price {
+                        margin-bottom: 20px;
+                        font-size: 24px;
+                    }
+                    .features-list {
+                        li {
+                            margin-bottom: 15px;
+                            padding-right: 20px;
+    
+                            i {
+                                font-size: 18px;
+                            }
+                        }
+                    }
+                    .mat-mdc-button {
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

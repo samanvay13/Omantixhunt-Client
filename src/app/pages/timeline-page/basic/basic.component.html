@@ -1,0 +1,68 @@
+<mat-card
+    class="daxa-card basic-timeline-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Basic Timeline
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <ul class="timeline pl-0 mb-0 mt-0 list-unstyled">
+            <li class="position-relative">
+                <h5>
+                    Eat
+                </h5>
+                <span class="time d-block text-body">
+                    11:47 PM Wednesday
+                </span>
+                <p class="text-black">
+                    Invoices have been paid to the company.
+                </p>
+            </li>
+            <li class="position-relative">
+                <h5>
+                    Code
+                </h5>
+                <span class="time d-block text-body">
+                    12:21 PM Wednesday
+                </span>
+                <p class="text-black">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+            </li>
+            <li class="position-relative">
+                <h5>
+                    Sleep
+                </h5>
+                <span class="time d-block text-body">
+                    12:59 PM Wednesday
+                </span>
+                <p class="text-black">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+            </li>
+            <li class="position-relative">
+                <h5>
+                    Repeat
+                </h5>
+                <span class="time d-block text-body">
+                    11:47 PM Wednesday
+                </span>
+                <div class="users d-flex align-items-center">
+                    <img src="assets/images/users/user12.jpg" alt="user-image">
+                    <img src="assets/images/users/user13.jpg" alt="user-image">
+                    <img src="assets/images/users/user14.jpg" alt="user-image">
+                    <img src="assets/images/users/user15.jpg" alt="user-image">
+                    <img src="assets/images/users/user16.jpg" alt="user-image">
+                    <div class="fw-medium bg-daxa text-white rounded-circle">
+                        27
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </mat-card-content>
+</mat-card>

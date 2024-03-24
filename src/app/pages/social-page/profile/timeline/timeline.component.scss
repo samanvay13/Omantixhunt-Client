@@ -1,0 +1,662 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.post-card {
+            .mat-mdc-card-header {
+                margin-bottom: 0;
+            }
+            .mat-mdc-card-content {
+                .user {
+                    border-bottom: 1px solid #dae0ec;
+                    padding-bottom: 20px;
+                    margin-bottom: 20px;
+
+                    .img {
+                        img {
+                            width: 50px;
+                            margin-bottom: -4px;
+                        }
+                    }
+                    .title {
+                        margin-left: 12px;
+                        
+                        span {
+                            &:not(:first-child) {
+                                margin-top: 5px;
+                                font-size: 14.5px;
+                            }
+                        }
+                    }
+                }
+                .post-info {
+                    border: {
+                        top: 1px solid #f4f6fc;
+                        bottom: 1px solid #f4f6fc;
+                    };
+                    padding: {
+                        top: 15px;
+                        bottom: 15px;
+                    };
+                    .mat-mdc-button {
+                        padding: 0;
+                        height: auto;
+                        min-width: auto;
+                        margin-right: 30px;
+                        font-size: 15px !important;
+
+                        i {
+                            left: 0;
+                            top: 50%;
+                            font-size: 18px;
+                            position: absolute;
+                            transform: translateY(-50%);
+                        }
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+                .post-comment {
+                    margin-top: 20px;
+
+                    .img {
+                        margin-right: 20px;
+
+                        img {
+                            margin-bottom: -4px;
+                            width: 55px;
+                        }
+                    }
+                    .buttons-list {
+                        top: 2px;
+                        margin-left: 20px;
+                        position: relative;
+                    }
+                    form {
+                        flex: 1 1 auto;
+                        padding-right: 70px;
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .user {
+                        border-color: rgba(255, 255, 255, 0.09);
+                    }
+                    .post-info {
+                        border-color: rgba(255, 255, 255, 0.09);
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .user {
+                        .title {
+                            margin: {
+                                left: 0;
+                                right: 12px;
+                            };
+                        }
+                    }
+                    .post-info {
+                        .mat-mdc-button {
+                            margin: {
+                                right: 0;
+                                left: 30px;
+                            };
+                            &:last-child {
+                                margin-left: 0;
+                            }
+                            i {
+                                left: auto;
+                                right: 0;
+                            }
+                        }
+                    }
+                    .post-comment {
+                        .img {
+                            margin: {
+                                right: 0;
+                                left: 20px;
+                            };
+                        }
+                        .buttons-list {
+                            margin: {
+                                left: 0;
+                                right: 20px;
+                            };
+                        }
+                        form {
+                            padding: {
+                                right: 0;
+                                left: 70px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.publish-post-card {
+                .mat-mdc-card-content {
+                    .mat-mdc-tab-group {
+                        display: block;
+                        --mat-tab-header-inactive-label-text-color: var(--bodyColor);
+
+                        .mat-mdc-tab-header {
+                            display: block;
+                            margin-bottom: 20px;
+
+                            .mat-mdc-tab-header-pagination {
+                                display: none;
+                            }
+                            .mat-mdc-tab-label-container {
+                                display: block;
+
+                                .mat-mdc-tab-list {
+                                    .mat-mdc-tab-labels {
+                                        display: block;
+                                        position: relative;
+
+                                        &::before {
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            height: 1px;
+                                            content: '';
+                                            position: absolute;
+                                            background: #dae0ec;
+                                        }
+                                        .mat-mdc-tab {
+                                            height: auto;
+                                            min-width: auto;
+                                            padding: 0 0 12px;
+                                            margin-right: 35px;
+                                            display: inline-block;
+
+                                            &:last-child {
+                                                margin-right: 0;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .mat-mdc-tab-body-wrapper {
+                            display: block;
+
+                            .mat-mdc-tab-body {
+                                overflow: hidden;
+
+                                .mat-mdc-tab-body-content {
+                                    overflow: hidden;
+                                    height: auto;
+
+                                    .btn-box {
+                                        margin-top: 20px;
+                
+                                        .mat-mdc-button {
+                                            &.btn {
+                                                border: 0;
+                                                height: auto;
+                                                min-width: auto;
+                                                min-height: auto;
+                                                padding: 13px 40px;
+                                                font-weight: normal;
+                                                color: var(--whiteColor);
+                                                background-color: var(--daxaColor);
+                                            }
+                                        }
+                                        .buttons-list {
+                                            top: 2px;
+                                            margin-left: 20px;
+                                            position: relative;
+                
+                                            .mat-mdc-button {
+                                                padding: 0;
+                                                height: auto;
+                                                min-width: auto;
+                                                margin-left: 12px;
+                                                display: inline-block;
+                                                transition: var(--transition);
+                    
+                                                i {
+                                                    font-size: 20px;
+                                                }
+                                                &:hover {
+                                                    color: var(--daxaColor);
+                                                }
+                                                &:first-child {
+                                                    margin-left: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.component-dark-theme {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            --mat-tab-header-inactive-label-text-color: rgba(255, 255, 255, .50);
+    
+                            .mat-mdc-tab-header {
+                                .mat-mdc-tab-label-container {
+                                    .mat-mdc-tab-list {
+                                        .mat-mdc-tab-labels {
+                                            &::before {
+                                                background: rgba(255, 255, 255, 0.09);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            .mat-mdc-tab-header {
+                                .mat-mdc-tab-label-container {
+                                    .mat-mdc-tab-list {
+                                        .mat-mdc-tab-labels {
+                                            .mat-mdc-tab {
+                                                margin: {
+                                                    right: 0;
+                                                    left: 15px;
+                                                };
+                                                &:last-child {
+                                                    margin-left: 0;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                .mat-mdc-tab-body {
+                                    .mat-mdc-tab-body-content {
+                                        .btn-box {
+                                            .buttons-list {
+                                                margin: {
+                                                    left: 0;
+                                                    right: 20px;
+                                                };
+                                                .mat-mdc-button {
+                                                    margin: {
+                                                        left: 0;
+                                                        right: 12px;
+                                                    };
+                                                    &:first-child {
+                                                        margin-right: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.post-card {
+                .mat-mdc-card-header {
+                    .mat-mdc-card-header-text {
+                        .mat-mdc-card-subtitle {
+                            display: block;
+
+                            .mat-mdc-button {
+                                &.card-header-menu-btn {
+                                    top: 35px;
+                                    right: 20px;
+                                    position: absolute;
+        
+                                    &::after {
+                                        display: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .post-info {
+                    .mat-mdc-button {
+                        .mdc-button__label {
+                            padding-left: 25px;
+                            display: block;
+                        }
+                    }
+                }
+                .post-comment {
+                    .buttons-list {
+                        .mat-mdc-button {
+                            padding: 0;
+                            height: auto;
+                            min-width: auto;
+                            margin-left: 12px;
+                            display: inline-block;
+                            transition: var(--transition);
+
+                            i {
+                                font-size: 20px;
+                            }
+                            &:hover {
+                                color: var(--daxaColor);
+                            }
+                            &:first-child {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                    form {
+                        .mat-mdc-button {
+                            right: 0;
+                            top: 50%;
+                            padding: 0;
+                            width: 55px;
+                            min-width: auto;
+                            border-radius: 3px;
+                            position: absolute;
+                            display: inline-block;
+                            height: 55px !important;
+                            color: var(--whiteColor);
+                            transform: translateY(-50%);
+                            background-color: var(--daxaColor);
+
+                            .mdc-button__label {
+                                left: 0;
+                                right: 0;
+                                top: 50%;
+                                margin-top: 2px;
+                                position: absolute;
+                                transform: translateY(-50%);
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            .mat-mdc-card-subtitle {
+                                .mat-mdc-button {
+                                    &.card-header-menu-btn {
+                                        right: auto;
+                                        left: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .post-info {
+                        .mat-mdc-button {
+                            .mdc-button__label {
+                                padding: {
+                                    left: 0;
+                                    right: 25px;
+                                };
+                            }
+                        }
+                    }
+                    .post-comment {
+                        .buttons-list {
+                            .mat-mdc-button {
+                                margin: {
+                                    left: 0;
+                                    right: 12px;
+                                };
+                                &:first-child {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                        form {
+                            .mat-mdc-button {
+                                right: auto;
+                                left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.post-card {
+                .mat-mdc-card-content {
+                    .user {
+                        padding-bottom: 15px;
+                        margin-bottom: 15px;
+    
+                        .title {
+                            span {
+                                &:not(:first-child) {
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                    .post-info {
+                        padding: {
+                            top: 15px;
+                            bottom: 0;
+                        };
+                        .mat-mdc-button {
+                            font-size: 14px !important;
+                            margin: {
+                                right: 15px;
+                                bottom: 15px;
+                            };
+                        }
+                    }
+                    .post-comment {
+                        margin-top: 15px;
+    
+                        .img {
+                            margin-right: 0;
+                        }
+                        .buttons-list {
+                            top: 0;
+                            margin-left: 0;
+                        }
+                        form {
+                            padding-right: 0;
+                            margin: {
+                                top: 15px;
+                                bottom: 15px;
+                            };
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .post-comment {
+                            .img {
+                                margin-left: 0;
+                            }
+                            .buttons-list {
+                                margin-right: 0;
+                            }
+                            form {
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.publish-post-card {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            .mat-mdc-tab-header {
+                                margin-bottom: 15px;
+    
+                                .mat-mdc-tab-label-container {
+                                    .mat-mdc-tab-list {
+                                        .mat-mdc-tab-labels {
+                                            .mat-mdc-tab {
+                                                padding: 0 0 8px;
+                                                margin-right: 22px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                .mat-mdc-tab-body {
+                                    .mat-mdc-tab-body-content {
+                                        .btn-box {
+                                            margin-top: 15px;
+                    
+                                            .mat-mdc-button {
+                                                &.btn {
+                                                    padding: 13px 30px;
+                                                }
+                                            }
+                                            .buttons-list {
+                                                margin: {
+                                                    left: 0;
+                                                    top: 15px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.rtl-enabled {
+                        .mat-mdc-card-content {
+                            .mat-mdc-tab-group {
+                                .mat-mdc-tab-header {
+                                    .mat-mdc-tab-label-container {
+                                        .mat-mdc-tab-list {
+                                            .mat-mdc-tab-labels {
+                                                .mat-mdc-tab {
+                                                    margin: {
+                                                        right: 0;
+                                                        left: 22px;
+                                                    };
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .mat-mdc-tab-body-wrapper {
+                                    .mat-mdc-tab-body {
+                                        .mat-mdc-tab-body-content {
+                                            .btn-box {
+                                                .buttons-list {
+                                                    margin: {
+                                                        right: 0;
+                                                    };
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.post-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            .mat-mdc-card-subtitle {
+                                .mat-mdc-button {
+                                    &.card-header-menu-btn {
+                                        top: 30px;
+                                        right: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.rtl-enabled {
+                        .mat-mdc-card-header {
+                            .mat-mdc-card-header-text {
+                                .mat-mdc-card-subtitle {
+                                    .mat-mdc-button {
+                                        &.card-header-menu-btn {
+                                            right: auto;
+                                            left: 15px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.post-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            .mat-mdc-card-subtitle {
+                                .mat-mdc-button {
+                                    &.card-header-menu-btn {
+                                        top: 35px;
+                                        right: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.rtl-enabled {
+                        .mat-mdc-card-header {
+                            .mat-mdc-card-header-text {
+                                .mat-mdc-card-subtitle {
+                                    .mat-mdc-button {
+                                        &.card-header-menu-btn {
+                                            right: auto;
+                                            left: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

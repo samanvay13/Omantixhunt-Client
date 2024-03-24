@@ -1,0 +1,512 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.products-list-card {
+            .mat-mdc-card-header {
+                .search-box {
+                    width: 300px;
+                }
+                .info {
+                    margin-left: 25px;
+
+                    li {
+                        margin-right: 20px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .mat-mdc-card-content {
+                margin: {
+                    left: -20px;
+                    right: -20px;
+                };
+                .products-list-table {
+                    .mat-mdc-table {
+                        .mat-mdc-header-cell {
+                            &:last-child {
+                                text-align: right;
+                            }
+                            &:first-child {
+                                padding-right: 0;
+                            }
+                        }
+                        .mat-mdc-cell {
+                            &:last-child {
+                                text-align: right;
+                            }
+                            &:first-child {
+                                padding-right: 0;
+                            }
+                        }
+                        .info {
+                            .image {
+                                width: 50px;
+                                line-height: .01;
+                                margin-right: 12px;
+
+                                img {
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-header {
+                    .info {
+                        margin: {
+                            left: 0;
+                            right: 25px;
+                        };
+                        li {
+                            margin: {
+                                left: 20px;
+                                right: 0;
+                            };
+                            &:last-child {
+                                margin-left: 0;
+                            }
+                        }
+                    }
+                }
+                .mat-mdc-card-content {
+                    .products-list-table {
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                &:last-child {
+                                    text-align: left;
+                                }
+                                &:first-child {
+                                    padding: {
+                                        right: 20px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                            .mat-mdc-cell {
+                                &:last-child {
+                                    text-align: left;
+                                }
+                                &:first-child {
+                                    padding: {
+                                        right: 20px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                            .info {
+                                .image {
+                                    margin: {
+                                        right: 0;
+                                        left: 12px;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.products-list-card {
+                .mat-mdc-card-header {
+                    .mat-mdc-card-header-text {
+                        .mat-mdc-card-title {
+                            display: flex;
+                            align-items: center;
+                        }
+                    }
+                }
+                .mat-mdc-card-content {
+                    .products-list-table {
+                        .mat-mdc-paginator {
+                            padding: {
+                                top: 15px;
+                                left: 20px;
+                                right: 20px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.products-list-card {
+                .mat-mdc-card-header {
+                    .info {
+                        margin-left: 0;
+    
+                        li {
+                            margin: {
+                                right: 15px;
+                                top: 12px;
+                            };
+                        }
+                    }
+                    .mat-mdc-button {
+                        &.add-new-btn {
+                            margin-top: 12px;
+                        }
+                    }
+                }
+                .mat-mdc-card-content {
+                    margin: {
+                        left: -15px;
+                        right: -15px;
+                    };
+                    .products-list-table {
+                        .mat-mdc-table {
+                            .info {
+                                .image {
+                                    width: 40px;
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-header {
+                        .info {
+                            margin-right: 0;
+        
+                            li {
+                                margin: {
+                                    right: 0;
+                                    left: 15px;
+                                };
+                            }
+                        }
+                    }
+                    .mat-mdc-card-content {
+                        .products-list-table {
+                            .mat-mdc-table {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 15px;
+                                        };
+                                    }
+                                }
+                                .mat-mdc-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 15px;
+                                        };
+                                    }
+                                }
+                                .info {
+                                    .image {
+                                        margin: {
+                                            right: 0;
+                                            left: 8px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.products-list-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            display: block;
+                            
+                            .mat-mdc-card-title {
+                                display: block;
+                            }
+                        }
+                    }
+                    .mat-mdc-card-content {
+                        .products-list-table {
+                            .mat-mdc-paginator {
+                                padding: {
+                                    top: 10px;
+                                    left: 15px;
+                                    right: 15px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.products-list-card {
+                .mat-mdc-card-content {
+                    margin: {
+                        left: -20px;
+                        right: -20px;
+                    };
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .products-list-table {
+                            .mat-mdc-table {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                                .mat-mdc-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.products-list-card {
+                    .mat-mdc-card-content {
+                        .products-list-table {
+                            .mat-mdc-paginator {
+                                padding: {
+                                    left: 20px;
+                                    right: 20px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.products-list-card {
+                .mat-mdc-card-header {
+                    .search-box {
+                        width: 100%;
+                    }
+                    .info {
+                        margin-left: 0;
+    
+                        li {
+                            margin: {
+                                right: 15px;
+                                top: 12px;
+                            };
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-header {
+                        .info {
+                            margin-right: 0;
+        
+                            li {
+                                margin: {
+                                    right: 0;
+                                    left: 15px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.products-list-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            .mat-mdc-card-title {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.products-list-card {
+                .mat-mdc-card-header {
+                    .search-box {
+                        width: 100%;
+                    }
+                    .info {
+                        margin-left: 0;
+    
+                        li {
+                            margin: {
+                                right: 15px;
+                                top: 12px;
+                            };
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-header {
+                        .info {
+                            margin-right: 0;
+        
+                            li {
+                                margin: {
+                                    left: 15px;
+                                    right: 0;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.products-list-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            .mat-mdc-card-title {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.products-list-card {
+                .mat-mdc-card-header {
+                    .search-box {
+                        width: 100%;
+                    }
+                    .info {
+                        margin-left: 0;
+    
+                        li {
+                            margin: {
+                                right: 15px;
+                                top: 12px;
+                            };
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-header {
+                        .info {
+                            margin-right: 0;
+        
+                            li {
+                                margin: {
+                                    left: 15px;
+                                    right: 0;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.products-list-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            .mat-mdc-card-title {
+                                display: block;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.products-list-card {
+                .mat-mdc-card-header {
+                    .search-box {
+                        width: 340px;
+                    }
+                    .info {
+                        margin-left: 50px;
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-header {
+                        .info {
+                            margin: {
+                                left: 0;
+                                right: 50px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

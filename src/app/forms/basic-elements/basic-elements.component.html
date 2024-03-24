@@ -1,0 +1,125 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Forms Layout
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Forms
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Forms Layout
+        </li>
+    </ol>
+</div>
+
+<!-- Textual Inputs -->
+<mat-card class="daxa-card mb-25 border-radius bg-white border-none d-block">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Textual Inputs
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <mat-form-field class="mb-25">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="Ex. Mateo">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="mb-25">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Ex. Luca">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="mb-25">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput placeholder="Ex. hello@daxa.com">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="mb-25">
+                        <mat-label>Phone</mat-label>
+                        <input matInput placeholder="Ex. +098765432">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="mb-25">
+                        <mat-label>Address</mat-label>
+                        <input matInput placeholder="Ex. Amsterdam">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-6">
+                    <mat-form-field class="mb-25">
+                        <mat-label>Country</mat-label>
+                        <input matInput placeholder="Ex. Netherlands">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field class="mb-25">
+                        <mat-label>Town/City</mat-label>
+                        <mat-select>
+                            <mat-option value="volvo">New York</mat-option>
+                            <mat-option value="saab">Amsterdam</mat-option>
+                            <mat-option value="mercedes">Nalchity</mat-option>
+                            <mat-option value="audi">Beijing</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field class="mb-25">
+                        <mat-label>State</mat-label>
+                        <mat-select>
+                            <mat-option value="volvo">Washington</mat-option>
+                            <mat-option value="saab">Utah</mat-option>
+                            <mat-option value="mercedes">Nebraska</mat-option>
+                            <mat-option value="audi">Florida</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-4">
+                    <mat-form-field class="mb-25">
+                        <mat-label>Zip Code</mat-label>
+                        <input matInput placeholder="Ex. 0986">
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-12">
+                    <mat-form-field class="textarea">
+                        <mat-label>Description</mat-label>
+                        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+                    </mat-form-field>
+                </div>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>
+
+<!-- Basic Form -->
+<div class="row">
+    <div class="col-md-6">
+        <mat-card class="daxa-card mb-25 border-radius bg-white border-none d-block">
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mt-0 mb-0">
+                        Basic Form
+                    </h5>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <app-basic-form></app-basic-form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

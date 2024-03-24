@@ -1,0 +1,31 @@
+<div class="logout-area">
+    <div class="d-table">
+        <div class="d-table-cell">
+            <div
+                class="daxa-form ml-auto mr-auto border-radius bg-white"
+                [class.card-borderd-theme]="themeService.isCardBorder()"
+                [class.component-dark-theme]="themeService.isDark()"
+            >
+                <div class="title text-center">
+                    <h3>
+                        Welcome To Daxa
+                    </h3>
+                    <p class="ml-auto mr-auto">
+                        Thank you for using Daxa admin template.
+                    </p>
+                </div>
+                <div class="admin text-center">
+                    <div class="logo position-relative rounded-circle">
+                        <img src="assets/images/logo.svg" alt="logo">
+                    </div>
+                    <span class="d-block fw-medium">
+                        You Are Logged out
+                    </span>
+                </div>
+                <a routerLink="/authentication" mat-button class="btn">
+                    Sign In
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

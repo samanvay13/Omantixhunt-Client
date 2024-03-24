@@ -1,0 +1,34 @@
+.star-rating {
+    font-size: 20px;
+    line-height: 1;
+
+    .star {
+        color: var(--warningColor);
+        margin-right: 3px;
+        cursor: pointer;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &.rtl-enabled {
+        .star {
+            margin: {
+                right: 0;
+                left: 3px;
+            };
+            &:last-child {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .star-rating {
+        font-size: 16px;
+    }
+
+}

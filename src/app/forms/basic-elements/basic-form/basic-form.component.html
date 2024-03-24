@@ -1,0 +1,56 @@
+<div
+    class="basic-form"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <form>
+        <div class="form-group">
+            <label class="main-label d-block mb-13 lh-1 text-black">
+                Name
+            </label>
+            <mat-form-field>
+                <mat-label>
+                    Enter name
+                </mat-label>
+                <input matInput type="email">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label class="main-label d-block mb-13 lh-1 text-black">
+                Email Address
+            </label>
+            <mat-form-field>
+                <mat-label>
+                    Enter email address
+                </mat-label>
+                <input matInput type="email">
+            </mat-form-field>
+        </div>
+        <div class="form-group">
+            <label class="main-label d-block mb-13 lh-1 text-black">
+                Password
+            </label>
+            <mat-form-field>
+                <mat-label>
+                    Enter your password
+                </mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'" id="password" formControlName="password">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                    <span class="material-symbols-outlined">
+                        {{hide ? 'visibility_off' : 'visibility'}}
+                    </span>
+                </button>
+            </mat-form-field>
+        </div>
+        <div class="info d-flex justify-content-between align-items-center">
+            <mat-checkbox>
+                Remember me
+            </mat-checkbox>
+            <a routerLink="/authentication/forgot-password" class="d-inline-block text-daxa">
+                Forgot Password?
+            </a>
+        </div>
+        <button mat-button class="btn" type="submit">
+            Sign In
+        </button>
+    </form>
+</div>

@@ -1,0 +1,159 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Seller Details
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Sellers
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Seller Details
+        </li>
+    </ol>
+</div>
+
+<!-- Seller Overview -->
+<mat-card class="daxa-card seller-overview-card mb-25 pb-0 border-radius bg-white border-none d-block">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Seller Overview
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row">
+            <div class="col-sm-6 col-xxl-3">
+
+                <!-- Total Orders -->
+                <app-total-orders></app-total-orders>
+
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+
+                <!-- Total Earnings -->
+                <app-total-earnings></app-total-earnings>
+
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+
+                <!-- Total Refunds -->
+                <app-total-refunds></app-total-refunds>
+
+            </div>
+            <div class="col-sm-6 col-xxl-3">
+
+                <!-- Conversion Rate -->
+                <app-conversion-rate></app-conversion-rate>
+
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
+
+<!-- Profile, Revenue, & Products -->
+<div class="row">
+    <div class="col-lg-3">
+        <mat-card
+            class="daxa-card seller-card mb-25 border-radius bg-white border-none d-block"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-header>
+                <mat-card-subtitle>
+                    <button type="button" mat-button class="card-header-menu-btn p-0" [matMenuTriggerFor]="cardHeaderMenu">
+                        <i class="material-symbols-outlined">
+                            more_horiz
+                        </i>
+                    </button>
+                    <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                        <button mat-menu-item>
+                            View
+                        </button>
+                        <button mat-menu-item>
+                            Edit
+                        </button>
+                        <button mat-menu-item>
+                            Delete
+                        </button>
+                    </mat-menu>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="d-flex align-items-center">
+                    <div class="icon position-relative text-center rounded-circle">
+                        <img src="assets/images/sellers/seller1.png" alt="seller-image">
+                    </div>
+                    <h5 class="mb-0 mt-0">
+                        Milton Jones
+                    </h5>
+                </div>
+                <ul class="pl-0 mb-0 list-unstyled">
+                    <li>
+                        <span class="text-body">
+                            Email:
+                        </span> 
+                        hello&#64;daxa.com
+                    </li>
+                    <li>
+                        <span class="text-body">
+                            Contact No:
+                        </span> 
+                        +(800) 555‑0199
+                    </li>
+                    <li>
+                        <span class="text-body">
+                            Location:
+                        </span> 
+                        United States
+                    </li>
+                    <li>
+                        <span class="text-body">
+                            Wallet Balance:
+                        </span> 
+                        $9,999.50
+                    </li>
+                    <li>
+                        <span class="text-body">
+                            Store:
+                        </span> 
+                        TechMaster Store
+                    </li>
+                </ul>
+                <h5>
+                    Contact Support
+                </h5>
+                <form>
+                    <mat-form-field class="textarea">
+                        <mat-label>
+                            Enter your message here....
+                        </mat-label>
+                        <textarea matInput placeholder="E.g. It makes me feel..."></textarea>
+                    </mat-form-field>
+                    <button mat-button>
+                        Send Message
+                    </button>
+                </form>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-9">
+        
+        <!-- Revenue -->
+        <app-revenue></app-revenue>
+
+    </div>
+</div>
+        
+<!-- Products -->
+<app-products></app-products>

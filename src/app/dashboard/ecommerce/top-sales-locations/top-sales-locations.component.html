@@ -1,0 +1,59 @@
+<mat-card
+    class="daxa-card top-sales-locations-card mb-25 border-radius bg-white border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Top Sales Locations
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <img src="assets/images/locations-map.png" alt="locations-map-image">
+            </div>
+            <div class="col-md-5">
+                <ul class="top-countries">
+                    <li class="d-flex align-items-center">
+                        <img src="assets/images/flags/usa.png" alt="flag-image">
+                        <span class="d-block text-body">
+                            United States <span class="text-black">85%</span>
+                        </span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <img src="assets/images/flags/china.png" alt="flag-image">
+                        <span class="d-block text-body">
+                            China <span class="text-black">60%</span>
+                        </span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <img src="assets/images/flags/australia.png" alt="flag-image">
+                        <span class="d-block text-body">
+                            Australia <span class="text-black">70%</span>
+                        </span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <img src="assets/images/flags/germany.png" alt="flag-image">
+                        <span class="d-block text-body">
+                            Germany <span class="text-black">75%</span>
+                        </span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <img src="assets/images/flags/canada.png" alt="flag-image">
+                        <span class="d-block text-body">
+                            Canada <span class="text-black">80%</span>
+                        </span>
+                    </li>
+                    <li class="d-flex align-items-center">
+                        <img src="assets/images/flags/france.png" alt="flag-image">
+                        <span class="d-block text-body">
+                            France <span class="text-black">65%</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

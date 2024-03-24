@@ -1,0 +1,27 @@
+.mat-column-demo-position {
+    width: 35px;
+    border-right: 1px solid var(--blackColor);
+}
+.mat-column-demo-name {
+    color: var(--blackColor) !important;
+    font-size: 20px;
+}
+.mat-column-demo-weight {
+    font-style: italic;
+}
+.mat-column-demo-symbol {
+    width: 35px;
+    font-weight: 700;
+    color: var(--blackColor) !important;
+}
+.component-dark-theme {
+    .mat-column-demo-position {
+        border-right-color: var(--whiteColor);
+    }
+    .mat-column-demo-name {
+        color: var(--whiteColor) !important;
+    }
+    .mat-column-demo-symbol {
+        color: var(--whiteColor) !important;
+    }
+}

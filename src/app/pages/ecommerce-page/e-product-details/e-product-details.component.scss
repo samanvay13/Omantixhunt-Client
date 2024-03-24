@@ -1,0 +1,1028 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.product-details-card {
+            .mat-mdc-card-content {
+                .product-details-image {
+                    padding-right: 20px;
+
+                    img {
+                        width: auto;
+                        display: inline-block;
+                    }
+                    a {
+                        cursor: pointer;
+                    }
+                    .product-gallery__featured {
+                        margin-bottom: 5px;
+                    }
+                }
+                .product-details-content {
+                    h3 {
+                        margin-bottom: 15px;
+                    }
+                    .price {
+                        margin-bottom: 15px;
+
+                        span {
+                            &:nth-child(1) {
+                                font-size: 18px;
+                                margin-right: 4px;
+                            }
+                            &:nth-child(2) {
+                                font-size: 14px;
+                                margin-left: 4px;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                    .ratings {
+                        margin-bottom: 15px;
+
+                        i {
+                            color: var(--warningColor);
+                            font-size: var(--fontSize);
+                            margin-right: 2px;
+                        }
+                        span {
+                            top: 1px;
+                            font-size: 14px;
+                            margin-left: 1px;
+                        }
+                    }
+                    .sub-title {
+                        margin-bottom: 15px;
+                    }
+                    .add-to-cart {
+                        margin: {
+                            bottom: 25px;
+                            top: 25px;
+                        };
+                        .quantity-counter {
+                            width: 100px;
+                            position: relative;
+                        
+                            input {
+                                border: 0;
+                                outline: 0;
+                                width: 100%;
+                                height: 44px;
+                                display: block;
+                                border-radius: 3px;
+                                text-align: center;
+                                background: #f4f6fc;
+                                color: var(--blackColor);
+                        
+                                &[type=number]::-webkit-inner-spin-button, &[type=number]::-webkit-outer-spin-button {
+                                    display: none;
+                                }
+                            }
+                            button {
+                                top: 50%;
+                                border: 0;
+                                left: 15px;
+                                padding: 0;
+                                cursor: pointer;
+                                margin-top: -1px;
+                                position: absolute;
+                                color: var(--bodyColor);
+                                transform: translateY(-50%);
+                                background-color: transparent;
+                                transition: var(--transition);
+                                font: {
+                                    size: 20px !important;
+                                };
+                                &:last-child {
+                                    left: auto;
+                                    right: 15px;
+                                }
+                                &:hover {
+                                    color: var(--daxaColor);
+                                }
+                            }
+                        }
+                        .mat-mdc-button {
+                            border: 0;
+                            height: auto;
+                            min-width: auto;
+                            min-height: auto;
+                            margin-left: 10px;
+                            padding: 12px 35px;
+                            color: var(--whiteColor);
+                            background-color: var(--daxaColor);
+                        }
+                    }
+                    .info {
+                        li {
+                            margin-bottom: 14px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .product-details-content {
+                        .add-to-cart {
+                            .quantity-counter {
+                                input {
+                                    background: var(--blackColor);
+                                    color: var(--whiteColor);
+                                }
+                                button {
+                                    color: rgba(255, 255, 255, .50);
+                                    
+                                    &:hover {
+                                        color: var(--daxaColor);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .product-details-image {
+                        padding: {
+                            right: 0;
+                            left: 20px;
+                        };
+                    }
+                    .product-details-content {
+                        .price {
+                            span {
+                                &:nth-child(1) {
+                                    margin: {
+                                        right: 0;
+                                        left: 4px;
+                                    };
+                                }
+                                &:nth-child(2) {
+                                    margin: {
+                                        left: 0;
+                                        right: 4px;
+                                    };
+                                }
+                            }
+                        }
+                        .ratings {
+                            i {
+                                margin: {
+                                    right: 0;
+                                    left: 2px;
+                                };
+                            }
+                            span {
+                                margin: {
+                                    left: 0;
+                                    right: 1px;
+                                };
+                            }
+                        }
+                        .add-to-cart {
+                            .quantity-counter {
+                                button {
+                                    left: auto;
+                                    right: 15px;
+                                    
+                                    &:last-child {
+                                        left: 15px;
+                                        right: auto;
+                                    }
+                                }
+                            }
+                            .mat-mdc-button {
+                                margin: {
+                                    left: 0;
+                                    right: 10px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-details-card {
+                .mat-mdc-card-content {
+                    .product-details-image {
+                        border-radius: 10px;
+                        
+                        .owl-item, .owl-stage, .owl-stage-outer {
+                            border-radius: 10px;
+                        }
+                    }
+                    .mat-mdc-tab-group {
+                        display: block;
+                        max-width: unset;
+                        margin: {
+                            top: 50px;
+                            left: -20px;
+                            right: -20px;
+                        };
+                        .mat-mdc-tab-header {
+                            display: block;
+                            margin-bottom: 0;
+                            
+                            .mat-mdc-tab-header-pagination {
+                                display: none;
+                            }
+                        }
+                        .mat-mdc-tab-label-container {
+                            background: #e7effd;
+                            margin-bottom: 30px;
+                            display: block;
+                            border: 0;
+                            padding: {
+                                left: 80px;
+                                right: 80px;
+                            };
+                            .mat-mdc-tab-labels {
+                                display: block;
+                                font: {
+                                    weight: 500;
+                                    size: 18px;
+                                };
+                                .mat-mdc-tab {
+                                    display: inline-block;
+                                    margin-right: 35px;
+                                    padding: 16px 0;
+                                    height: auto;
+
+                                    .mdc-tab__text-label {
+                                        color: var(--blackColor);
+                                        display: block;
+                                    }
+                                    &.mdc-tab--active {
+                                        .mdc-tab__text-label {
+                                            color: var(--daxaColor);
+                                        }
+                                    }
+                                    &:last-child {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                        .mat-mdc-tab-body-wrapper {
+                            padding: {
+                                left: 80px;
+                                right: 80px;
+                                bottom: 15px;
+                            };
+                            .features-list {
+                                li {
+                                    margin-bottom: 15px;
+                                    padding-left: 15px;
+
+                                    &::before {
+                                        left: 0;
+                                        top: 50%;
+                                        width: 6px;
+                                        height: 6px;
+                                        content: '';
+                                        position: absolute;
+                                        border-radius: 50%;
+                                        background: var(--infoColor);
+                                        transform: translateY(-50%);
+                                    }
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                            .overall-ratings {
+                                margin-bottom: 45px;
+
+                                h5 {
+                                    margin-bottom: 20px;
+                                }
+                                h3 {
+                                    margin-bottom: 3px;
+                                }
+                                .all-ratings {
+                                    margin-top: 9px;
+            
+                                    i {
+                                        color: var(--warningColor);
+                                        font-size: var(--fontSize);
+                                        margin-right: 2px;
+                                    }
+                                    span {
+                                        top: 1px;
+                                        font-size: 14px;
+                                        margin-left: 1px;
+                                    }
+                                }
+                                .rating-item {
+                                    margin-bottom: 25px;
+                                    padding: {
+                                        left: 153px;
+                                        right: 41px;
+                                    };
+                                    .ratings {
+                                        left: 0;
+                                        top: 50%;
+                                        position: absolute;
+                                        transform: translateY(-50%);
+
+                                        i {
+                                            font-size: 15px;
+                                            margin-right: 2px;
+                                            color: var(--warningColor);
+                                        }
+                                        span {
+                                            top: 1px;
+                                            font-size: 14px;
+                                            margin-left: 1px;
+                                        }
+                                    }
+                                    .number {
+                                        right: 0;
+                                        top: 50%;
+                                        font-size: 14px;
+                                        position: absolute;
+                                        transform: translateY(-50%);
+                                    }
+                                    &:last-child {
+                                        margin-bottom: 0;
+                                    }
+                                }
+                            }
+                            .review-item {
+                                background-color: #f4f6fc;
+                                padding: 30px;
+
+                                .ratings {
+                                    margin-bottom: 12px;
+            
+                                    i {
+                                        color: var(--warningColor);
+                                        font-size: var(--fontSize);
+                                        margin-right: 2px;
+                                    }
+                                    span {
+                                        top: 1px;
+                                        font-size: 14px;
+                                        margin-left: 1px;
+                                    }
+                                }
+                                .user-info {
+                                    margin-top: 18px;
+
+                                    img {
+                                        width: 50px;
+                                        border-radius: 50%;
+                                    }
+                                    span {
+                                        font-size: 18px;
+                                        margin-left: 15px;
+                                    }
+                                }
+                            }
+                            .your-ratings {
+                                margin-top: 20px;
+
+                                h5 {
+                                    margin-bottom: 15px;
+                                }
+                                form {
+                                    margin-top: 22px;
+
+                                    .mat-mdc-button {
+                                        border: 0;
+                                        height: auto;
+                                        min-width: auto;
+                                        min-height: auto;
+                                        margin-top: 20px;
+                                        padding: 13px 40px;
+                                        font-weight: normal;
+                                        color: var(--whiteColor);
+                                        background-color: var(--daxaColor);
+                                    }
+                                }
+                            }
+                            .mat-mdc-tab-body-content {
+                                height: auto;
+                                overflow: hidden;
+                            }
+                            .mat-mdc-tab-body {
+                                &.mat-mdc-tab-body-active {
+                                    overflow-y: hidden;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.component-dark-theme {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            .mat-mdc-tab-label-container {
+                                background: #131920;
+                                
+                                .mat-mdc-tab-labels {
+                                    .mat-mdc-tab {
+                                        .mdc-tab__text-label {
+                                            color: var(--whiteColor);
+                                        }
+                                        &.mdc-tab--active {
+                                            .mdc-tab__text-label {
+                                                color: var(--daxaColor);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                .review-item {
+                                    background-color: #131920;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            .mat-mdc-tab-label-container {
+                                .mat-mdc-tab-labels {
+                                    .mat-mdc-tab {
+                                        margin: {
+                                            right: 0;
+                                            left: 35px;
+                                        };
+                                        &:last-child {
+                                            margin-left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                .features-list {
+                                    padding-right: 0;
+
+                                    li {
+                                        padding: {
+                                            left: 0;
+                                            right: 15px;
+                                        };
+                                        &::before {
+                                            left: auto;
+                                            right: 0;
+                                        }
+                                    }
+                                }
+                                .overall-ratings {
+                                    .all-ratings {
+                                        i {
+                                            margin: {
+                                                right: 0;
+                                                left: 2px;
+                                            };
+                                        }
+                                        span {
+                                            margin: {
+                                                left: 0;
+                                                right: 1px;
+                                            };
+                                        }
+                                    }
+                                    .rating-item {
+                                        padding: {
+                                            left: 41px;
+                                            right: 153px;
+                                        };
+                                        .ratings {
+                                            left: auto;
+                                            right: 0;
+    
+                                            i {
+                                                margin: {
+                                                    left: 2px;
+                                                    right: 0;
+                                                };
+                                            }
+                                            span {
+                                                margin: {
+                                                    left: 0;
+                                                    right: 1px;
+                                                };
+                                            }
+                                        }
+                                        .number {
+                                            right: auto;
+                                            left: 0;
+                                        }
+                                    }
+                                }
+                                .review-item {
+                                    .ratings {
+                                        i {
+                                            margin: {
+                                                right: 0;
+                                                left: 2px;
+                                            };
+                                        }
+                                        span {
+                                            margin: {
+                                                left: 0;
+                                                right: 1px;
+                                            };
+                                        }
+                                    }
+                                    .user-info {
+                                        span {
+                                            margin: {
+                                                left: 0;
+                                                right: 15px;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-details-card {
+                .mat-mdc-card-content {
+                    .product-details-image {
+                        padding-right: 0;
+                        margin-bottom: 15px;
+                    }
+                    .product-details-content {
+                        h3 {
+                            margin-bottom: 12px;
+                        }
+                        .ratings {
+                            margin-bottom: 12px;
+                        }
+                        .price {
+                            span {
+                                &:nth-child(1) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                        .ratings {
+                            i {
+                                font-size: 14px;
+                            }
+                        }
+                        .sub-title {
+                            margin-bottom: 15px;
+                        }
+                        .add-to-cart {
+                            margin: {
+                                bottom: 20px;
+                                top: 20px;
+                            };
+                            .quantity-counter {
+                                input {
+                                    height: 42px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .product-details-image {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-details-card {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            margin: {
+                                top: 25px;
+                                left: -15px;
+                                right: -15px;
+                            };
+                            .mat-mdc-tab-label-container {
+                                margin-bottom: 20px;
+                                padding: {
+                                    left: 15px;
+                                    right: 15px;
+                                };
+                                .mat-mdc-tab-labels {
+                                    font-size: 15px;
+
+                                    .mat-mdc-tab {
+                                        margin-right: 18px;
+                                        padding: 13px 0;
+                                    }
+                                }
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                padding: {
+                                    bottom: 0;
+                                    left: 15px;
+                                    right: 15px;
+                                };
+                                .overall-ratings {
+                                    margin-bottom: 25px;
+    
+                                    h5 {
+                                        margin-bottom: 7px;
+                                    }
+                                    h3 {
+                                        margin-bottom: 4px;
+                                    }
+                                    .all-ratings {
+                                        margin-bottom: 22px;
+
+                                        i {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    .rating-item {
+                                        padding: {
+                                            left: 125px;
+                                            right: 35px;
+                                        };
+                                        .ratings {
+                                            i {
+                                                font-size: 14px;
+                                            }
+                                        }
+                                        .number {
+                                            font-size: 13px;
+                                        }
+                                    }
+                                }
+                                .review-item {
+                                    padding: 20px;
+    
+                                    .ratings {
+                                        margin-bottom: 10px;
+                
+                                        i {
+                                            font-size: 14px;
+                                        }
+                                    }
+                                    .user-info {
+                                        margin-top: 15px;
+    
+                                        span {
+                                            font-size: 16px;
+                                        }
+                                    }
+                                }
+                                .your-ratings {
+                                    margin-top: 5px;
+    
+                                    h5 {
+                                        margin-bottom: 15px;
+                                    }
+                                    form {
+                                        margin-top: 20px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &.rtl-enabled {
+                        .mat-mdc-card-content {
+                            .mat-mdc-tab-group {
+                                .mat-mdc-tab-label-container {
+                                    .mat-mdc-tab-labels {
+                                        .mat-mdc-tab {
+                                            margin: {
+                                                right: 0;
+                                                left: 18px;
+                                            };
+                                        }
+                                    }
+                                }
+                                .mat-mdc-tab-body-wrapper {
+                                    .overall-ratings {
+                                        .rating-item {
+                                            padding: {
+                                                left: 35px;
+                                                right: 125px;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-details-card {
+                .mat-mdc-card-content {
+                    .product-details-image {
+                        padding-right: 0;
+                        margin-bottom: 15px;
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .product-details-image {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-details-card {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            margin-top: 35px;
+
+                            .mat-mdc-tab-label-container {
+                                margin-bottom: 25px;
+                                padding: {
+                                    left: 20px;
+                                    right: 20px;
+                                };
+                                .mat-mdc-tab-labels {
+                                    font-size: 16px;
+
+                                    .mat-mdc-tab {
+                                        margin-right: 25px;
+                                        padding: 15px 0;
+                                    }
+                                }
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                padding: {
+                                    bottom: 0;
+                                    left: 20px;
+                                    right: 20px;
+                                };
+                                .overall-ratings {
+                                    margin-bottom: 35px;
+    
+                                    h5 {
+                                        margin-bottom: 10px;
+                                    }
+                                    .rating-item {
+                                        padding-left: 140px;
+                                    }
+                                }
+                                .review-item {
+                                    padding: 20px;
+    
+                                    .ratings {
+                                        margin-bottom: 10px;
+                                    }
+                                    .user-info {
+                                        margin-top: 15px;
+                                    }
+                                }
+                                .your-ratings {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                    &.rtl-enabled {
+                        .mat-mdc-card-content {
+                            .mat-mdc-tab-group {
+                                .mat-mdc-tab-label-container {
+                                    .mat-mdc-tab-labels {
+                                        .mat-mdc-tab {
+                                            margin: {
+                                                left: 25px;
+                                                right: 0;
+                                            };
+                                        }
+                                    }
+                                }
+                                .mat-mdc-tab-body-wrapper {
+                                    .overall-ratings {
+                                        .rating-item {
+                                            padding: {
+                                                left: 0;
+                                                right: 140px;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-details-card {
+                .mat-mdc-card-content {
+                    .product-details-image {
+                        padding-right: 0;
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .product-details-image {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-details-card {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            .mat-mdc-tab-label-container {
+                                padding: {
+                                    left: 40px;
+                                    right: 40px;
+                                };
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                padding: {
+                                    left: 40px;
+                                    right: 40px;
+                                };
+                                .overall-ratings {
+                                    margin-bottom: 35px;
+                                }
+                                .review-item {
+                                    padding: 25px;
+                                }
+                                .your-ratings {
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-details-card {
+                .mat-mdc-card-content {
+                    .product-details-image {
+                        padding-right: 0;
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .product-details-image {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-details-card {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            .mat-mdc-tab-label-container {
+                                padding: {
+                                    left: 40px;
+                                    right: 40px;
+                                };
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                padding: {
+                                    left: 40px;
+                                    right: 40px;
+                                };
+                                .review-item {
+                                    padding: 25px;
+                                }
+                                .your-ratings {
+                                    margin-top: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.product-details-card {
+                .mat-mdc-card-content {
+                    .product-details-image {
+                        padding-right: 60px;
+                    }
+                    .product-details-content {
+                        padding-right: 80px;
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .product-details-image {
+                            padding: {
+                                left: 60px;
+                                right: 0;
+                            };
+                        }
+                        .product-details-content {
+                            padding: {
+                                right: 0;
+                                left: 80px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.product-details-card {
+                    .mat-mdc-card-content {
+                        .mat-mdc-tab-group {
+                            margin: {
+                                top: 50px;
+                                left: -20px;
+                                right: -20px;
+                            };
+                            .mat-mdc-tab-label-container {
+                                padding: {
+                                    left: 135px;
+                                    right: 135px;
+                                };
+                            }
+                            .mat-mdc-tab-body-wrapper {
+                                padding: {
+                                    left: 135px;
+                                    right: 135px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

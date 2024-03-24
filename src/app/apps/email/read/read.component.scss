@@ -1,0 +1,267 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.email-read-card {
+            .mat-mdc-card-content {
+                .info {
+                    border-top: 1px solid #eaecf2;
+                    padding-top: 20px;
+
+                    .user {
+                        .img {
+                            margin-right: 15px;
+                            
+                            img {
+                                width: 65px;
+                            }
+                        }
+                        .title {
+                            span {
+                                &:nth-child(1) {
+                                    font-size: 18px;
+                                }
+                                &:not(:first-child) {
+                                    margin-top: 5px;
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .content {
+                    padding-left: 80px;
+                    margin-top: 10px;
+
+                    .title {
+                        margin-bottom: 10px;
+
+                        &:not(:first-child) {
+                            margin-top: 20px;
+                        }
+                    }
+                    ol, ul {
+                        padding-left: 18px;
+                        margin: {
+                            top: 15px;
+                            bottom: 20px;
+                        };
+                        li {
+                            margin-bottom: 15px;
+
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                }
+                .btn-box {
+                    border-top: 1px solid #eaecf2;
+                    margin-top: 20px;
+                    padding: {
+                        top: 20px;
+                        left: 80px;
+                    };
+                    .mat-mdc-button {
+                        border: 0;
+                        height: auto;
+                        min-width: auto;
+                        min-height: auto;
+                        padding: 12px 40px;
+                        font-weight: normal;
+                        color: var(--whiteColor);
+                        background-color: var(--daxaColor);
+                        border: 1px solid var(--daxaColor);
+
+                        &:not(:first-child) {
+                            margin-left: 10px;
+                            border-color: #dae0ec;
+                            color: var(--blackColor);
+                            background-color: transparent;
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .info {
+                        border-color: rgba(255, 255, 255, 0.09);
+                    }
+                    .btn-box {
+                        border-color: rgba(255, 255, 255, 0.09);
+                        
+                        .mat-mdc-button {
+                            &:not(:first-child) {
+                                border-color: rgba(255, 255, 255, 0.09);
+                                color: var(--whiteColor);
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .info {
+                        .user {
+                            .img {
+                                margin: {
+                                    right: 0;
+                                    left: 15px;
+                                };
+                            }
+                        }
+                    }
+                    .content {
+                        padding: {
+                            left: 0;
+                            right: 80px;
+                        };
+                        ol, ul {
+                            padding: {
+                                left: 0;
+                                right: 18px;
+                            };
+                        }
+                    }
+                    .btn-box {
+                        padding: {
+                            right: 80px;
+                            left: 0;
+                        };
+                        .mat-mdc-button {
+                            &:not(:first-child) {
+                                margin: {
+                                    left: 0;
+                                    right: 10px;
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.email-read-card {
+                .mat-mdc-card-content {
+                    .info {
+                        padding-top: 15px;
+    
+                        .user {
+                            margin-bottom: 10px;
+                            
+                            .img {
+                                margin-right: 13px;
+                                
+                                img {
+                                    width: 50px;
+                                }
+                            }
+                            .title {
+                                span {
+                                    &:nth-child(1) {
+                                        font-size: 16px;
+                                    }
+                                    &:not(:first-child) {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .content {
+                        padding-left: 0;
+                        margin-top: 10px;
+                    }
+                    .btn-box {
+                        margin-top: 15px;
+                        padding: {
+                            top: 15px;
+                            left: 0;
+                        };
+                        .mat-mdc-button {
+                            padding: 10px 30px;
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .info {
+                            .user {
+                                .img {
+                                    margin: {
+                                        left: 13px;
+                                        right: 0;
+                                    };
+                                }
+                            }
+                        }
+                        .content {
+                            padding-right: 0;
+                        }
+                        .btn-box {
+                            padding: {
+                                right: 0;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                &.email-read-card {
+                    .mat-mdc-card-header {
+                        .mat-mdc-card-header-text {
+                            display: block;
+
+                            .info-buttons-list {
+                                margin-top: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.email-read-card {
+                .mat-mdc-card-content {
+                    .info {
+                        padding-top: 20px;
+                    }
+                    .btn-box {
+                        margin-top: 20px;
+                        padding-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

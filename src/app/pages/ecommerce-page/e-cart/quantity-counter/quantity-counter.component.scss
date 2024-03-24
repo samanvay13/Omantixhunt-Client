@@ -1,0 +1,56 @@
+.quantity-counter {
+    width: 100px;
+    position: relative;
+
+    input {
+        border: 0;
+        outline: 0;
+        width: 100%;
+        height: 42px;
+        display: block;
+        border-radius: 3px;
+        text-align: center;
+        background: #f4f6fc;
+        color: var(--blackColor);
+
+        &[type=number]::-webkit-inner-spin-button, &[type=number]::-webkit-outer-spin-button {
+            display: none;
+        }
+    }
+    button {
+        top: 50%;
+        border: 0;
+        left: 15px;
+        padding: 0;
+        cursor: pointer;
+        margin-top: -1px;
+        position: absolute;
+        color: var(--bodyColor);
+        transform: translateY(-50%);
+        background-color: transparent;
+        transition: var(--transition);
+        font: {
+            size: 20px !important;
+        };
+        &:last-child {
+            left: auto;
+            right: 15px;
+        }
+        &:hover {
+            color: var(--daxaColor);
+        }
+    }
+    &.component-dark-theme {
+        input {
+            background: #131920;
+            color: var(--whiteColor);
+        }
+        button {
+            color: rgba(255, 255, 255, .50);
+            
+            &:hover {
+                color: var(--daxaColor);
+            }
+        }
+    }
+}

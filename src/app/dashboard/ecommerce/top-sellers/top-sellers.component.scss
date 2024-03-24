@@ -1,0 +1,256 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.top-sellers-card {
+            .mat-mdc-card-content {
+                .top-sellers-table {
+                    table {
+                        width: 100%;
+                        border-spacing: 0;
+
+                        tbody {
+                            tr {
+                                td {
+                                    white-space: nowrap;
+                                    padding: 16.4px 15px;
+                                    border-bottom: 1px dashed #e0e0e0;
+
+                                    .info {
+                                        .image {
+                                            width: 50px;
+                                            line-height: .01;
+                                            margin-right: 12px;
+
+                                            img {
+                                                border-radius: 50%;
+                                            }
+                                        }
+                                        h6 {
+                                            font-size: 18px;
+                                            margin-bottom: 5px;
+                                        }
+                                        span {
+                                            font-size: 14px;
+                                            margin-top: 5px;
+                                        }
+                                    }
+                                    &:first-child {
+                                        padding-left: 0;
+                                    }
+                                    &:nth-child(2) {
+                                        padding-left: 0;
+                                    }
+                                    &:last-child {
+                                        text-align: right;
+                                        padding-right: 0;
+                                    }
+                                    .rating {
+                                        font-size: 14px;
+                                        line-height: 1;
+
+                                        i {
+                                            color: var(--warningColor);
+                                            font-size: var(--fontSize);
+                                            position: relative;
+                                            margin-right: 2px;
+                                            top: -1px;
+                                        }
+                                    }
+                                }
+                                &:first-child {
+                                    td {
+                                        padding-top: 5px;
+                                    }
+                                }
+                                &:last-child {
+                                    td {
+                                        border-bottom: 0;
+                                        padding-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .top-sellers-table {
+                        table {
+                            tbody {
+                                tr {
+                                    td {
+                                        border-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .top-sellers-table {
+                        table {
+                            tbody {
+                                tr {
+                                    td {
+                                        .info {
+                                            .image {
+                                                margin: {
+                                                    left: 12px;
+                                                    right: 0;
+                                                };
+                                            }
+                                        }
+                                        &:first-child {
+                                            padding: {
+                                                left: 15px;
+                                                right: 0;
+                                            };
+                                        }
+                                        &:nth-child(2) {
+                                            padding: {
+                                                left: 15px;
+                                                right: 0;
+                                            };
+                                        }
+                                        &:last-child {
+                                            text-align: left;
+                                            padding: {
+                                                right: 15px;
+                                                left: 0;
+                                            };
+                                        }
+                                        .rating {
+                                            i {
+                                                margin: {
+                                                    right: 0;
+                                                    left: 2px;
+                                                };
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.top-sellers-card {
+                .mat-mdc-card-content {
+                    .top-sellers-table {
+                        table {
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 10px;
+    
+                                        .info {
+                                            .image {
+                                                width: 40px;
+                                                margin-right: 8px;
+                                            }
+                                            h6 {
+                                                font-size: 16px;
+                                                margin-bottom: 4px;
+                                            }
+                                        }
+                                    }
+                                    &:first-child {
+                                        td {
+                                            padding-top: 0;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .top-sellers-table {
+                            table {
+                                tbody {
+                                    tr {
+                                        td {
+                                            padding: 10px;
+        
+                                            .info {
+                                                .image {
+                                                    margin: {
+                                                        left: 8px;
+                                                        right: 0;
+                                                    };
+                                                }
+                                            }
+                                            &:first-child {
+                                                padding-left: 10px;
+                                            }
+                                            &:nth-child(2) {
+                                                padding-left: 10px;
+                                            }
+                                            &:last-child {
+                                                padding-right: 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.top-sellers-card {
+                .mat-mdc-card-content {
+                    .top-sellers-table {
+                        table {
+                            tbody {
+                                tr {
+                                    td {
+                                        .info {
+                                            h6 {
+                                                font-size: 17px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

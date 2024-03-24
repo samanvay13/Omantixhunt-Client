@@ -1,0 +1,185 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Create Lead
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Leads
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Create Lead
+        </li>
+    </ol>
+</div>
+
+<!-- Create Lead -->
+<mat-card
+    class="daxa-card create-lead-card mb-25 border-radius bg-white border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <form>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            ID
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter id
+                            </mat-label>
+                            <input matInput placeholder="E.g. #ARP-1217">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Customer Name
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter customer name
+                            </mat-label>
+                            <input matInput placeholder="E.g. Marcia Baker">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Email Address
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter email address
+                            </mat-label>
+                            <input matInput placeholder="E.g. marcia@example.com">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Phone Number
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter phone number
+                            </mat-label>
+                            <input matInput placeholder="E.g. +1 555-123-4567">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Create Date
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter create date
+                            </mat-label>
+                            <input matInput placeholder="E.g. Nov 10, 2023">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Company
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter company
+                            </mat-label>
+                            <input matInput placeholder="E.g. ABC Corporation">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Lead Source
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Select lead source
+                            </mat-label>
+                            <mat-select>
+                                <mat-option value="option1">
+                                    Website
+                                </mat-option>
+                                <mat-option value="option2">
+                                    Referral
+                                </mat-option>
+                                <mat-option value="option3">
+                                    Cold Call
+                                </mat-option>
+                                <mat-option value="option4">
+                                    Email Campaign
+                                </mat-option>
+                                <mat-option value="option5">
+                                    Online Store
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Status
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Select status
+                            </mat-label>
+                            <mat-select>
+                                <mat-option value="option1">
+                                    New
+                                </mat-option>
+                                <mat-option value="option2">
+                                    Won
+                                </mat-option>
+                                <mat-option value="option3">
+                                    In Progress
+                                </mat-option>
+                                <mat-option value="option4">
+                                    Lost
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Customer Image
+                        </label>
+                        <file-upload class="file-uploader" [multiple]="multiple"></file-upload>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button mat-button>
+                    Create Lead
+                </button>
+                <button mat-button>
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

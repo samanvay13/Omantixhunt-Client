@@ -1,0 +1,79 @@
+<mat-card
+    class="daxa-card active-students-card mb-25 border-radius bg-white border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Active Students
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="info d-md-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <div>
+                    <span class="d-block text-body">
+                        Monthly
+                    </span>
+                    <h3 class="mb-0">
+                        1,705
+                    </h3>
+                </div>
+                <span class="daxa-up-down-badge position-relative">
+                    <i class="material-symbols-outlined">
+                        trending_up
+                    </i>
+                    4.75%
+                </span>
+            </div>
+            <div class="d-flex align-items-center">
+                <div>
+                    <span class="d-block text-body">
+                        Weekly
+                    </span>
+                    <h3 class="mb-0">
+                        450
+                    </h3>
+                </div>
+                <span class="daxa-up-down-badge down position-relative">
+                    <i class="material-symbols-outlined">
+                        trending_down
+                    </i>
+                    1.05%
+                </span>
+            </div>
+            <div class="d-flex align-items-center">
+                <div>
+                    <span class="d-block text-body">
+                        Daily
+                    </span>
+                    <h3 class="mb-0">
+                        260
+                    </h3>
+                </div>
+                <span class="daxa-up-down-badge position-relative">
+                    <i class="material-symbols-outlined">
+                        trending_up
+                    </i>
+                    1.25%
+                </span>
+            </div>
+        </div>
+        <apx-chart
+            [series]="chartOptions.series!"
+            [chart]="chartOptions.chart!"
+            [yaxis]="chartOptions.yaxis!"
+            [xaxis]="chartOptions.xaxis!"
+            [colors]="chartOptions.colors!"
+            [grid]="chartOptions.grid!"
+            [labels]="chartOptions.labels!"
+            [stroke]="chartOptions.stroke!"
+            [legend]="chartOptions.legend!"
+            [plotOptions]="chartOptions.plotOptions!"
+            [markers]="chartOptions.markers!"
+            [fill]="chartOptions.fill!"
+            [tooltip]="chartOptions.tooltip!"
+        ></apx-chart>
+    </mat-card-content>
+</mat-card>

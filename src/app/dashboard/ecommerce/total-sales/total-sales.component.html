@@ -1,0 +1,41 @@
+<mat-card class="daxa-card total-sales-card mb-25 border-radius bg-white border-none d-block">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Total Sales
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button type="button" mat-button class="card-header-menu-btn" [matMenuTriggerFor]="cardHeaderMenu">
+                Year 2023
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <button mat-menu-item>
+                    Year 2023
+                </button>
+                <button mat-menu-item>
+                    Year 2022
+                </button>
+                <button mat-menu-item>
+                    Year 2021
+                </button>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <apx-chart
+            [series]="chartOptions.series!"
+            [chart]="chartOptions.chart!"
+            [dataLabels]="chartOptions.dataLabels!"
+            [markers]="chartOptions.markers!"
+            [xaxis]="chartOptions.xaxis!"
+            [yaxis]="chartOptions.yaxis!"
+            [stroke]="chartOptions.stroke!"
+            [colors]="chartOptions.colors!"
+            [grid]="chartOptions.grid!"
+            [fill]="chartOptions.fill!"
+            [forecastDataPoints]="chartOptions.forecastDataPoints!"
+            [legend]="chartOptions.legend!"
+        ></apx-chart>
+    </mat-card-content>
+</mat-card>

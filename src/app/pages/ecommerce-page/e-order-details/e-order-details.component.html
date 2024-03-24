@@ -1,0 +1,349 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Order Details
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Orders
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Order Details
+        </li>
+    </ol>
+</div>
+
+<!-- Order Details -->
+<div class="row">
+    <div class="col-lg-8">
+        <mat-card
+            class="daxa-card tracking-id-card mb-25 border-radius bg-white border-none d-block bg-gradient"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-content>
+                <span class="d-block fw-medium text-white">
+                    Tracking ID: 000346798254
+                </span>
+                <div class="numbers position-relative d-sm-flex align-items-center justify-content-between">
+                    <div class="box">
+                        <div class="rounded-circle text-center transition text-white fw-medium">
+                            01
+                        </div>
+                        <span class="fw-medium d-block text-white">
+                            Order Placed
+                        </span>
+                    </div>
+                    <div class="box">
+                        <div class="rounded-circle text-center transition text-white fw-medium">
+                            02
+                        </div>
+                        <span class="fw-medium d-block text-white">
+                            Packed
+                        </span>
+                    </div>
+                    <div class="box active">
+                        <div class="rounded-circle text-center transition text-white fw-medium">
+                            03
+                        </div>
+                        <span class="fw-medium d-block text-white">
+                            Shipped
+                        </span>
+                    </div>
+                    <div class="box">
+                        <div class="rounded-circle text-center transition text-white fw-medium">
+                            04
+                        </div>
+                        <span class="fw-medium d-block text-white">
+                            Delivered
+                        </span>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+        <mat-card
+            class="daxa-card recent-orders-card mb-25 border-radius bg-white border-none d-block"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mt-0 mb-0">
+                        Recent Orders
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <h5 class="mt-0 mb-0">
+                        Customer ID : 357951
+                    </h5>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="recent-orders-table">
+                    <div class="table-responsive">
+                        <table mat-table [dataSource]="dataSource">
+        
+                            <!-- Order ID Column -->
+                            <ng-container matColumnDef="orderID">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Order ID
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.orderID}}
+                                </td>
+                            </ng-container>
+        
+                            <!-- Product Column -->
+                            <ng-container matColumnDef="product">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Product
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <div class="info d-flex align-items-center">
+                                        <div class="image">
+                                            <img [src]="element.product.img" alt="product-image">
+                                        </div>
+                                        <a routerLink="/ecommerce-page/product-details" class="d-block fw-medium">
+                                            {{element.product.name}}
+                                        </a>
+                                    </div>
+                                </td>
+                            </ng-container>
+        
+                            <!-- Items Column -->
+                            <ng-container matColumnDef="items">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Items
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.items}}
+                                </td>
+                            </ng-container>
+        
+                            <!-- Price Column -->
+                            <ng-container matColumnDef="price">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Price
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.price}}
+                                </td>
+                            </ng-container>
+        
+                            <!-- Total Column -->
+                            <ng-container matColumnDef="total">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Total
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.total}}
+                                </td>
+                            </ng-container>
+        
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+                        </table>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4">
+        <mat-card
+            class="daxa-card order-summary-card mb-25 border-radius bg-white border-none d-block"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+            [class.component-dark-theme]="themeService.isDark()"
+        >
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mt-0 mb-0">
+                        Order Summary
+                    </h5>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="order-summary-table">
+                    <div class="table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="fw-medium text-black">
+                                        Description
+                                    </th>
+                                    <th scope="col" class="fw-medium text-black">
+                                        Price
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="text-body">
+                                        Grand Total :
+                                    </td>
+                                    <td class="text-body">
+                                        $1,105.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-body">
+                                        Discount :
+                                    </td>
+                                    <td class="text-body">
+                                        -$105.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-body">
+                                        Tax :
+                                    </td>
+                                    <td class="text-body">
+                                        $75.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">
+                                        Subtotal :
+                                    </td>
+                                    <td class="text-body">
+                                        $1,000.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-body">
+                                        Shipping Charge :
+                                    </td>
+                                    <td class="text-body">
+                                        $80.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-body">
+                                        Coupon Charge :
+                                    </td>
+                                    <td class="text-body">
+                                        $20.00
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-black">
+                                        Total :
+                                    </td>
+                                    <td class="text-body">
+                                        $900.00
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <h5>
+                    Payment Method
+                </h5>
+                <div class="payment-method d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <div class="icon">
+                            <img src="assets/images/master-card.png" alt="master-card">
+                        </div>
+                        <div class="info">
+                            <span class="d-block fw-medium">
+                                Payment
+                            </span>
+                            <span class="d-block text-body">
+                                Via MasterCard
+                            </span>
+                        </div>
+                    </div>
+                    <span class="d-block text-body">
+                        $900.00
+                    </span>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card
+            class="daxa-card order-details-card mb-25 border-radius bg-white border-none d-block"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-content>
+                <h5>
+                    Billing Details
+                </h5>
+                <ul class="pl-0 mb-0 mt-0 list-unstyled">
+                    <li class="text-body">
+                        <span class="text-black">Name:</span> Gary Fraser
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Email:</span> example&#64;daxa.com
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Phone:</span> +1 444 333 5566
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Address:</span> 715 Maple St, Hamletville, England
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card 
+            class="daxa-card order-details-card mb-25 border-radius bg-white border-none d-block"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-content>
+                <h5>
+                    Shipping Details
+                </h5>
+                <ul class="pl-0 mb-0 mt-0 list-unstyled">
+                    <li class="text-body">
+                        <span class="text-black">Shipping Date:</span> Nov 25, 2023 10:30 AM
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Email:</span> example&#64;daxa.com
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Phone:</span> +1 444 333 5566
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Address:</span> 789 Pine St, Villageton, England
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-4 col-md-6">
+        <mat-card
+            class="daxa-card order-details-card mb-25 border-radius bg-white border-none d-block"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-content>
+                <h5>
+                    Delivery Informatin
+                </h5>
+                <ul class="pl-0 mb-0 mt-0 list-unstyled">
+                    <li class="text-body">
+                        <span class="text-black">XYZ Delivery</span>
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Order ID:</span> XXXXXX1004
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Payment Method:</span> Master Card
+                    </li>
+                    <li class="text-body">
+                        <span class="text-black">Email:</span> example&#64;daxa.com
+                    </li>
+                </ul>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

@@ -1,0 +1,580 @@
+<mat-card
+    class="daxa-card users-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Users
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button type="button" mat-button class="card-header-menu-btn" [matMenuTriggerFor]="cardHeaderMenu">
+                This Week
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <button mat-menu-item>
+                    This Day
+                </button>
+                <button mat-menu-item>
+                    This Week
+                </button>
+                <button mat-menu-item>
+                    This Month
+                </button>
+                <button mat-menu-item>
+                    This Year
+                </button>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="users-table">
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col" class="fw-medium text-black">
+                                ID
+                            </th>
+                            <th scope="col" class="fw-medium text-black">
+                                User
+                            </th>
+                            <th scope="col" class="fw-medium text-black">
+                                Email
+                            </th>
+                            <th scope="col" class="fw-medium text-black">
+                                Phone
+                            </th>
+                            <th scope="col" class="fw-medium text-black">
+                                Last Contacted
+                            </th>
+                            <th scope="col" class="fw-medium text-black">
+                                Company
+                            </th>
+                            <th scope="col" class="fw-medium text-black">
+                                Status
+                            </th>
+                            <th scope="col" class="fw-medium text-black">
+                                Action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-1217
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user15.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Marcia Baker
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                marcia&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-123-4567
+                            </td>
+                            <td class="text-body">
+                                Nov 10, 2023
+                            </td>
+                            <td class="text-body">
+                                ABC Corporation
+                            </td>
+                            <td>
+                                <span class="daxa-badge d-inline-block">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-1364
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user7.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Carolyn Barnes
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                barnes&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-987-6543
+                            </td>
+                            <td class="text-body">
+                                Nov 11, 2023
+                            </td>
+                            <td class="text-body">
+                                XYZ Ltd
+                            </td>
+                            <td>
+                                <span class="daxa-badge d-inline-block">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-2951
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user12.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Donna Miller
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                donna&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-456-7890
+                            </td>
+                            <td class="text-body">
+                                Nov 12, 2023
+                            </td>
+                            <td class="text-body">
+                                Tech Solutions
+                            </td>
+                            <td>
+                                <span class="daxa-badge deactive d-inline-block">
+                                    Deactive
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-7342
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user5.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Barbara Cross
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                cross&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-369-7878
+                            </td>
+                            <td class="text-body">
+                                Nov 13, 2023
+                            </td>
+                            <td class="text-body">
+                                Global Solutions
+                            </td>
+                            <td>
+                                <span class="daxa-badge d-inline-block">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-4619
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user16.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Rebecca Block
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                block&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-658-4488	
+                            </td>
+                            <td class="text-body">
+                                Nov 14, 2023
+                            </td>
+                            <td class="text-body">
+                                Acma Industries
+                            </td>
+                            <td>
+                                <span class="daxa-badge deactive d-inline-block">
+                                    Deactive
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-7346
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user9.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Ramiro McCarty
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                ramiro&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-558-9966
+                            </td>
+                            <td class="text-body">
+                                Nov 15, 2023
+                            </td>
+                            <td class="text-body">
+                                Synergy Ltd
+                            </td>
+                            <td>
+                                <span class="daxa-badge d-inline-block">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-7612
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user1.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Robert Fairweather
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                robert&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-357-5888
+                            </td>
+                            <td class="text-body">
+                                Nov 16, 2023
+                            </td>
+                            <td class="text-body">
+                                Summit Solutions
+                            </td>
+                            <td>
+                                <span class="daxa-badge d-inline-block">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-7642
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user6.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Marcelino Haddock
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                haddock&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-456-8877
+                            </td>
+                            <td class="text-body">
+                                Nov 17, 2023
+                            </td>
+                            <td class="text-body">
+                                Strategies Ltd
+                            </td>
+                            <td>
+                                <span class="daxa-badge d-inline-block">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-4652
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user13.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Thomas Wilson
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                wildon&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-622-4488
+                            </td>
+                            <td class="text-body">
+                                Nov 18, 2023
+                            </td>
+                            <td class="text-body">
+                                Tech Enterprises	
+                            </td>
+                            <td>
+                                <span class="daxa-badge deactive d-inline-block">
+                                    Deactive
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text-body">
+                                #ARP-7895
+                            </td>
+                            <td>
+                                <div class="info d-flex align-items-center">
+                                    <div class="image">
+                                        <img src="assets/images/users/user14.jpg" alt="user-image">
+                                    </div>
+                                    <span class="d-block fw-medium">
+                                        Nathaniel Hulsey
+                                    </span>
+                                </div>
+                            </td>
+                            <td class="text-body">
+                                hulsey&#64;example.com
+                            </td>
+                            <td class="text-body">
+                                +1 555-225-4488
+                            </td>
+                            <td class="text-body">
+                                Nov 19, 2023
+                            </td>
+                            <td class="text-body">
+                                Synetic Solutions
+                            </td>
+                            <td>
+                                <span class="daxa-badge d-inline-block">
+                                    Active
+                                </span>
+                            </td>
+                            <td>
+                                <div class="action-info d-flex align-items-center justify-content-end">
+                                    <button type="button" class="text-daxa" mat-button matTooltip="Edit" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            visibility
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="View" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            edit
+                                        </i>
+                                    </button>
+                                    <button type="button" class="text-body" mat-button matTooltip="Delete" matTooltipPosition="above">
+                                        <i class="material-symbols-outlined">
+                                            delete
+                                        </i>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

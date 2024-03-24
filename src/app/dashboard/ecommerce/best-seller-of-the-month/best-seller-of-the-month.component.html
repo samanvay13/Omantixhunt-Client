@@ -1,0 +1,31 @@
+<mat-card
+    class="daxa-card best-seller-of-the-month-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Best Seller Of The Month
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="d-flex justify-content-between">
+            <div class="content">
+                <h5 class="fw-medium">
+                    Michael Marquez!
+                </h5>
+                <div class="price lh-1 fw-medium">
+                    $3.5K<span class="text-body">(Sales)</span>
+                </div>
+                <a routerLink="/ecommerce-page/seller-details" class="link-btn d-inline-block fw-medium text-decoration-underline">
+                    Details View
+                </a>
+            </div>
+            <div class="image">
+                <img src="assets/images/man.png" alt="man-image">
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

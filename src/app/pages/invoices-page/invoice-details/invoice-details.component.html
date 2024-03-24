@@ -1,0 +1,247 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Invoice Details
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Pages
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Invoices
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Invoice Details
+        </li>
+    </ol>
+</div>
+
+<!-- Invoice Details -->
+<mat-card
+    class="daxa-card invoice-details-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Invoice Details
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="invoice-info d-md-flex align-items-center justify-content-between">
+            <div>
+                <span class="title d-block text-body">
+                    Invoice Number: <span class="text-black">#1346</span>
+                </span>
+                <span class="d-block text-body">
+                    Invoice To:
+                </span>
+                <span class="d-block">
+                    Shannon Nelson
+                </span>
+                <span class="d-block">
+                    4545 Seth Street Ballinger, TX 78965
+                </span>
+                <span class="d-block">
+                    +1 444 556 8899
+                </span>
+            </div>
+            <div>
+                <img src="assets/images/qr-code.png" alt="qr-code-image">
+            </div>
+            <div>
+                <span class="title d-block text-body">
+                    Date: <span class="text-black">Dec 01, 2023</span>
+                </span>
+                <span class="d-block text-body">
+                    Pay To:
+                </span>
+                <span class="d-block">
+                    Mercedes Foreman
+                </span>
+                <span class="d-block">
+                    458 Friendship Lane Walnut Creek, CA 5828
+                </span>
+                <span class="d-block">
+                    +1 444 888 0055
+                </span>
+            </div>
+        </div>
+        <div class="recent-orders-table table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" class="fw-medium text-black">
+                            No
+                        </th>
+                        <th scope="col" class="fw-medium text-black">
+                            Item Description
+                        </th>
+                        <th scope="col" class="fw-medium text-black">
+                            Quantity
+                        </th>
+                        <th scope="col" class="fw-medium text-black">
+                            Price
+                        </th>
+                        <th scope="col" class="fw-medium text-black">
+                            Total
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-body">
+                            01
+                        </td>
+                        <td class="text-black fw-medium">
+                            High-performance laptop with the latest specifications
+                        </td>
+                        <td class="text-body">
+                            4
+                        </td>
+                        <td class="text-body">
+                            $80
+                        </td>
+                        <td class="text-body">
+                            $320
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-body">
+                            02
+                        </td>
+                        <td class="text-black fw-medium">
+                            Complete set of ergonomic office furniture including a desk and chair
+                        </td>
+                        <td class="text-body">
+                            3
+                        </td>
+                        <td class="text-body">
+                            $45
+                        </td>
+                        <td class="text-body">
+                            $135
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-body">
+                            03
+                        </td>
+                        <td class="text-black fw-medium">
+                            Custom web development services including design, coding, and testing
+                        </td>
+                        <td class="text-body">
+                            5
+                        </td>
+                        <td class="text-body">
+                            $30
+                        </td>
+                        <td class="text-body">
+                            $150
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-body">
+                            04
+                        </td>
+                        <td class="text-black fw-medium">
+                            Expert consultation for developing and executing marketing strategies
+                        </td>
+                        <td class="text-body">
+                            1
+                        </td>
+                        <td class="text-body">
+                            $56
+                        </td>
+                        <td class="text-body">
+                            $56
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-body">
+                            05
+                        </td>
+                        <td class="text-black fw-medium">
+                            Design services for creating logos, graphics, and promotional materials
+                        </td>
+                        <td class="text-body">
+                            4
+                        </td>
+                        <td class="text-body">
+                            $90
+                        </td>
+                        <td class="text-body">
+                            $360
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-body">
+                            06
+                        </td>
+                        <td class="text-black fw-medium">
+                            Purchase of networking equipment, including routers and switches
+                        </td>
+                        <td class="text-body">
+                            2
+                        </td>
+                        <td class="text-body">
+                            $75
+                        </td>
+                        <td class="text-body">
+                            $150
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-body">
+                            Sub total:
+                        </td>
+                        <td class="text-body">
+                            $1,171
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-body">
+                            Tax (5%)
+                        </td>
+                        <td class="text-body">
+                            $58.55
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-black fw-medium">
+                            Grand Total
+                        </td>
+                        <td class="text-black">
+                            $1,229.55
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="btn-box text-center">
+            <button mat-button>
+                Print
+            </button>
+            <button mat-button>
+                Download
+            </button>
+        </div>
+    </mat-card-content>
+</mat-card>

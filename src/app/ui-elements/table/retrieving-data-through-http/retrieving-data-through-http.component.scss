@@ -1,0 +1,71 @@
+.example-rate-limit-reached {
+    padding: 0 20px 20px;
+}
+::ng-deep {
+    .mat-mdc-card {
+        &.daxa-card {
+            .mat-mdc-card-content {
+                .example-table {
+                    .mat-mdc-paginator {
+                        padding: {
+                            top: 20px;
+                            left: 20px;
+                            right: 20px;
+                        };
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .example-rate-limit-reached {
+        padding: 0 15px 15px;
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                .mat-mdc-card-content {
+                    .example-table {
+                        .mat-mdc-paginator {
+                            padding: {
+                                top: 15px;
+                                left: 15px;
+                                right: 15px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .example-rate-limit-reached {
+        padding: 0 20px 20px;
+    }
+    ::ng-deep {
+        .mat-mdc-card {
+            &.daxa-card {
+                .mat-mdc-card-content {
+                    .example-table {
+                        .mat-mdc-paginator {
+                            padding: {
+                                left: 20px;
+                                right: 20px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

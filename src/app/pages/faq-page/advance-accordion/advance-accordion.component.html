@@ -1,0 +1,43 @@
+<mat-card
+    class="daxa-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Advance Accordion
+            </h5>
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <cdk-accordion class="advance-accordion">
+            <cdk-accordion-item
+                *ngFor="let item of items; let index = index;"
+                #accordionItem="cdkAccordionItem"
+                role="button"
+                tabindex="0"
+                class="accordion-item"
+                [attr.id]="'accordion-header-' + index"
+                [attr.aria-expanded]="accordionItem.expanded"
+                [attr.aria-controls]="'accordion-body-' + index"
+            >
+                <div
+                    class="accordion-item-header {{accordionItem.expanded ? 'close' : 'open'}}"
+                    (click)="accordionItem.toggle()"
+                >
+                    {{ item.title }}
+                </div>
+                <div
+                    role="region"
+                    class="accordion-item-body"
+                    [style.display]="accordionItem.expanded ? '' : 'none'"
+                    [attr.id]="'accordion-body-' + index"
+                    [attr.aria-labelledby]="'accordion-header-' + index"
+                >
+                    <p>{{ item.desc }}</p>
+                </div>
+            </cdk-accordion-item>
+        </cdk-accordion>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,81 @@
+<mat-card
+    class="daxa-card courses-categories-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Courses Categories
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <button type="button" mat-button class="card-header-menu-btn" [matMenuTriggerFor]="cardHeaderMenu">
+                This Week
+            </button>
+            <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                <button mat-menu-item>
+                    This Day
+                </button>
+                <button mat-menu-item>
+                    This Week
+                </button>
+                <button mat-menu-item>
+                    This Month
+                </button>
+                <button mat-menu-item>
+                    This Year
+                </button>
+            </mat-menu>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="courses-categories-table">
+            <div class="table-responsive">
+                <table mat-table [dataSource]="dataSource">
+
+                    <!-- Course Column -->
+                    <ng-container matColumnDef="course">
+                        <td mat-cell *matCellDef="let element">
+                            <div class="course-info d-flex align-items-center">
+                                <div class="image">
+                                    <img [src]="element.course.img" alt="course-image">
+                                </div>
+                                <div class="info">
+                                    <a routerLink="/lms-page" class="d-inline-block">
+                                        {{element.course.name}}
+                                    </a>
+                                    <span class="d-block text-body">
+                                        {{element.course.number}}
+                                    </span>
+                                </div>
+                            </div>
+                        </td>
+                    </ng-container>
+
+                    <!-- Enrolled Column -->
+                    <ng-container matColumnDef="enrolled">
+                        <td mat-cell *matCellDef="let element">
+                            {{element.enrolled}}
+                        </td>
+                    </ng-container>
+
+                    <!-- Link Btn Column -->
+                    <ng-container matColumnDef="linkbtn">
+                        <td mat-cell *matCellDef="let element">
+                            <a mat-button class="link-btn text-body" routerLink="/{{element.linkbtn}}">
+                                <i class="material-symbols-outlined">
+                                    east
+                                </i>
+                            </a>
+                        </td>
+                    </ng-container>
+
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                </table>
+            </div>
+            <mat-paginator [pageSizeOptions]="[6, 12, 18]" showFirstLastButtons></mat-paginator>
+        </div>
+    </mat-card-content>
+</mat-card>

@@ -1,0 +1,191 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.basic-timeline-card {
+            .mat-mdc-card-content {
+                .timeline {
+                    li {
+                        border-bottom: 1px solid rgba(0, 0, 0, .04);
+                        padding: {
+                            top: 20px;
+                            left: 30px;
+                            bottom: 20px;
+                        };
+                        h5 {
+                            margin-bottom: 11px;
+                        }
+                        .time {
+                            font-size: 14.5px;
+                            margin-bottom: 9px;
+                        }
+                        .users {
+                            margin-top: 12px;
+        
+                            img {
+                                width: 52px;
+                                height: 52px;
+                                border-radius: 50%;
+                                margin-right: -20px;
+                                border: 3px solid var(--whiteColor);
+                            }
+                            div {
+                                width: 52px;
+                                height: 52px;
+                                line-height: 44px;
+                                text-align: center;
+                                border: 3px solid var(--whiteColor);
+                            }
+                        }
+                        &::before {
+                            top: 0;
+                            left: 4px;
+                            bottom: 0;
+                            width: 1px;
+                            content: '';
+                            position: absolute;
+                            background: rgba(0, 0, 0, .04);
+                        }
+                        &::after {
+                            left: 0;
+                            top: -5px;
+                            content: '';
+                            width: 10px;
+                            height: 10px;
+                            border-radius: 50%;
+                            position: absolute;
+                            background: var(--daxaColor);
+                        }
+                        &:nth-child(2), &:nth-child(8) {
+                            &::after {
+                                background: var(--primaryColor);
+                            }
+                        }
+                        &:nth-child(3), &:nth-child(9) {
+                            &::after {
+                                background: var(--successColor);
+                            }
+                        }
+                        &:nth-child(4), &:nth-child(10) {
+                            &::after {
+                                background: var(--warningColor);
+                            }
+                        }
+                        &:nth-child(5), &:nth-child(11) {
+                            &::after {
+                                background: var(--dangerColor);
+                            }
+                        }
+                        &:nth-child(6), &:nth-child(12) {
+                            &::after {
+                                background: var(--infoColor);
+                            }
+                        }
+                        &:first-child {
+                            &::after {
+                                top: 0;
+                            }
+                        }
+                        &:last-child {
+                            border-bottom: 0;
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .timeline {
+                        li {
+                            border-bottom-color: rgba(255, 255, 255, .04);
+                            
+                            .users {
+                                img {
+                                    border-color: #1b232d;
+                                }
+                                div {
+                                    border-color: #1b232d;
+                                }
+                            }
+                            &::before {
+                                background: rgba(255, 255, 255, .04);
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .timeline {
+                        padding-right: 0;
+
+                        li {
+                            padding: {
+                                right: 30px;
+                                left: 0;
+                            };
+                            .users {
+                                img {
+                                    margin: {
+                                        right: 0;
+                                        left: -20px;
+                                    };
+                                }
+                            }
+                            &::before {
+                                left: auto;
+                                right: 4px;
+                            }
+                            &::after {
+                                left: auto;
+                                right: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.basic-timeline-card {
+                .mat-mdc-card-content {
+                    .timeline {
+                        li {
+                            padding: {
+                                top: 15px;
+                                left: 22px;
+                                bottom: 15px;
+                            };
+                            h5 {
+                                margin-bottom: 10px;
+                            }
+                            .time {
+                                font-size: 14px;
+                                margin-bottom: 8px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

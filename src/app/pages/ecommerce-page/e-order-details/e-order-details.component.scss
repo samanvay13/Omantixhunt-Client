@@ -1,0 +1,556 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.tracking-id-card {
+            .mat-mdc-card-content {
+                .numbers {
+                    z-index: 1;
+                    margin-top: 20px;
+
+                    .box {
+                        div {
+                            width: 50px;
+                            height: 50px;
+                            line-height: 48px;
+                            background-color: #978bff;
+                            border: 1px dashed var(--whiteColor);
+                        }
+                        span {
+                            margin-top: 16px;
+                        }
+                        &:hover {
+                            div {
+                                background-color: var(--infoColor);
+                            }
+                        }
+                        &:last-child {
+                            text-align: right;
+
+                            div {
+                                margin-left: auto;
+                            }
+                        }
+                        &.active {
+                            div {
+                                background-color: var(--infoColor);
+                            }
+                        }
+                    }
+                    &::before {
+                        left: 0;
+                        right: 0;
+                        top: 25px;
+                        content: '';
+                        z-index: -1;
+                        position: absolute;
+                        border-top: 1px dashed var(--whiteColor);
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .numbers {
+                        .box {
+                            &:last-child {
+                                text-align: left;
+    
+                                div {
+                                    margin: {
+                                        left: 0;
+                                        right: auto;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.recent-orders-card {
+            .mat-mdc-card-content {
+                .recent-orders-table {
+                    margin: {
+                        left: -20px;
+                        right: -20px;
+                    };
+                    .mat-mdc-table {
+                        .mat-mdc-header-cell {
+                            padding: {
+                                top: 17px;
+                                bottom: 17px;
+                            };
+                            &:first-child {
+                                padding-right: 0;
+                            }
+                        }
+                        .mat-mdc-cell {
+                            padding: {
+                                top: 17px;
+                                bottom: 17px;
+                            };
+                            &:first-child {
+                                padding-right: 0;
+                            }
+                        }
+                        .info {
+                            .image {
+                                width: 50px;
+                                line-height: .01;
+                                margin-right: 12px;
+
+                                img {
+                                    border-radius: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .recent-orders-table {
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                &:first-child {
+                                    padding: {
+                                        right: 20px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                            .mat-mdc-cell {
+                                &:first-child {
+                                    padding: {
+                                        right: 20px;
+                                        left: 0;
+                                    };
+                                }
+                            }
+                            .info {
+                                .image {
+                                    margin: {
+                                        right: 0;
+                                        left: 12px;
+                                    };
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.order-summary-card {
+            .mat-mdc-card-content {
+                .order-summary-table {
+                    margin: {
+                        left: -20px;
+                        right: -20px;
+                        bottom: 40px;
+                    };
+                    table {
+                        width: 100%;
+                        border-spacing: 0;
+
+                        thead {
+                            tr {
+                                th {
+                                    text-align: left;
+                                    padding: 15px 20px;
+                                    white-space: nowrap;
+                                    background-color: #e7effd;
+
+                                    &:last-child {
+                                        text-align: right;
+                                    }
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    border-bottom: 1px dashed #e0e0e0;
+                                    white-space: nowrap;
+                                    padding: 15px 20px;
+
+                                    &:last-child {
+                                        text-align: right;
+                                    }
+                                }
+                                &:last-child {
+                                    td {
+                                        padding-bottom: 0;
+                                        border-bottom: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                h5 {
+                    margin-bottom: 10px;
+                }
+                .payment-method {
+                    .icon {
+                        img {
+                            margin-bottom: -5px;
+                        }
+                    }
+                    .info {
+                        margin-left: 10px;
+
+                        span {
+                            &:nth-child(2) {
+                                font-size: 14px;
+                                margin-top: 3px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        background-color: #131920;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        border-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        text-align: right;
+    
+                                        &:last-child {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        &:last-child {
+                                            text-align: left;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .payment-method {
+                        .info {
+                            margin: {
+                                left: 0;
+                                right: 10px;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+        &.order-details-card {
+            .mat-mdc-card-content {
+                h5 {
+                    margin-bottom: 15px;
+                }
+                ul {
+                    li {
+                        margin-bottom: 12px;
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+            &.rtl-enabled {
+                .mat-mdc-card-content {
+                    ul {
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.tracking-id-card {
+                .mat-mdc-card-content {
+                    .numbers {
+                        margin-top: 0;
+    
+                        .box {
+                            display: inline-block;
+                            margin: {
+                                right: 25px;
+                                top: 15px;
+                            };
+                            div {
+                                width: 45px;
+                                height: 45px;
+                                line-height: 43px;
+                            }
+                            span {
+                                margin-top: 12px;
+                            }
+                            &:last-child {
+                                text-align: left;
+    
+                                div {
+                                    margin-left: 0;
+                                }
+                            }
+                        }
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .numbers {
+                            .box {
+                                margin: {
+                                    right: 0;
+                                    left: 25px;
+                                };
+                                &:last-child {
+                                    text-align: right;
+        
+                                    div {
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.recent-orders-card {
+                .mat-mdc-card-content {
+                    .recent-orders-table {
+                        margin: {
+                            left: -15px;
+                            right: -15px;
+                        };
+                        .mat-mdc-table {
+                            .mat-mdc-header-cell {
+                                padding: {
+                                    top: 15px;
+                                    bottom: 15px;
+                                };
+                            }
+                            .mat-mdc-cell {
+                                padding: {
+                                    top: 15px;
+                                    bottom: 15px;
+                                };
+                            }
+                            .info {
+                                .image {
+                                    width: 40px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .recent-orders-table {
+                            .mat-mdc-table {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 15px;
+                                        };
+                                    }
+                                }
+                                .mat-mdc-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 15px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.order-summary-card {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        margin: {
+                            left: -15px;
+                            right: -15px;
+                            bottom: 15px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.order-details-card {
+                .mat-mdc-card-content {
+                    h5 {
+                        margin-bottom: 12px;
+                    }
+                    ul {
+                        li {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.recent-orders-card {
+                .mat-mdc-card-content {
+                    .recent-orders-table {
+                        margin: {
+                            left: -20px;
+                            right: -20px;
+                        };
+                    }
+                }
+                &.rtl-enabled {
+                    .mat-mdc-card-content {
+                        .recent-orders-table {
+                            .mat-mdc-table {
+                                .mat-mdc-header-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                                .mat-mdc-cell {
+                                    &:first-child {
+                                        padding: {
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &.order-summary-card {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        margin: {
+                            left: -20px;
+                            right: -20px;
+                            bottom: 20px;
+                        };
+                        table {
+                            thead {
+                                tr {
+                                    th {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                            tbody {
+                                tr {
+                                    td {
+                                        padding: {
+                                            left: 20px;
+                                            right: 20px;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.tracking-id-card {
+                .mat-mdc-card-content {
+                    .numbers {
+                        .box {
+                            span {
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            &.order-summary-card {
+                .mat-mdc-card-content {
+                    .order-summary-table {
+                        margin-bottom: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

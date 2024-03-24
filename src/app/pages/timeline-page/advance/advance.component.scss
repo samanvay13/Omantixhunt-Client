@@ -1,0 +1,532 @@
+.mat-mdc-card {
+    &.daxa-card {
+        &.advance-timeline-card {
+            .mat-mdc-card-content {
+                .timeline {
+                    .timeline-item {
+                        padding-bottom: 30px;
+                        z-index: 1;
+
+                        .inner {
+                            padding: 20px;
+                            float: left;
+                            width: 47%;
+
+                            h5 {
+                                margin-bottom: 10px;
+                            }
+                            .assigned-to {
+                                margin-bottom: 20px;
+                            }
+                            .description {
+                                margin-bottom: 5px;
+                            }
+                        }
+                        .date {
+                            left: 50%;
+                            top: 68px;
+                            font-size: 15px;
+                            margin-left: 125px;
+                            position: absolute;
+                            padding: 5px 12px 5px 10px;
+                            transform: translateX(-50%);
+                            border: 1px solid var(--daxaColor);
+
+                            .arrow {
+                                left: 0;
+                                top: 6px;
+                                position: absolute;
+
+                                &::before {
+                                    border: 7px solid transparent;
+                                    border-right-color: #f4f6fc;
+                                    position: absolute;
+                                    content: '';
+                                    z-index: 2;
+                                    top: 1.5px;
+                                    right: 0;
+                                }
+                                &::after {
+                                    top: 0;
+                                    right: 0;
+                                    z-index: 1;
+                                    content: '';
+                                    position: absolute;
+                                    border: 8.5px solid transparent;
+                                    border-right-color: var(--daxaColor);
+                                }
+                            }
+                        }
+                        &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8), &:nth-child(10) {
+                            .inner {
+                                float: right;
+                            }
+                            .date {
+                                margin-left: -125px;
+
+                                .arrow {
+                                    left: auto;
+                                    right: 0;
+    
+                                    &::before {
+                                        left: 0;
+                                        right: auto;
+                                        border: {
+                                            right-color: transparent;
+                                            left-color: #f4f6fc;
+                                        };
+                                    }
+                                    &::after {
+                                        left: 0;
+                                        right: auto;
+                                        border: {
+                                            right-color: transparent;
+                                            left-color: var(--daxaColor);
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(2), &:nth-child(10) {
+                            &::before {
+                                background: var(--infoColor);
+                            }
+                            .date {
+                                border-color: var(--infoColor);
+
+                                .arrow {
+                                    &::after {
+                                        border: {
+                                            left-color: var(--infoColor);
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(3), &:nth-child(11) {
+                            &::before {
+                                background: var(--primaryColor);
+                            }
+                            .date {
+                                border-color: var(--primaryColor);
+
+                                .arrow {
+                                    &::after {
+                                        border: {
+                                            right-color: var(--primaryColor);
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(4), &:nth-child(12) {
+                            &::before {
+                                background: var(--warningColor);
+                            }
+                            .date {
+                                border-color: var(--warningColor);
+
+                                .arrow {
+                                    &::after {
+                                        border: {
+                                            left-color: var(--warningColor);
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(5), &:nth-child(13) {
+                            &::before {
+                                background: var(--dangerColor);
+                            }
+                            .date {
+                                border-color: var(--dangerColor);
+
+                                .arrow {
+                                    &::after {
+                                        border: {
+                                            right-color: var(--dangerColor);
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(6), &:nth-child(14) {
+                            &::before {
+                                background: var(--successColor);
+                            }
+                            .date {
+                                border-color: var(--successColor);
+
+                                .arrow {
+                                    &::after {
+                                        border: {
+                                            left-color: var(--successColor);
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(7), &:nth-child(15) {
+                            &::before {
+                                background: #9bc44e;
+                            }
+                            .date {
+                                border-color: #9bc44e;
+
+                                .arrow {
+                                    &::after {
+                                        border: {
+                                            right-color: #9bc44e;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-child(8), &:nth-child(16) {
+                            &::before {
+                                background: #ffe500;
+                            }
+                            .date {
+                                border-color: #ffe500;
+
+                                .arrow {
+                                    &::after {
+                                        border: {
+                                            left-color: #ffe500;
+                                        };
+                                    }
+                                }
+                            }
+                        }
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                        &::before {
+                            left: 50%;
+                            top: 73px;
+                            content: '';
+                            width: 24px;
+                            height: 24px;
+                            border-radius: 50%;
+                            position: absolute;
+                            transform: translateX(-50%);
+                            background: var(--daxaColor);
+                        }
+                        &::after {
+                            display: block;
+                            content: "";
+                            clear: both;
+                        }
+                    }
+                    &::before {
+                        top: 0;
+                        left: 50%;
+                        bottom: 0;
+                        width: 2px;
+                        content: '';
+                        position: absolute;
+                        background: #f4f6fc;
+                        transform: translateX(-50%);
+                        margin: {
+                            top: 73px;
+                            bottom: 73px;
+                        };
+                    }
+                }
+            }
+            &.component-dark-theme {
+                .mat-mdc-card-content {
+                    .timeline {
+                        .timeline-item {
+                            .date {
+                                .arrow {
+                                    &::before {
+                                        border-color: transparent;
+                                        border-right-color: rgba(255, 255, 255, 0.09);
+                                    }
+                                    &::after {
+                                        border-color: transparent;
+                                        border-right-color: var(--daxaColor);
+                                    }
+                                }
+                            }
+                            &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8), &:nth-child(10) {
+                                .date {
+                                    .arrow {
+                                        &::before {
+                                            border: {
+                                                right-color: transparent;
+                                                left-color: rgba(255, 255, 255, 0.09);
+                                            };
+                                        }
+                                        &::after {
+                                            border: {
+                                                right-color: transparent;
+                                                left-color: var(--daxaColor);
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(2), &:nth-child(10) {
+                                .date {
+                                    border-color: var(--infoColor);
+    
+                                    .arrow {
+                                        &::after {
+                                            border: {
+                                                left-color: var(--infoColor);
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(3), &:nth-child(11) {
+                                .date {
+                                    border-color: var(--primaryColor);
+    
+                                    .arrow {
+                                        &::after {
+                                            border: {
+                                                right-color: var(--primaryColor);
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(4), &:nth-child(12) {
+                                .date {
+                                    border-color: var(--warningColor);
+    
+                                    .arrow {
+                                        &::after {
+                                            border: {
+                                                left-color: var(--warningColor);
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(5), &:nth-child(13) {
+                                .date {
+                                    border-color: var(--dangerColor);
+    
+                                    .arrow {
+                                        &::after {
+                                            border: {
+                                                right-color: var(--dangerColor);
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(6), &:nth-child(14) {
+                                .date {
+                                    border-color: var(--successColor);
+    
+                                    .arrow {
+                                        &::after {
+                                            border: {
+                                                left-color: var(--successColor);
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(7), &:nth-child(15) {
+                                .date {
+                                    border-color: #9bc44e;
+    
+                                    .arrow {
+                                        &::after {
+                                            border: {
+                                                right-color: #9bc44e;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                            &:nth-child(8), &:nth-child(16) {
+                                .date {
+                                    border-color: #ffe500;
+    
+                                    .arrow {
+                                        &::after {
+                                            border: {
+                                                left-color: #ffe500;
+                                            };
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &::before {
+                            background: rgba(255, 255, 255, 0.09);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.advance-timeline-card {
+                .mat-mdc-card-content {
+                    .timeline {
+                        padding-left: 15px !important;
+                        
+                        .timeline-item {
+                            padding-bottom: 15px;
+    
+                            .inner {
+                                border-radius: 10px 10px 0 0 !important;
+                                float: unset !important;
+                                padding: 15px 15px 10px;
+                                width: 100%;
+    
+                                .assigned-to {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            .date {
+                                top: 0;
+                                left: 0;
+                                border: 0;
+                                font-size: 13.5px;
+                                position: relative;
+                                transform: translateX(0);
+                                padding: 0 15px 15px 15px;
+                                border-radius: 0 0 10px 10px;
+                                margin: {
+                                    left: 0 !important;
+                                };
+                                .arrow {
+                                    display: none !important;
+                                }
+                            }
+                            &::before {
+                                top: 50%;
+                                width: 13px;
+                                left: -21px;
+                                height: 13px;
+                                transform: translateX(0) translateY(-50%);
+                            }
+                        }
+                        &::before {
+                            left: 0;
+                            width: 1px;
+                            transform: translateX(0);
+                            margin: {
+                                top: 0;
+                                bottom: 0;
+                            };
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.advance-timeline-card {
+                .mat-mdc-card-content {
+                    .timeline {
+                        padding-left: 20px !important;
+                        
+                        .timeline-item {
+                            padding-bottom: 20px;
+    
+                            .inner {
+                                padding: 20px 20px 10px;
+                            }
+                            .date {
+                                padding: 0 20px 20px 20px;
+                            }
+                            &::before {
+                                left: -26px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.advance-timeline-card {
+                .mat-mdc-card-content {
+                    .timeline {
+                        .timeline-item {
+                            padding-bottom: 25px;
+    
+                            .date {
+                                font-size: 14px;
+                                margin-left: 110px;
+                            }
+                            &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8), &:nth-child(10) {
+                                .date {
+                                    margin-left: -110px;
+                                }
+                            }
+                            &::before {
+                                width: 20px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {
+
+    .mat-mdc-card {
+        &.daxa-card {
+            &.advance-timeline-card {
+                .mat-mdc-card-content {
+                    .timeline {
+                        .timeline-item {
+                            .date {
+                                margin-left: 135px;
+                            }
+                            &:nth-child(2), &:nth-child(4), &:nth-child(6), &:nth-child(8), &:nth-child(10) {
+                                .date {
+                                    margin-left: -135px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

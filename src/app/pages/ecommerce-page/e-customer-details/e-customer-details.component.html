@@ -1,0 +1,185 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Customer Details
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Customers
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Customer Details
+        </li>
+    </ol>
+</div>
+
+<!-- Customer Details -->
+<div class="row">
+    <div class="col-lg-4">
+        <mat-card
+            class="daxa-card customer-card mb-25 border-radius bg-white border-none d-block"
+            [class.component-dark-theme]="themeService.isDark()"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-content>
+                <div class="text-center">
+                    <img src="assets/images/admin.png" width="160" class="rounded-cricle" alt="customer-image">
+                    <h4>Mateo Luca</h4>
+                    <span class="d-block text-body">
+                        hello&#64;mateo.com
+                    </span>
+                </div>
+                <div class="info">
+                    <h5>
+                        Details
+                    </h5>
+                    <ul class="pl-0 mb-0 list-unstyled mt-0">
+                        <li class="text-body">
+                            <span class="d-block text-black fw-medium">
+                                Account ID
+                            </span>
+                            ID-12174123
+                        </li>
+                        <li class="text-body">
+                            <span class="d-block text-black fw-medium">
+                                Billing Email
+                            </span>
+                            hello&#64;luca.com
+                        </li>
+                        <li class="text-body">
+                            <span class="d-block text-black fw-medium">
+                                Delivery Address
+                            </span>
+                            715 Maple St, Hamletville, England
+                        </li>
+                        <li class="text-body">
+                            <span class="d-block text-black fw-medium">
+                                Language
+                            </span>
+                            English, Spanish
+                        </li>
+                        <li class="text-body">
+                            <span class="d-block text-black fw-medium">
+                                Latest Transaction
+                            </span>
+                            #ARP-1217
+                        </li>
+                    </ul>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="col-lg-8">
+        <mat-card
+            class="daxa-card transactions-history-card mb-25 border-radius bg-white border-none d-block"
+            [class.rtl-enabled]="themeService.isRTLEnabled()"
+        >
+            <mat-card-header>
+                <mat-card-title>
+                    <h5 class="mt-0 mb-0">
+                        Transactions History
+                    </h5>
+                </mat-card-title>
+                <mat-card-subtitle>
+                    <button type="button" mat-button class="card-header-menu-btn" [matMenuTriggerFor]="cardHeaderMenu">
+                        Last Month
+                    </button>
+                    <mat-menu #cardHeaderMenu="matMenu" class="card-header-menu" xPosition="before">
+                        <button mat-menu-item>
+                            Last Day
+                        </button>
+                        <button mat-menu-item>
+                            Last Week
+                        </button>
+                        <button mat-menu-item>
+                            Last Month
+                        </button>
+                        <button mat-menu-item>
+                            Last Year
+                        </button>
+                    </mat-menu>
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content>
+                <div class="transactions-history-table">
+                    <div class="table-responsive">
+                        <table mat-table [dataSource]="dataSource">
+        
+                            <!-- Order ID Column -->
+                            <ng-container matColumnDef="orderID">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Order ID
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.orderID}}
+                                </td>
+                            </ng-container>
+        
+                            <!-- Status Column -->
+                            <ng-container matColumnDef="status">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Status
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    <span class="daxa-badge successful d-inline-block" *ngIf="element.status.successful">
+                                        {{element.status.successful}}
+                                    </span>
+                                    <span class="daxa-badge pending d-inline-block" *ngIf="element.status.pending">
+                                        {{element.status.pending}}
+                                    </span>
+                                    <span class="daxa-badge rejected d-inline-block" *ngIf="element.status.rejected">
+                                        {{element.status.rejected}}
+                                    </span>
+                                </td>
+                            </ng-container>
+        
+                            <!-- Amount Column -->
+                            <ng-container matColumnDef="amount">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Amount
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.amount}}
+                                </td>
+                            </ng-container>
+        
+                            <!-- Rewards Column -->
+                            <ng-container matColumnDef="rewards">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Rewards
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.rewards}}
+                                </td>
+                            </ng-container>
+        
+                            <!-- Date Column -->
+                            <ng-container matColumnDef="date">
+                                <th mat-header-cell *matHeaderCellDef>
+                                    Date
+                                </th>
+                                <td mat-cell *matCellDef="let element">
+                                    {{element.date}}
+                                </td>
+                            </ng-container>
+        
+                            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        
+                        </table>
+                    </div>
+                    <mat-paginator [pageSizeOptions]="[10, 20, 30]" showFirstLastButtons></mat-paginator>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

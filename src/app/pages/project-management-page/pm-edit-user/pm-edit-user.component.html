@@ -1,0 +1,151 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Edit User
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Project Management
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Users
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Edit User
+        </li>
+    </ol>
+</div>
+
+<!-- Edit User -->
+<mat-card class="daxa-card edit-user-card mb-25 border-radius bg-white border-none d-block">
+    <mat-card-content>
+        <form>
+            <div class="row">
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            User ID
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter user id
+                            </mat-label>
+                            <input matInput value="#ARP-1217">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Full Name
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter full name
+                            </mat-label>
+                            <input matInput value="Marcia Baker">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Email Address
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Enter email address
+                            </mat-label>
+                            <input matInput value="marcia@example.com">
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Role
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Select role
+                            </mat-label>
+                            <mat-select [(value)]="roleSelected">
+                                <mat-option value="option1">
+                                    Project manager
+                                </mat-option>
+                                <mat-option value="option2">
+                                    Developer
+                                </mat-option>
+                                <mat-option value="option3">
+                                    Business analyst
+                                </mat-option>
+                                <mat-option value="option4">
+                                    UI/UX designer	
+                                </mat-option>
+                                <mat-option value="option5">
+                                    QA tester
+                                </mat-option>
+                                <mat-option value="option6">
+                                    Admin
+                                </mat-option>
+                                <mat-option value="option7">
+                                    Editor
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Status
+                        </label>
+                        <mat-form-field>
+                            <mat-label>
+                                Select status
+                            </mat-label>
+                            <mat-select [(value)]="statusSelected">
+                                <mat-option value="option1">
+                                    Active
+                                </mat-option>
+                                <mat-option value="option2">
+                                    Deactive
+                                </mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Description
+                        </label>
+                        <div class="NgxEditor__Wrapper">
+                            <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+                            <ngx-editor [editor]="editor" [placeholder]="'Type here...'"></ngx-editor>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="mb-25">
+                        <label class="main-label d-block lh-1 text-black">
+                            Image
+                        </label>
+                        <file-upload class="file-uploader" [multiple]="multiple"></file-upload>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button mat-button>
+                    Update Changes
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

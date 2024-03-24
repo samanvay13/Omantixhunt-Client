@@ -1,0 +1,34 @@
+<mat-card
+    class="daxa-card tickets-open-card mb-25 border-radius bg-white border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <span class="title d-block text-body">
+            Tickets Open
+        </span>
+        <h3 class="mb-0 lh-1">
+            2.75K
+        </h3>
+        <span class="info d-block position-relative text-success">
+            <i class="material-symbols-outlined">
+                trending_up
+            </i>
+            20.05% <span class="text-body">This Week</span>
+        </span>
+        <div class="chart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [xaxis]="chartOptions.xaxis!"
+                [stroke]="chartOptions.stroke!"
+                [dataLabels]="chartOptions.dataLabels!"
+                [colors]="chartOptions.colors!"
+                [yaxis]="chartOptions.yaxis!"
+                [fill]="chartOptions.fill!"
+                [grid]="chartOptions.grid!"
+                [labels]="chartOptions.labels!"
+                [legend]="chartOptions.legend!"
+            ></apx-chart>
+        </div>
+    </mat-card-content>
+</mat-card>

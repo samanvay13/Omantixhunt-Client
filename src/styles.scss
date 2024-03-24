@@ -1,0 +1,162 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$daxa-primary: mat.define-palette(mat.$indigo-palette);
+$daxa-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$daxa-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$daxa-theme: mat.define-light-theme((
+    color: (
+        primary: $daxa-primary,
+        accent: $daxa-accent,
+        warn: $daxa-warn,
+    )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($daxa-theme);
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --fontFamily: 'Outfit', sans-serif;
+    --daxaColor: #0f79f3;
+    --primaryColor: #796df6;
+    --dangerColor: #e74c3c;
+    --infoColor: #00cae3;
+    --warningColor: #ffb264;
+    --successColor: #2ed47e;
+    --blackColor: #475569;
+    --whiteColor: #ffffff;
+    --bodyColor: #919aa3;
+    --transition: .5s;
+    --fontSize: 16px;
+    --borderBoxShadow: rgba(0, 0, 0, .05) 0px 6px 24px 0px, rgba(0, 0, 0, .08) 0px 0px 0px 1px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    color: var(--blackColor);
+    background-color: #eff3f9;
+    font: {
+        weight: 400;
+        size: var(--fontSize);
+        family: var(--fontFamily);
+    };
+}
+a {
+    transition: var(--transition);
+    color: var(--blackColor);
+    text-decoration: none;
+    outline: 0 !important;
+
+    &:hover {
+        text-decoration: none;
+        color: var(--daxaColor);
+    }
+}
+.d-table {
+    width: 100%;
+    height: 100%;
+
+    &-cell {
+        vertical-align: middle;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+input {
+    font: {
+        family: var(--fontFamily);
+        size: var(--fontSize);
+    };
+}
+button {
+    font: {
+        family: var(--fontFamily) !important;
+        size: var(--fontSize) !important;
+    };
+}
+.mb-25 {
+    margin-bottom: 25px !important;
+}
+
+// Utilities CSS
+@import "./utilities";
+
+// UI Kit CSS
+@import "./ui-kit";
+
+// Typography CSS
+@import "./typography";
+
+// RTL CSS
+@import "./rtl";
+
+// Dark CSS
+@import "./dark";
+
+/* Max width 767px */
+@media only screen and (max-width : 767px) {
+
+    body {
+        font-size: 14px;
+    }
+    .mb-25 {
+        margin-bottom: 15px !important;
+    }
+    button {
+        font-size: 14px !important;
+    }
+
+}
+
+/* Min width 576px to Max width 767px */
+@media only screen and (min-width : 576px) and (max-width : 767px) {
+
+    .mb-25 {
+        margin-bottom: 20px !important;
+    }
+
+}
+
+/* Min width 768px to Max width 991px */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+    body {
+        font-size: 15px;
+    }
+    button {
+        font-size: 15px !important;
+    }
+
+}
+
+/* Min width 992px to Max width 1199px */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {}
+
+/* Min width 1200px to Max width 1399px */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {}
+
+/* Min width 1600px */
+@media only screen and (min-width: 1600px) {}

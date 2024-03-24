@@ -1,0 +1,395 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Create Product
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            E-Commerce
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Create Product
+        </li>
+    </ol>
+</div>
+
+<!-- Create Product -->
+<mat-card
+    class="daxa-card create-product-card mb-25 border-radius bg-white border-none d-block"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-content>
+        <form>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h5 class="title mt-0">
+                        Add a Product
+                    </h5>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Product Title
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Product title
+                                    </mat-label>
+                                    <input matInput placeholder="E.g. Hand Watch">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Product Type
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Select
+                                    </mat-label>
+                                    <mat-select>
+                                        <mat-option value="option1">
+                                            Digital Product
+                                        </mat-option>
+                                        <mat-option value="option2">
+                                            Physical Product
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    SKU
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        SKU
+                                    </mat-label>
+                                    <input matInput placeholder="E.g. ABC-12345">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Brand Name
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Select
+                                    </mat-label>
+                                    <mat-select>
+                                        <mat-option value="option1">
+                                            Emburo
+                                        </mat-option>
+                                        <mat-option value="option2">
+                                            Fediz
+                                        </mat-option>
+                                        <mat-option value="option3">
+                                            Debilop
+                                        </mat-option>
+                                        <mat-option value="option4">
+                                            Canin
+                                        </mat-option>
+                                        <mat-option value="option5">
+                                            Daxa
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Product Description
+                                </label>
+                                <div class="NgxEditor__Wrapper">
+                                    <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"></ngx-editor-menu>
+                                    <ngx-editor [editor]="editor" [placeholder]="'Type here...'"></ngx-editor>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Regular Price
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Regular price
+                                    </mat-label>
+                                    <input matInput placeholder="E.g. $99">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Sale Price
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Sale price
+                                    </mat-label>
+                                    <input matInput placeholder="E.g. $29">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Publish Schedule
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Choose a date
+                                    </mat-label>
+                                    <input matInput [matDatepicker]="publishSchedule">
+                                    <mat-datepicker-toggle matIconSuffix [for]="publishSchedule"></mat-datepicker-toggle>
+                                    <mat-datepicker #publishSchedule></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Product in Stock
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Product in stock
+                                    </mat-label>
+                                    <input matInput placeholder="E.g. 17">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Product ID
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Product ID
+                                    </mat-label>
+                                    <input matInput placeholder="E.g. #1342-ABC">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Discout / Offer
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Discout / offer
+                                    </mat-label>
+                                    <input matInput placeholder="E.g. $20">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Available Date
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Choose a date
+                                    </mat-label>
+                                    <input matInput [matDatepicker]="availableDate">
+                                    <mat-datepicker-toggle matIconSuffix [for]="availableDate"></mat-datepicker-toggle>
+                                    <mat-datepicker #availableDate></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    End Date
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Choose a date
+                                    </mat-label>
+                                    <input matInput [matDatepicker]="endDate">
+                                    <mat-datepicker-toggle matIconSuffix [for]="endDate"></mat-datepicker-toggle>
+                                    <mat-datepicker #endDate></mat-datepicker>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Upload New Product Images
+                                </label>
+                                <file-upload class="file-uploader"></file-upload>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="title mt-0">
+                        Product Category & Tags
+                    </h5>
+                    <div class="row">
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Category
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Select
+                                    </mat-label>
+                                    <mat-select>
+                                        <mat-option value="option1">
+                                            Watch
+                                        </mat-option>
+                                        <mat-option value="option2">
+                                            Mobile
+                                        </mat-option>
+                                        <mat-option value="option3">
+                                            Laptop
+                                        </mat-option>
+                                        <mat-option value="option4">
+                                            Headphone
+                                        </mat-option>
+                                        <mat-option value="option5">
+                                            Shoe
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Vendor
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Select
+                                    </mat-label>
+                                    <mat-select>
+                                        <mat-option value="option1">
+                                            Dennis Matthews
+                                        </mat-option>
+                                        <mat-option value="option2">
+                                            Susan Rader
+                                        </mat-option>
+                                        <mat-option value="option3">
+                                            Douglas Harvey
+                                        </mat-option>
+                                        <mat-option value="option4">
+                                            John Valdez
+                                        </mat-option>
+                                        <mat-option value="option5">
+                                            Kathryn Turner
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Collection
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Select
+                                    </mat-label>
+                                    <mat-select>
+                                        <mat-option value="option1">
+                                            Collection 1
+                                        </mat-option>
+                                        <mat-option value="option2">
+                                            Collection 2
+                                        </mat-option>
+                                        <mat-option value="option3">
+                                            Collection 3
+                                        </mat-option>
+                                        <mat-option value="option4">
+                                            Collection 4
+                                        </mat-option>
+                                        <mat-option value="option5">
+                                            Collection 5
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-lg-12">
+                            <div class="mb-25">
+                                <label class="main-label d-block lh-1 text-black">
+                                    Tags
+                                </label>
+                                <mat-form-field>
+                                    <mat-label>
+                                        Select
+                                    </mat-label>
+                                    <mat-select multiple>
+                                        <mat-option value="Watch">Watch</mat-option>
+                                        <mat-option value="Electronics">Electronics</mat-option>
+                                        <mat-option value="Sports">Sports</mat-option>
+                                        <mat-option value="Fashion">Fashion</mat-option>
+                                        <mat-option value="Electronics">Electronics</mat-option>
+                                        <mat-option value="Watch">Jewellery</mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <h5 class="title mt-0">
+                        Other Option
+                    </h5>
+                    <div class="col-lg-12">
+                        <div class="mb-25">
+                            <label class="main-label d-block lh-1 text-black">
+                                Title
+                            </label>
+                            <mat-form-field>
+                                <mat-label>
+                                    Title
+                                </mat-label>
+                                <input matInput placeholder="E.g. Hand Watch">
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="mb-25">
+                            <label class="main-label d-block lh-1 text-black">
+                                Description
+                            </label>
+                            <mat-form-field class="textarea">
+                                <mat-label>
+                                    Write here....
+                                </mat-label>
+                                <textarea matInput placeholder="E.g. It makes me feel..."></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <button mat-button>
+                    Create Product
+                </button>
+                <button mat-button>
+                    Cancel
+                </button>
+            </div>
+        </form>
+    </mat-card-content>
+</mat-card>

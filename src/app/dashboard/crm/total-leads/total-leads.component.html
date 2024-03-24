@@ -1,0 +1,35 @@
+<mat-card class="daxa-card total-leads-card mb-25 border-radius bg-white border-none d-block">
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                Total Leads
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <span class="daxa-badge position-relative">
+                <i class="material-symbols-outlined">
+                    trending_up
+                </i>
+                75%
+            </span>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="chart">
+            <apx-chart
+                [series]="chartOptions.series!"
+                [chart]="chartOptions.chart!"
+                [xaxis]="chartOptions.xaxis!"
+                [stroke]="chartOptions.stroke!"
+                [dataLabels]="chartOptions.dataLabels!"
+                [yaxis]="chartOptions.yaxis!"
+                [labels]="chartOptions.labels!"
+                [legend]="chartOptions.legend!"
+                [colors]="chartOptions.colors!"
+                [grid]="chartOptions.grid!"
+                [title]="chartOptions.title!"
+                [subtitle]="chartOptions.subtitle!"
+            ></apx-chart>
+        </div>
+    </mat-card-content>
+</mat-card>

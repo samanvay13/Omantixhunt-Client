@@ -1,0 +1,10 @@
+textarea {
+    padding: 15px;
+    outline: 0 !important;
+    border: 1px solid #dae0ec;
+}
+.component-dark-theme {
+    textarea {
+        border-color: rgba(255, 255, 255, 0.2);
+    }
+}

@@ -1,0 +1,39 @@
+<mat-card
+    class="daxa-card new-customers-this-month-card mb-25 border-radius bg-white border-none d-block"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <mat-card-header>
+        <mat-card-title>
+            <h5 class="mt-0 mb-0">
+                New Customers This Month
+            </h5>
+        </mat-card-title>
+        <mat-card-subtitle>
+            <span class="daxa-badge position-relative">
+                <i class="material-symbols-outlined">
+                    trending_up
+                </i>
+                2.75%
+            </span>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <div class="number lh-1 fw-medium">
+            2,537
+        </div>
+        <span class="d-block text-body">
+            Join Today
+        </span>
+        <div class="users d-flex align-items-center">
+            <img src="assets/images/users/user12.jpg" alt="user-image">
+            <img src="assets/images/users/user13.jpg" alt="user-image">
+            <img src="assets/images/users/user14.jpg" alt="user-image">
+            <img src="assets/images/users/user15.jpg" alt="user-image">
+            <img src="assets/images/users/user16.jpg" alt="user-image">
+            <div class="fw-medium bg-daxa text-white rounded-circle">
+                27
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

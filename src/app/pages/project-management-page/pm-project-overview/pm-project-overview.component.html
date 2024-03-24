@@ -1,0 +1,73 @@
+<!-- Breadcrumb -->
+<div class="breadcrumb-card mb-25 d-md-flex align-items-center justify-content-between">
+    <h5 class="mb-0">
+        Projects Overview
+    </h5>
+    <ol class="breadcrumb list-unstyled mt-0 mb-0 pl-0">
+        <li class="breadcrumb-item position-relative">
+            <a routerLink="/" class="d-inline-block position-relative">
+                <i class="ri-home-8-line"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Project Management
+        </li>
+        <li class="breadcrumb-item position-relative">
+            Projects Overview
+        </li>
+    </ol>
+</div>
+
+<div class="row">
+    <div class="col-xxxl-6">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <!-- Product Development -->
+                <app-product-development></app-product-development>
+
+            </div>
+            <div class="col-lg-12">
+
+                <!-- Project Discussion -->
+                <app-project-discussion></app-project-discussion>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-xxxl-6">
+        <div class="row">
+            <div class="col-lg-6 col-xxxl-12">
+
+                <!-- Team Members -->
+                <app-team-members></app-team-members>
+
+            </div>
+            <div class="col-lg-6 col-xxxl-12">
+
+                <!-- Projects Roadmap -->
+                <app-projects-roadmap></app-projects-roadmap>
+                
+            </div>
+            <div class="col-lg-12">
+
+                <!-- Running Projects -->
+                <app-running-projects></app-running-projects>
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-8">
+
+        <!-- To Do List -->
+        <app-to-do-list></app-to-do-list>
+
+    </div>
+    <div class="col-lg-4">
+
+        <!-- Projects Progress -->
+        <app-projects-progress></app-projects-progress>
+
+    </div>
+</div>

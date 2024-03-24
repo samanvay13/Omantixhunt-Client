@@ -1,0 +1,524 @@
+<div
+    class="sidebar-area bg-white active"
+    [ngClass]="{'active': isSidebarToggled}"
+    [class.component-dark-theme]="themeService.isDark()"
+    [class.dark-sidebar]="themeService.isSidebarDark()"
+    [class.right-sidebar]="themeService.isRightSidebar()"
+    [class.hide-sidebar]="themeService.isHideSidebar()"
+    [class.card-borderd-theme]="themeService.isCardBorder()"
+    [class.rtl-enabled]="themeService.isRTLEnabled()"
+>
+    <div class="logo bg-white">
+        <a routerLink="/" class="d-flex align-items-center">
+            <i class="material-symbols-outlined">
+                dashboard
+            </i>
+            <span class="fw-semibold">Dashboard</span>
+        </a>
+    </div>
+    <div
+        (click)="toggle()"
+        class="burger-menu"
+        [ngClass]="{'active': isSidebarToggled}"
+    >
+        <span class="top-bar"></span>
+        <span class="middle-bar"></span>
+        <span class="bottom-bar"></span>
+    </div>
+    <ng-scrollbar visibility="hover">
+        <div class="sidebar-inner">
+            <div class="sidebar-menu">
+                <mat-accordion>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    account_balance
+                                </i>
+                                <span class="title">
+                                    Accounts
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/accounts" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Accounts
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/callbackList" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    My Callback List
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/myAccounts" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    My Accounts
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/whatsapp" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Whatsapp
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/myPtpList" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    My PTP List
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/futurePtp" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Future PTP
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    approval
+                                </i>
+                                <span class="title">
+                                    Approvals
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/skipTracingApproval" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Skip Tracing Approval
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/requireFvApproval" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Require FV Approval
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    query_stats
+                                </i>
+                                <span class="title">
+                                    Tracking
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/accountTracking" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Account Tracking
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/complaintTracking" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Complaint Tracking
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/employeeTracking" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Employee Tracking
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/agentTransfer" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Agent Transfer
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    receipt_long
+                                </i>
+                                <span class="title">
+                                    TPS
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/tpsTracking" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    TPS Tracking
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/tpsTrackingUpload" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    TPS Tracking Upload
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/tpsVendor" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    TPS Vendor
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    dashboard
+                                </i>
+                                <span class="title">
+                                    Field visit
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/newCampaign" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    New Campaign
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/approval" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Approval
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/campaignMonitor" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Campaign Monitor
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/myVisit" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    My Visit
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/pendingVisit" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Pending Visit
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/completedVisit" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Completed Visit
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/visitStatus" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Visit Status
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    attach_money
+                                </i>
+                                <span class="title">
+                                    Payment Arrangement
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            <span class="title">
+                                                Payment Arrangement
+                                            </span>
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <ul class="sidebar-sub-menu">
+                                        <li class="sidemenu-item">
+                                            <a routerLink="/approval" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                                Approval
+                                            </a>
+                                        </li>
+                                        <li class="sidemenu-item">
+                                            <a routerLink="/pdf" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                                PDF
+                                            </a>
+                                        </li>
+                                        <li class="sidemenu-item">
+                                            <a routerLink="/endorse" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                                Endorse
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </mat-expansion-panel>
+                            </li>
+                            <li class="sidemenu-item">
+                                <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                    <mat-expansion-panel-header>
+                                        <mat-panel-title>
+                                            <span class="title">
+                                                Payment Entry
+                                            </span>
+                                        </mat-panel-title>
+                                    </mat-expansion-panel-header>
+                                    <ul class="sidebar-sub-menu">
+                                        <li class="sidemenu-item">
+                                            <a routerLink="/createPaymentEntry" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                                Create Payment Entry
+                                            </a>
+                                        </li>
+                                        <li class="sidemenu-item">
+                                            <a routerLink="/paymentEntryApproval" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                                Payment Entry Approval
+                                            </a>
+                                        </li>
+                                        <li class="sidemenu-item">
+                                            <a routerLink="/paymentEntryReceipt" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                                Payment Entry Receipt
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </mat-expansion-panel>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    summarize
+                                </i>
+                                <span class="title">
+                                    Statement
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/soa" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    SOA
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    summarize
+                                </i>
+                                <span class="title">
+                                    Report
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="employeeKpis" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Employee KPIS
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="lruSummary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    LRU Sumary
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="hpOverview" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    HP Overview
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="lruPtpSummary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    LRU PTP Summary
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="dialerMonitoring" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Dialer Monitoring
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    paid
+                                </i>
+                                <span class="title">
+                                    Payment Upload
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/bankinSlipRequest" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    BankinSlip Request
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/file-manager/assets" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Refund Request
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/file-manager/projects" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Request Transfer
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/file-manager/personal" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    DCA Non-Psl Settlement Request
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    dashboard
+                                </i>
+                                <span class="title">
+                                    DCA
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="dcaSummary" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    DCA Summary
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    dashboard
+                                </i>
+                                <span class="title">
+                                    CPU Automation
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="cpuAutomation" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    CPU Automation
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = true">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    policy
+                                </i>
+                                <span class="title">
+                                    Legal
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/preLegal" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    PreLegal
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/summons" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Summons
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/judgement" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Judgement
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/bankruptcy" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Bankruptcy
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/pod" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    POD
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/deposit" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Deposit
+                                </a>
+                            </li>
+                            <li class="sidemenu-item">
+                                <a routerLink="/mdi" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    MDI
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    dashboard
+                                </i>
+                                <span class="title">
+                                    Administrative
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/userIdentity" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    User/Identity
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    thermostat
+                                </i>
+                                <span class="title">
+                                    Weather
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/weather" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Weather
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                    <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                        <mat-expansion-panel-header>
+                            <mat-panel-title>
+                                <i class="material-symbols-outlined">
+                                    dashboard
+                                </i>
+                                <span class="title">
+                                    Next Actions
+                                </span>
+                            </mat-panel-title>
+                        </mat-expansion-panel-header>
+                        <ul class="sidebar-sub-menu">
+                            <li class="sidemenu-item">
+                                <a routerLink="/nextActions" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="sidemenu-link">
+                                    Next Actions
+                                </a>
+                            </li>
+                        </ul>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            </div>
+        </div>
+    </ng-scrollbar>
+</div>

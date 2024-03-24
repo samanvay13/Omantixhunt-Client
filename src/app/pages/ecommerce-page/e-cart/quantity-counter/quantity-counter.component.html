@@ -1,0 +1,12 @@
+<div
+    class="quantity-counter"
+    [class.component-dark-theme]="themeService.isDark()"
+>
+    <button (click)="decrement()">
+        -
+    </button>
+    <input type="number" [(ngModel)]="value" />
+    <button (click)="increment()">
+        +
+    </button>
+</div>
