@@ -47,7 +47,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     {
         number: '01.',
         product: {
-            productName: 'Rule 1',
+            productName: 'Participants must adhere to the provided clues and instructions without deviation',
         },
         invoiceNumber: '',
         price: ''
@@ -55,7 +55,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     {
         number: '02.',
         product: {
-            productName: 'Rule 2',
+            productName: 'Collaboration among participants is encouraged, but each individual must submit their own answers or solutions',
         },
         invoiceNumber: '',
         price: ''
@@ -63,7 +63,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     {
         number: '03.',
         product: {
-            productName: 'Rule 3',
+            productName: 'All submissions must be made within the specified time frame to be considered valid',
         },
         invoiceNumber: '',
         price: ''
@@ -71,7 +71,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     {
         number: '04.',
         product: {
-            productName: 'Rule 4',
+            productName: 'In case of any disputes or uncertainties, the decision of the organizers is final',
         },
         invoiceNumber: '',
         price: ''
@@ -79,7 +79,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     {
         number: '05.',
         product: {
-            productName: 'Rule 5',
+            productName: 'Participants must refrain from using any external resources or assistance not explicitly permitted in the rules',
         },
         invoiceNumber: '',
         price: ''
@@ -87,7 +87,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     {
         number: '06.',
         product: {
-            productName: 'Rule 6',
+            productName: 'Any form of cheating, including sharing answers or attempting to manipulate the system, will result in immediate disqualification',
         },
         invoiceNumber: '',
         price: ''
@@ -95,7 +95,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
     {
         number: '07.',
         product: {
-            productName: 'Rule 7',
+            productName: 'Have fun and enjoy the challenge!',
         },
         invoiceNumber: '',
         price: ''
