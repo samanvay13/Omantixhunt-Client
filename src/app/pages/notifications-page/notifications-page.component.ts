@@ -18,7 +18,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 })
 export class NotificationsPageComponent {
 
-    displayedColumns: string[] = ['notificationID', 'timestamp', 'type', 'content', 'status'];
+    displayedColumns: string[] = ['notificationID', 'content', 'timestamp'];
     dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
     selection = new SelectionModel<PeriodicElement>(true, []);
 }

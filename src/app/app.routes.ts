@@ -187,9 +187,13 @@ import { FileUploaderComponent } from './forms/file-uploader/file-uploader.compo
 import { FaqPageComponent } from './pages/faq-page/faq-page.component';
 import { RatioComponent } from './ui-elements/ratio/ratio.component';
 import { UtilitiesComponent } from './ui-elements/utilities/utilities.component';
+import { LeaderboardComponent } from './leaderboard/leaderboard.component';
+import { QuizpageComponent } from './quizpage/quizpage.component';
 
 export const routes: Routes = [
     {path: '', component: EcommerceComponent},
+    {path: 'leaderboard', component: LeaderboardComponent},
+    {path: 'quizpage', component: QuizpageComponent},
     {path: 'crm', component: CrmComponent},
     {path: 'project-management', component: ProjectManagementComponent},
     {path: 'lms', component: LmsComponent},

@@ -1,0 +1,32 @@
+import { Component, ViewChild } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { RouterLink } from '@angular/router';
+import { CustomizerSettingsService } from '../customizer-settings/customizer-settings.service';
+
+@Component({
+    selector: 'app-top-selling-products',
+    standalone: true,
+    imports: [MatCardModule, MatMenuModule, MatButtonModule, RouterLink],
+    templateUrl: './quizpage.component.html',
+    styleUrl: './quizpage.component.scss'
+})
+
+export class QuizpageComponent{
+     // isToggled
+     isToggled = false;
+
+     constructor(
+         public themeService: CustomizerSettingsService
+     ) {
+         this.themeService.isToggled$.subscribe(isToggled => {
+             this.isToggled = isToggled;
+         });
+     }
+ 
+     // RTL Mode
+     toggleRTLEnabledTheme() {
+         this.themeService.toggleRTLEnabledTheme();
+     }
+}
