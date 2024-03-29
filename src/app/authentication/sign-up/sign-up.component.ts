@@ -27,8 +27,11 @@ export class SignUpComponent {
         public themeService: CustomizerSettingsService
     ) {
         this.authForm = this.fb.group({
-            name: ['', Validators.required],
+            firstName: ['', Validators.required],
+            lastName: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
+            username: ['', [Validators.required]],
+            waNumber: ['', [Validators.required, Validators.minLength(10)]],
             password: ['', [Validators.required, Validators.minLength(8)]],
         });
         this.themeService.isToggled$.subscribe(isToggled => {
