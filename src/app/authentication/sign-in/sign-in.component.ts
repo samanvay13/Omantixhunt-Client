@@ -40,6 +40,7 @@ export class SignInComponent {
 
     // Form
     authForm: FormGroup;
+    
     onSubmit() {
         if (this.authForm.valid) {
             this.router.navigate(['/']);

@@ -8,6 +8,8 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -34,7 +36,7 @@ $daxa-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --fontFamily: 'Outfit', sans-serif;
+    --fontFamily: 'Montserrat', sans-serif;;
     --daxaColor: #0f79f3;
     --primaryColor: #796df6;
     --dangerColor: #e74c3c;
@@ -45,7 +47,7 @@ $daxa-theme: mat.define-light-theme((
     --whiteColor: #ffffff;
     --bodyColor: #919aa3;
     --transition: .5s;
-    --fontSize: 16px;
+    --fontSize: 13px;
     --borderBoxShadow: rgba(0, 0, 0, .05) 0px 6px 24px 0px, rgba(0, 0, 0, .08) 0px 0px 0px 1px;
 }
 *, ::after, ::before {
@@ -55,7 +57,7 @@ body {
     margin: 0;
     padding: 0;
     color: var(--blackColor);
-    background-color: #eff3f9;
+    background-color: #f4eff9;
     font: {
         weight: 400;
         size: var(--fontSize);

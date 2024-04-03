@@ -32,6 +32,7 @@
         "moment": "^2.30.1",
         "ng-apexcharts": "^1.8.0",
         "ngx-color-picker": "^16.0.0",
+        "ngx-cookie-service": "^17.1.0",
         "ngx-editor": "^16.0.1",
         "ngx-gauge": "^9.0.0",
         "ngx-mat-timepicker": "^17.0.3",

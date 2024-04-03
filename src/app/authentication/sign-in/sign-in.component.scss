@@ -1,3 +1,41 @@
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background-size: 180% 180%;
+    animation: gradient-animation 10s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}
+
+.login-container {
+    width: 40%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.content-container {
+    width: 60%;
+    text-align: center; /* Centering text horizontally */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Additional styling as needed */
+
 .sign-in-area {
     height: 100vh;
     overflow-x: hidden;
