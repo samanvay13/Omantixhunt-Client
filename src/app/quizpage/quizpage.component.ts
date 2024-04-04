@@ -30,9 +30,9 @@ export class QuizpageComponent{
          private fb: FormBuilder,
          private router: Router,
     ) {
-        this.authForm = this.fb.group({
-            answer: ['', [Validators.required]],
-        });
+        // this.authForm = this.fb.group({
+        //     answer: ['', [Validators.required]],
+        // });
         this.themeService.isToggled$.subscribe(isToggled => {
             this.isToggled = isToggled;
         });

@@ -4,7 +4,7 @@
     align-items: center;
     background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
     background-size: 180% 180%;
-    animation: gradient-animation 10s ease infinite;
+    animation: gradient-animation 7s ease infinite;
 }
 
 @keyframes gradient-animation {
@@ -17,6 +17,14 @@
     100% {
       background-position: 0% 50%;
     }
+}
+
+h1.text-white {
+    font: 900;
+}
+
+h3.text-white {
+    font-family: 'Source Code Pro', monospace;
 }
 
 .login-container {

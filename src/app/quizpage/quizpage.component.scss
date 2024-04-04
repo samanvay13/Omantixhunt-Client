@@ -1,3 +1,51 @@
+.answer {
+    margin-left: 20px;
+    width: 400px;
+    padding: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    border-color: rgb(216, 216, 216);
+}
+
+.btn-box {
+    .mat-mdc-button {
+        border: 0;
+        margin-left: 20px;
+        height: auto;
+        min-width: auto;
+        min-height: auto;
+        padding: 10px 20px;
+        font-weight: normal;
+        color: var(--whiteColor);
+        background: linear-gradient(-45deg, #00e467 0%, #00c53b 51%, #00e467 100%);
+        background-size: 400% 400%;
+
+        left: 0;
+        top: 20px;
+
+        &:not(:first-child) {
+            margin-left: 10px;
+        }
+
+        &:hover {
+            background-image: linear-gradient(to right, #00e467 0%, #00c53b 51%, #00e467 100%);
+            animation: gradient 3s ease infinite;
+        }
+    }
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 /* Min width 992px to Max width 1199px */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
     .text-white {
