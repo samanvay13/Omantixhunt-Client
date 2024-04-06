@@ -1,11 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
-import { RouterLink } from '@angular/router';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { CustomizerSettingsService } from '../customizer-settings/customizer-settings.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-rules',
@@ -14,26 +15,38 @@ import { CustomizerSettingsService } from '../customizer-settings/customizer-set
     templateUrl: './rules.component.html',
     styleUrl: './rules.component.scss'
 })
-export class RulesComponent {
+export class RulesComponent implements OnInit {
 
-    displayedColumns: string[] = ['number', 'product', 'invoiceNumber', 'price'];
-    dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+    displayedColumns: string[] = ['number', 'product'];
+    dataSource = new MatTableDataSource<any>();
 
     @ViewChild(MatPaginator) paginator: MatPaginator;
-
-    ngAfterViewInit() {
-        this.dataSource.paginator = this.paginator;
-    }
 
     // isToggled
     isToggled = false;
 
     constructor(
-        public themeService: CustomizerSettingsService
+        public themeService: CustomizerSettingsService,
+        private http: HttpClient
     ) {
         this.themeService.isToggled$.subscribe(isToggled => {
             this.isToggled = isToggled;
         });
+    }
+
+    ngOnInit() {
+        this.fetchData();
+    }
+
+    fetchData() {
+        this.http.get<any[]>('https://omantixhunt-server.onrender.com/api/rules')
+            .subscribe(data => {
+                this.dataSource.data = data.map((item, index) => ({
+                    number: (index + 1).toString().padStart(2, '0') + '.',
+                    product: { productName: item.statement }
+                }));
+                this.dataSource.paginator = this.paginator;
+            });
     }
 
     // RTL Mode
@@ -41,70 +54,4 @@ export class RulesComponent {
         this.themeService.toggleRTLEnabledTheme();
     }
 
-}
-
-const ELEMENT_DATA: PeriodicElement[] = [
-    {
-        number: '01.',
-        product: {
-            productName: 'Participants must adhere to the provided clues and instructions without deviation',
-        },
-        invoiceNumber: '',
-        price: ''
-    },
-    {
-        number: '02.',
-        product: {
-            productName: 'Collaboration among participants is encouraged, but each individual must submit their own answers or solutions',
-        },
-        invoiceNumber: '',
-        price: ''
-    },
-    {
-        number: '03.',
-        product: {
-            productName: 'All submissions must be made within the specified time frame to be considered valid',
-        },
-        invoiceNumber: '',
-        price: ''
-    },
-    {
-        number: '04.',
-        product: {
-            productName: 'In case of any disputes or uncertainties, the decision of the organizers is final',
-        },
-        invoiceNumber: '',
-        price: ''
-    },
-    {
-        number: '05.',
-        product: {
-            productName: 'Participants must refrain from using any external resources or assistance not explicitly permitted in the rules',
-        },
-        invoiceNumber: '',
-        price: ''
-    },
-    {
-        number: '06.',
-        product: {
-            productName: 'Any form of cheating, including sharing answers or attempting to manipulate the system, will result in immediate disqualification',
-        },
-        invoiceNumber: '',
-        price: ''
-    },
-    {
-        number: '07.',
-        product: {
-            productName: 'Have fun and enjoy the challenge!',
-        },
-        invoiceNumber: '',
-        price: ''
-    }
-];
-
-export interface PeriodicElement {
-    number: string;
-    product: any;
-    invoiceNumber: string;
-    price: string;
 }
