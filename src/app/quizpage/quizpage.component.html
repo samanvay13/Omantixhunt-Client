@@ -1,7 +1,7 @@
 <div class="container">
     <mat-card
         class="daxa-card welcome-card mb-25 border-radius position-relative bg-gradient border-none d-block"
-        style="margin: 20px;"
+        style="margin: 20px 30px 30px 30px;"
         [class.rtl-enabled]="themeService.isRTLEnabled()"
     >
         <div class="row">
@@ -10,16 +10,17 @@
                     <h4 class="text-white">
                         Level 1
                     </h4>
+                    <br>
                     <p class="text-white" style="font-size: medium;">
-                        In the realm where shadows dance with light, I'm found in whispers that elude the night. Without a form, yet I hold secrets deep, In every dream, and every thought you keep. I speak in echoes of forgotten tales, Where silence reigns and mystery prevails. With neither mouth nor tongue to shape my sound, In the realm of dreams, I am often found. I'm carried on the wind's gentle embrace, Yet in the stillness, I find my place. I'm bound to time, yet timeless in my way, A fleeting moment, yet forever I stay. What am I, hidden in the whispers heard, In the realm of dreams, and the spoken word?
+                        In the realm where shadows dance with light, I'm found in whispers that elude the night. Without a form, yet I hold secrets deep, In every dream, and every thought you keep.
                     </p>
                 </div>
             </div>
         </div>
     </mat-card>
-    <input class="answer" placeholder="Your answer here">
-    <div class="btn-box">
-        <button mat-button>
+    <div class="input-submit-container">
+        <input matInput class="answer" placeholder="Your answer here">
+        <button mat-button class="submit-btn">
             <a routerLink="/quizpage" style="color: white;">Submit</a>
         </button>
     </div>
