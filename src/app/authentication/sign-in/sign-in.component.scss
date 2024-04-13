@@ -1,9 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css?family=Inter');
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: row; 
     align-items: center;
-    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
-    background-size: 180% 180%;
+    // background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background-image: url('../../../assets/images/background/loginBG.png');
+    // background-image: url('././assets/images/background/loginBG.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // background-size: 180% 180%;
     animation: gradient-animation 7s ease infinite;
 }
 
@@ -27,19 +36,69 @@ h3.text-white {
     font-family: 'Source Code Pro', monospace;
 }
 
+.omantix-container {
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+.omantix {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    object-fit: cover; 
+}
+
+.omantix-text {
+    margin-left: 50px;
+    // position: absolute;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+}
+
 .login-container {
     width: 40%;
     margin-left: 5%;
     margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
 }
 
 .content-container {
     width: 60%;
-    text-align: center;
+    // text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    padding-left: 10vw;
+}
+
+.title1 {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 80px; /* 110% */
+}
+.title2 {
+    font-family: Inter;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 80px; /* 110% */
+
+    background: linear-gradient(90deg, #FFF 0%, #298AF3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* Additional styling as needed */
@@ -53,6 +112,10 @@ h3.text-white {
     };
 }
 .daxa-form {
+    border-radius: 40px;
+    border: 3px solid rgba(101, 152, 229, 0.49);
+    background: rgba(114, 152, 208, 0.37);
+    backdrop-filter: blur(14.25px);
     max-width: 930px;
     padding: 40px;
 
@@ -92,8 +155,9 @@ h3.text-white {
                 margin-top: 22px;
                 padding: 17px 30px;
                 font-weight: normal;
-                color: var(--whiteColor);
-                background-color: var(--daxaColor);
+                color: white;
+                border-radius: 10px;
+                background: linear-gradient(90deg, #298AF3 0%, #9401D4 100%);
 
                 &[disabled] {
                     background-color: #eff3f9;
@@ -352,6 +416,62 @@ h3.text-white {
         }
     }
 
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .title1 {
+        color: #FFF;
+        font-family: Inter;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 50px; /* 110% */
+    }
+    .title2 {
+        font-family: Inter;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 50px; /* 110% */
+
+        background: linear-gradient(90deg, #FFF 0%, #298AF3 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .container {
+        flex-direction: column; /* This will stack them top and bottom */
+    }
+
+    /* Adjust the widths of the containers for portrait mode */
+    .login-container, .content-container {
+        width: 100%; /* Full width for small screens */
+        margin-left: 40px; /* Reset margins */
+        margin-right: 40px;
+    }
+
+    .content-container {
+        padding-top: 70px;
+        padding-left: 30px; /* Reset padding */
+        padding-bottom: 0px;
+    }
+    .omantix {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        object-fit: cover; 
+    }
+    
+    .omantix-text {
+        margin-left: 40px;
+        // position: absolute;
+        color: #FFF;
+        font-family: Inter;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: 30px;
+    }
 }
 
 /* Min width 992px to Max width 1199px */
