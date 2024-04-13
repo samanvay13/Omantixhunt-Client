@@ -1,9 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Inter');
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: row; 
     align-items: center;
-    background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
-    background-size: 180% 180%;
+    // background: linear-gradient(300deg,deepskyblue,darkviolet,blue);
+    background-image: url('../../../assets/images/background/loginBG.png');
+    // background-image: url('././assets/images/background/loginBG.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    // background-size: 180% 180%;
     animation: gradient-animation 7s ease infinite;
 }
 
@@ -19,6 +27,31 @@
     }
 }
 
+.omantix-container {
+    overflow: hidden;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+.omantix {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    object-fit: cover; 
+}
+
+.omantix-text {
+    margin-left: 50px;
+    // position: absolute;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+}
+
 h1.text-white {
     font: 900;
 }
@@ -28,7 +61,10 @@ h3.text-white {
 }
 
 .signup-container {
+    margin-top: 60px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Additional styling as needed */
@@ -42,8 +78,12 @@ h3.text-white {
     };
 }
 .daxa-form {
+    border-radius: 40px;
+    border: 3px solid rgba(101, 152, 229, 0.49);
+    background: rgba(114, 152, 208, 0.37);
+    backdrop-filter: blur(14.25px);
     max-width: 930px;
-    padding: 100px;
+    padding: 40px;
 
     .title {
         margin-bottom: 25px;
@@ -75,8 +115,9 @@ h3.text-white {
                 margin-top: 22px;
                 padding: 17px 30px;
                 font-weight: normal;
-                color: var(--whiteColor);
-                background-color: var(--daxaColor);
+                color: white;
+                border-radius: 10px;
+                background: linear-gradient(90deg, #298AF3 0%, #9401D4 100%);
 
                 &[disabled] {
                     background-color: #eff3f9;

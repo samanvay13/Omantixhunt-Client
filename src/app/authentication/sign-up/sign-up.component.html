@@ -1,25 +1,29 @@
 <div class="container">
     <div class="signup-container">
+        <div class="omantix-container">
+            <img src="../../../assets/images/icons/OMANTIX.jpeg" alt="OMANTIX" class="omantix">
+            <span class="omantix-text">OMANTIXVERSE MEDIATECH PVT. LTD.</span>
+        </div>
         <div class="sign-up-area">
             <div class="d-table">
                 <div class="d-table-cell">
                     <div
-                        class="daxa-form ml-auto mr-auto border-radius bg-white"
+                        class="daxa-form ml-auto mr-auto"
                         [class.card-borderd-theme]="themeService.isCardBorder()"
                         [class.component-dark-theme]="themeService.isDark()"
                         [class.rtl-enabled]="themeService.isRTLEnabled()"
                     >
                         <div class="title text-center">
-                            <h3>
+                            <h3 class="text-white" style="font-weight: 600;">
                                 Sign Up
                             </h3>
-                            <p class="text-black">
-                                Already have an account? <a routerLink="/authentication" class="text-daxa">Sign In</a>
+                            <p class="text-white">
+                                Already have an account? <a routerLink="/authentication"  class="text-white" style="font-weight: 600;">Login</a>
                             </p>
                         </div>
                         <form [formGroup]="authForm" (ngSubmit)="onSubmit()">
                             <div class="form-group">
-                                <label class="main-label d-block lh-1 text-black">
+                                <label class="main-label d-block lh-1 text-white">
                                     First Name
                                 </label>
                                 <mat-form-field>
@@ -28,15 +32,9 @@
                                     </mat-label>
                                     <input matInput type="text" id="firstName" formControlName="firstName">
                                 </mat-form-field>
-                                <div class="error text-danger" *ngIf="authForm.get('firstName')!.hasError('required') && authForm.get('firstName')!.touched">
-                                    First name is required.
-                                </div>
-                                <div class="error text-danger" *ngIf="authForm.get('firstName')!.hasError('firstName') && authForm.get('firstName')!.touched">
-                                    Please enter a valid name.
-                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="main-label d-block lh-1 text-black">
+                                <label class="main-label d-block lh-1 text-white">
                                     Last Name
                                 </label>
                                 <mat-form-field>
@@ -45,15 +43,9 @@
                                     </mat-label>
                                     <input matInput type="text" id="lastName" formControlName="lastName">
                                 </mat-form-field>
-                                <div class="error text-danger" *ngIf="authForm.get('lastName')!.hasError('required') && authForm.get('lastName')!.touched">
-                                    Last Name is required.
-                                </div>
-                                <div class="error text-danger" *ngIf="authForm.get('lastName')!.hasError('name') && authForm.get('lastName')!.touched">
-                                    Please enter a valid name.
-                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="main-label d-block lh-1 text-black">
+                                <label class="main-label d-block lh-1 text-white">
                                     Email Address
                                 </label>
                                 <mat-form-field>
@@ -62,15 +54,9 @@
                                     </mat-label>
                                     <input matInput type="email" id="email" formControlName="email">
                                 </mat-form-field>
-                                <div class="error text-danger" *ngIf="authForm.get('email')!.hasError('required') && authForm.get('email')!.touched">
-                                    Email is required.
-                                </div>
-                                <div class="error text-danger" *ngIf="authForm.get('email')!.hasError('email') && authForm.get('email')!.touched">
-                                    Please enter a valid email address.
-                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="main-label d-block lh-1 text-black">
+                                <label class="main-label d-block lh-1 text-white">
                                     Username
                                 </label>
                                 <mat-form-field>
@@ -79,12 +65,9 @@
                                     </mat-label>
                                     <input matInput type="text" id="username" formControlName="username">
                                 </mat-form-field>
-                                <div class="error text-danger" *ngIf="authForm.get('username')!.hasError('required') && authForm.get('username')!.touched">
-                                    Username is required.
-                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="main-label d-block lh-1 text-black">
+                                <label class="main-label d-block lh-1 text-white">
                                     WhatsApp Number
                                 </label>
                                 <mat-form-field>
@@ -93,12 +76,9 @@
                                     </mat-label>
                                     <input matInput type="text" id="waNumber" formControlName="waNumber">
                                 </mat-form-field>
-                                <div class="error text-danger" *ngIf="authForm.get('waNumber')!.hasError('required') && authForm.get('waNumber')!.touched">
-                                    WhatsApp Number is required.
-                                </div>
                             </div>
                             <div class="form-group">
-                                <label class="main-label d-block lh-1 text-black">
+                                <label class="main-label d-block lh-1 text-white">
                                     Your Password
                                 </label>
                                 <mat-form-field>
@@ -112,15 +92,9 @@
                                         </span>
                                     </button>
                                 </mat-form-field>
-                                <div class="error text-danger" *ngIf="authForm.get('password')!.hasError('required') && authForm.get('password')!.touched">
-                                    Password is required.
-                                </div>
-                                <div class="error text-danger" *ngIf="authForm.get('password')!.hasError('minlength') && authForm.get('password')!.touched">
-                                    Password must be at least 8 characters long.
-                                </div>
                             </div>
                             <mat-checkbox>
-                                I accept the <a href="javascript:void(0);" class="text-daxa">Terms and conditions</a>
+                                <p class="text-white">I accept the Terms & Conditions</p>
                             </mat-checkbox>
                             <button mat-button class="btn" type="submit" [disabled]="authForm.invalid">
                                 Sign Up
