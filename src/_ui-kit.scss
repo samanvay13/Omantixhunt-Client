@@ -31,8 +31,8 @@ html {
     --mat-form-field-focus-select-arrow-color: rgba(15, 121, 243, 0.87);
     --mat-select-focused-arrow-color: rgba(15, 121, 243, 0.87);
     --mat-option-selected-state-label-text-color: var(--daxaColor);
-    --mdc-checkbox-unselected-icon-color: rgba(0, 0, 0, 0.30);
-    --mdc-checkbox-disabled-unselected-icon-color: rgba(0, 0, 0, 0.20);
+    --mdc-checkbox-unselected-icon-color: rgba(255, 255, 255, 1);
+    --mdc-checkbox-disabled-unselected-icon-color: rgba(255, 255, 255, 1);
     --mat-slider-ripple-color:  var(--daxaColor);
 }
 
@@ -415,18 +415,18 @@ html {
     --mdc-outlined-text-field-focus-outline-color: var(--daxaColor);
     --mat-form-field-focus-select-arrow-color: rgba(15, 121, 243, 0.87);
     --mdc-outlined-text-field-focus-label-text-color: rgba(15, 121, 243, 0.87);
-    --mdc-filled-text-field-label-text-color: #919aa3;
+    --mdc-filled-text-field-label-text-color: #000000;
     --mdc-filled-text-field-input-text-color: var(--blackColor);
     --mdc-filled-text-field-label-text-font: var(--fontFamily);
 
     .mat-mdc-text-field-wrapper {
-        background-color: transparent;
+        background-color: white;
         border: 1px solid #dae0ec;
-        border-radius: 5px;
+        border-radius: 12px;
     }
     .mdc-text-field--filled {
         &:not(.mdc-text-field--disabled) {
-            background-color: transparent;
+            background-color: white;
         }
         .mdc-floating-label--float-above {
             top: 30px;
@@ -434,7 +434,7 @@ html {
         &:not(.mdc-text-field--disabled) {
             .mdc-line-ripple {
                 &::before {
-                    border-bottom-color: transparent !important;
+                    border-bottom-color: white !important;
                 }
             }
         }
@@ -442,14 +442,14 @@ html {
             &:not(.mdc-text-field--focused):hover {
                 .mdc-line-ripple {
                     &::before {
-                        border-bottom-color: transparent !important;
+                        border-bottom-color: white !important;
                     }
                 }
             }
         }
     }
     .mat-mdc-form-field-focus-overlay {
-        border-radius: 5px;
+        border-radius: 12px;
     }
     .mdc-text-field {
         padding: {

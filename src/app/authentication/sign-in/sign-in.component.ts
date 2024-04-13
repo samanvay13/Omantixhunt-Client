@@ -49,11 +49,6 @@ export class SignInComponent {
         }
     }
 
-    // Dark Mode
-    toggleTheme() {
-        this.themeService.toggleTheme();
-    }
-
     // Card Border
     toggleCardBorderTheme() {
         this.themeService.toggleCardBorderTheme();
