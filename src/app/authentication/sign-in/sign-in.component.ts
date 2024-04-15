@@ -49,14 +49,4 @@ export class SignInComponent {
         }
     }
 
-    // Card Border
-    toggleCardBorderTheme() {
-        this.themeService.toggleCardBorderTheme();
-    }
-
-    // RTL Mode
-    toggleRTLEnabledTheme() {
-        this.themeService.toggleRTLEnabledTheme();
-    }
-
 }
