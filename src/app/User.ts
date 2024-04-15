@@ -1,26 +1,17 @@
 export class User {
-    id: number;
-    name: string; // username
-    fullname: string;
-    accessLevel: number;
-    team: string;
+    _id: number;
+    fName: string;
+    lName: string;
     email: string;
-    status: string;
-    memberOf: string;
-    empID: string;
+    whatsapp: number;
     username: string;
 
-    constructor(id:number, name:string, fullname:string, accessLevel:number, team:string, email:string,
-        status:string, memberOf:string, empID:string, username:string) {
-        this.id = id;
-        this.fullname = fullname;
-        this.name = name;
-        this.accessLevel = accessLevel;
-        this.team = team;
+    constructor(_id:number, lName:string, fName:string, email:string, whatsapp:number, username:string) {
+        this._id = _id;
+        this.fName = fName;
+        this.lName = lName;
         this.email = email;
-        this.status = status;
-        this.memberOf = memberOf;
-        this.empID = empID;
+        this.whatsapp = whatsapp;
         this.username = username
     }
 }

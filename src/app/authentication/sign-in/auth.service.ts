@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
-import { EventEmitterService } from '../../eventemitterservice';
+import { APIService } from '../../apiservice';
 import { CookieService } from 'ngx-cookie-service';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { BehaviorSubject } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -16,14 +15,11 @@ export class AuthenticationService {
 
   public username: String;
   public password: String;
-  public _expTime = new BehaviorSubject<Date|null>(null);
-  public expTime$ = this._expTime.asObservable();
   _returnUrl: string;
 
-  constructor(private http: HttpClient, private eeService: EventEmitterService, private cookieService: CookieService, private _snackBar: MatSnackBar, private router: Router) { 
+  constructor(private http: HttpClient, private apiSrv: APIService, private cookieService: CookieService, private _snackBar: MatSnackBar, private router: Router) { 
     if(this.isUserLoggedIn()){
-      let token = this.cookieService.get('aiqon.auth.token');
-      this._expTime.next(this.getExpiryTime(token));  
+      let token = this.cookieService.get('omantixhunt.auth.token');
     }else{
       this.router.navigate(['/authentication'])
     }
@@ -33,30 +29,14 @@ export class AuthenticationService {
     return this.isUserLoggedIn();
   }
 
-  refreshToken(token:string){
-    return this.http.get(this.eeService.URL + 'aiqon/refreshToken', {
-      headers: {
-        'Authorization': `Bearer ${token}`,
-        'isRefreshToken': 'true'
-      }
-    })
-      .pipe(map((res: any) => {
-        this.cookieService.set('aiqon.auth.token', res.token);
-        let expiryTime = this.getExpiryTime(res.token);
-        this._expTime.next(expiryTime);
-      }));
-  }
-
   authenticateUser(username: String, password: String) {
     let reqData = {
       username,
       password
     };
-    return this.http.post(this.eeService.URL + 'aiqon/authenticate', reqData)
+    return this.http.post(this.apiSrv.URL + 'login', reqData)
       .pipe(map((res: any) => {
-        this.cookieService.set('aiqon.auth.token', res.token);
-        let expiryTime = this.getExpiryTime(res.token);
-        this._expTime.next(expiryTime);
+        this.cookieService.set('omantixhunt.auth.token', res.token);
         this.username = username;
         this.password = password;
         this.setLoggedInUserName(username);
@@ -80,7 +60,7 @@ export class AuthenticationService {
   logout() {
     sessionStorage.removeItem(this.USER_NAME_SESSION);
     this.cookieService.deleteAll();
-    this.eeService.clearUserObj()
+    this.apiSrv.clearUserObj()
     this.username = null;
     this.password = null;
   }
@@ -94,6 +74,7 @@ export class AuthenticationService {
 
     return JSON.parse(jsonPayload);
   }
+
   private getExpiryTime(token:string): Date{
     let data = this.parseJwt(token);
     if (data.exp) {
@@ -101,14 +82,15 @@ export class AuthenticationService {
     }
     return new Date();
   }
+  
   isUserLoggedIn() {
     let isAuth = false;
-    if (this.cookieService.check('aiqon.auth.token')) {
-      let token = this.cookieService.get('aiqon.auth.token');
+    if (this.cookieService.check('omantixhunt.auth.token')) {
+      let token = this.cookieService.get('omantixhunt.auth.token');
       isAuth = this.getExpiryTime(token) > new Date();
     }
     if(!isAuth){
-      this.cookieService.delete('aiqon.auth.token');
+      this.cookieService.delete('omantixhunt.auth.token');
     }
     return isAuth;
     // let user = sessionStorage.getItem(this.USER_NAME_SESSION);
@@ -119,7 +101,6 @@ export class AuthenticationService {
 
     // return true
   }
-
 
   set returnUrl(value: string) {
     this._returnUrl = value;

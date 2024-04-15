@@ -5,20 +5,24 @@
     box-shadow: unset;
 }
 
+.row-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .btn-box {
+    margin-left: auto;
     .mat-mdc-button {
         border: 0;
         height: auto;
         min-width: auto;
         min-height: auto;
-        padding: 13px 40px;
+        padding: 13px 20px;
         font-weight: normal;
         color: var(--whiteColor);
         background: linear-gradient(-45deg, #5000e4 0%, #a200ff 51%, #5000e4 100%);
         background-size: 400% 400%;
-
-        left: 0;
-        top: 20px;
 
         &:not(:first-child) {
             margin-left: 10px;
