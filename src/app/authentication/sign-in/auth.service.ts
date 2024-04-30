@@ -86,8 +86,7 @@ export class AuthenticationService {
   isUserLoggedIn() {
     let isAuth = false;
     if (this.cookieService.check('omantixhunt.auth.token')) {
-      let token = this.cookieService.get('omantixhunt.auth.token');
-      isAuth = this.getExpiryTime(token) > new Date();
+      isAuth = true;
     }
     if(!isAuth){
       this.cookieService.delete('omantixhunt.auth.token');

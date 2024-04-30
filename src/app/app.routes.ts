@@ -1,4 +1,4 @@
-import { Routes } from '@angular/router';
+import { mapToCanActivate, Routes } from '@angular/router';
 import { NotFoundComponent } from './common/not-found/not-found.component';
 import { NotificationsPageComponent } from './notifications-page/notifications-page.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
@@ -15,13 +15,14 @@ import { MyProfileComponent } from './my-profile/my-profile.component';
 import { LeaderboardComponent } from './leaderboard/leaderboard.component';
 import { QuizpageComponent } from './quizpage/quizpage.component';
 import { RulesComponent } from './rules/rules.component';
+import { AuthGuard } from './authentication/sign-in/auth.guard';
 
 export const routes: Routes = [
-    {path: '', component: RulesComponent},
-    {path: 'leaderboard', component: LeaderboardComponent},
-    {path: 'quizpage', component: QuizpageComponent},    
-    {path: 'notifications', component: NotificationsPageComponent},
-    {path: 'my-profile', component: MyProfileComponent},
+    {path: '', component: RulesComponent, canActivate: [AuthGuard]},
+    {path: 'leaderboard', component: LeaderboardComponent, canActivate: [AuthGuard]},
+    {path: 'quizpage', component: QuizpageComponent, canActivate: [AuthGuard]},    
+    {path: 'notifications', component: NotificationsPageComponent, canActivate: [AuthGuard]},
+    {path: 'my-profile', component: MyProfileComponent, canActivate: [AuthGuard]},
 
     {
         path: 'authentication',
@@ -37,7 +38,7 @@ export const routes: Routes = [
     },
     
     {
-        path: 'settings',
+        path: 'settings', canActivate: [AuthGuard],
         component: SettingsComponent,
         children: [
             {path: '', component: AccountSettingsComponent},
@@ -47,5 +48,5 @@ export const routes: Routes = [
 
     // Here add new pages component
 
-    {path: '**', component: NotFoundComponent} // This line will remain down from the whole pages component list
+    {path: '**', canActivate: [AuthGuard], component: NotFoundComponent} // This line will remain down from the whole pages component list
 ];
