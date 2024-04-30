@@ -12,23 +12,13 @@
             <div class="table-responsive">
                 <table mat-table [dataSource]="dataSource">
 
-                    <!-- Notification ID Column -->
-                    <ng-container matColumnDef="notificationID">
-                        <th mat-header-cell *matHeaderCellDef>
-                            ID
-                        </th>
-                        <td mat-cell *matCellDef="let element">
-                            {{element.notificationID}}
-                        </td>
-                    </ng-container>
-
                      <!-- Content Column -->
                      <ng-container matColumnDef="content">
                         <th mat-header-cell *matHeaderCellDef>
                             Content
                         </th>
                         <td mat-cell *matCellDef="let element" class="text-black fw-medium">
-                            {{element.content}}
+                            {{element.content.notificationName}}
                         </td>
                     </ng-container>
 
@@ -38,7 +28,7 @@
                             Timestamp
                         </th>
                         <td mat-cell *matCellDef="let element">
-                            {{element.timestamp}}
+                            {{element.timestamp.createdAt}}
                         </td>
                     </ng-container>
 
