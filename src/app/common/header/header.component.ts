@@ -5,6 +5,8 @@ import { ToggleService } from '../sidebar/toggle.service';
 import { MatButtonModule } from '@angular/material/button';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { CustomizerSettingsService } from '../../customizer-settings/customizer-settings.service';
+import { CookieService } from 'ngx-cookie-service';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-header',
@@ -23,7 +25,9 @@ export class HeaderComponent {
 
     constructor(
         private toggleService: ToggleService,
-        public themeService: CustomizerSettingsService
+        public themeService: CustomizerSettingsService,
+        private cookieService: CookieService,
+        private router: Router
     ) {
         this.toggleService.isSidebarToggled$.subscribe(isSidebarToggled => {
             this.isSidebarToggled = isSidebarToggled;
@@ -31,6 +35,12 @@ export class HeaderComponent {
         this.themeService.isToggled$.subscribe(isToggled => {
             this.isToggled = isToggled;
         });
+    }
+
+    onLogout() {
+        this.cookieService.delete('omantixhunt.auth.token');
+        this.cookieService.delete('username');
+        this.router.navigateByUrl('/authentication');
     }
 
     // Burger Menu Toggle

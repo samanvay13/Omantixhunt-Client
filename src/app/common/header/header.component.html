@@ -47,7 +47,7 @@
                                 Leaderboard 
                             </span>
                         </div>
-                        <ul class="menu-body pl-0 mt-0 list-unstyled">
+                        <!-- <ul class="menu-body pl-0 mt-0 list-unstyled">
                             <li class="position-relative">
                                 <img src="assets/images/users/user1.jpg" width="44" height="44" class="rounded-circle position-absolute" alt="user">
                                 <span class="sub-title d-block fw-medium">
@@ -67,7 +67,7 @@
                                 </span>
                                 <a routerLink="/chat" class="d-block link-btn position-absolute"></a>
                             </li>
-                        </ul>
+                        </ul> -->
                         <div class="menu-footer text-center">
                             <a routerLink="/leaderboard" class="link-btn text-daxa d-inline-block fw-medium">
                                 View All Rankings
@@ -82,7 +82,7 @@
                         notifications
                     </i>
                     <span class="daxa-badge">
-                        3
+                        1
                     </span>
                 </button>
                 <mat-menu class="notifications-menu-dropdown" #notificationsMenu="matMenu" xPosition="before">
@@ -92,10 +92,10 @@
                         <div class="title d-flex align-items-center justify-content-between">
                             <span class="fw-medium">
                                 Notifications
-                                <span class="text-body fw-normal">(03)</span>
+                                <span class="text-body fw-normal">(01)</span>
                             </span>
                         </div>
-                        <ul class="menu-body pl-0 mt-0 list-unstyled">
+                        <!-- <ul class="menu-body pl-0 mt-0 list-unstyled">
                             <li class="position-relative">
                                 <div class="icon rounded-circle position-absolute text-center transition">
                                     <i class="material-symbols-outlined">
@@ -140,7 +140,7 @@
                                 </span>
                                 <a routerLink="/notifications" class="d-block link-btn position-absolute"></a>
                             </li>
-                        </ul>
+                        </ul> -->
                         <div class="menu-footer text-center">
                             <a routerLink="/notifications" class="link-btn text-daxa d-inline-block fw-medium">
                                 See All Notifications
@@ -184,12 +184,11 @@
                                 Settings
                                 <a routerLink="/settings" class="link-btn d-block position-absolute"></a>
                             </li>
-                            <li class="position-relative transition fw-medium">
+                            <li class="position-relative transition fw-medium" (click)="onLogout()" style="cursor: pointer;">
                                 <i class="material-symbols-outlined">
                                     logout
                                 </i>
                                 Logout
-                                <a routerLink="/authentication" class="link-btn d-block position-absolute"></a>
                             </li>
                         </ul>
                     </div>
